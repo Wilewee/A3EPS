@@ -33,7 +33,7 @@ EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 4 19
+Sheet 2 19
 Title ""
 Date ""
 Rev ""
@@ -314,28 +314,20 @@ Wire Wire Line
 Wire Wire Line
 	4300 2700 4450 2700
 Wire Wire Line
-	4300 2900 4600 2900
-Wire Wire Line
-	4600 2900 4750 2900
+	4300 2900 4750 2900
 Connection ~ 4600 2900
 Wire Wire Line
 	4600 3200 4300 3200
 Wire Wire Line
-	4300 3400 5050 3400
-Wire Wire Line
-	5050 3400 5550 3400
+	4300 3400 5550 3400
 Wire Wire Line
 	5050 3400 5050 3450
 Wire Wire Line
 	5550 3400 5550 3300
 Wire Wire Line
-	5550 3300 5750 3300
+	5550 3300 6450 3300
 Wire Wire Line
-	5750 3300 6450 3300
-Wire Wire Line
-	5750 3250 5750 3300
-Wire Wire Line
-	5750 3300 5750 3350
+	5750 3250 5750 3350
 Connection ~ 5050 3400
 Connection ~ 5750 3300
 Wire Wire Line
@@ -347,9 +339,7 @@ Wire Wire Line
 	5750 2600 5750 2950
 Connection ~ 5750 2600
 Wire Wire Line
-	2600 2650 2600 2950
-Wire Wire Line
-	2600 2950 2600 3200
+	2600 2650 2600 3200
 Wire Wire Line
 	2850 2650 2600 2650
 Wire Wire Line
@@ -361,22 +351,16 @@ Wire Wire Line
 Wire Wire Line
 	2850 1900 2850 2650
 Wire Wire Line
-	6150 2600 5750 2600
-Wire Wire Line
-	5750 2600 5500 2600
+	6150 2600 5500 2600
 Wire Wire Line
 	2600 2950 3250 2950
 Connection ~ 2600 2950
 Wire Wire Line
-	6150 1900 6150 2150
-Wire Wire Line
-	6150 2150 6150 2600
+	6150 1900 6150 2600
 Wire Wire Line
 	6150 2150 6700 2150
 Wire Wire Line
-	4750 2350 4750 2450
-Wire Wire Line
-	4750 2450 4750 2500
+	4750 2350 4750 2500
 Wire Wire Line
 	4750 2450 5200 2450
 Wire Wire Line

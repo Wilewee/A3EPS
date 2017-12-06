@@ -349,8 +349,6 @@ Wire Wire Line
 	4150 3600 4250 3600
 Text GLabel 4250 3700 0    60   Input ~ 0
 B-
-Text GLabel 5375 2300 2    60   Input ~ 0
-B-
 Text GLabel 5375 1925 2    60   Input ~ 0
 B-
 Text GLabel 5600 1800 2    60   Input ~ 0
@@ -478,7 +476,7 @@ Wire Wire Line
 Wire Wire Line
 	5375 1525 5950 1525
 Wire Wire Line
-	5950 1525 5950 2875
+	5950 1425 5950 2875
 Wire Wire Line
 	5950 2875 6150 2875
 Wire Wire Line
@@ -518,4 +516,7 @@ Text GLabel 4050 1950 2    60   Input ~ 0
 I_2_Boost
 Text GLabel 4050 2600 2    60   Input ~ 0
 I_3_Boost
+Wire Wire Line
+	5950 1425 7250 1425
+Connection ~ 5950 1525
 $EndSCHEMATC
