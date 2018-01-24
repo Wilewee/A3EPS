@@ -1,0 +1,409 @@
+EESchema Schematic File Version 2
+LIBS:LM3485-rescue
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:LM3485-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L LM3485 U1
+U 1 1 57750F22
+P 5750 3900
+F 0 "U1" H 5750 4000 60  0000 C CNN
+F 1 "LM3485" H 5750 3900 60  0000 C CNN
+F 2 "Housings_SSOP:TSSOP-8_3x3mm_Pitch0.65mm" H 5750 3900 60  0001 C CNN
+F 3 "" H 5750 3900 60  0000 C CNN
+	1    5750 3900
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_01X02 P1
+U 1 1 57750FB1
+P 3400 3350
+F 0 "P1" H 3400 3500 50  0000 C CNN
+F 1 "CONN_01X02" V 3500 3350 50  0000 C CNN
+F 2 "Socket_Strips:Socket_Strip_Straight_1x02_Pitch2.54mm" H 3400 3350 50  0001 C CNN
+F 3 "" H 3400 3350 50  0000 C CNN
+	1    3400 3350
+	-1   0    0    1   
+$EndComp
+$Comp
+L CONN_01X02 P2
+U 1 1 5775100B
+P 8000 3350
+F 0 "P2" H 8000 3500 50  0000 C CNN
+F 1 "CONN_01X02" V 8100 3350 50  0000 C CNN
+F 2 "Socket_Strips:Socket_Strip_Straight_1x02_Pitch2.54mm" H 8000 3350 50  0001 C CNN
+F 3 "" H 8000 3350 50  0000 C CNN
+	1    8000 3350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3600 2900 4250 2900
+Wire Wire Line
+	3600 2900 3600 3300
+Wire Wire Line
+	5050 3750 5050 3600
+Wire Wire Line
+	5050 3600 5750 3600
+Wire Wire Line
+	5750 3600 5750 4150
+Wire Wire Line
+	5750 4150 6500 4150
+Wire Wire Line
+	6450 4150 6450 4100
+$Comp
+L D_Schottky_Small D1
+U 1 1 5775104D
+P 6900 3200
+F 0 "D1" H 6850 3280 50  0000 L CNN
+F 1 "D_Schottky_Small" H 7000 3300 50  0000 L CNN
+F 2 "Diodes_SMD:D_SMA_Standard" H 7100 3400 50  0000 C CNN
+F 3 "" V 6900 3200 50  0000 C CNN
+	1    6900 3200
+	0    1    1    0   
+$EndComp
+$Comp
+L CP C1
+U 1 1 577511A5
+P 3950 3250
+F 0 "C1" H 3975 3350 50  0000 L CNN
+F 1 "CP" H 3975 3150 50  0000 L CNN
+F 2 "Capacitors_SMD:CP_Elec_6.3x5.7" H 3988 3100 50  0001 C CNN
+F 3 "" H 3950 3250 50  0000 C CNN
+	1    3950 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L CP C4
+U 1 1 577511EF
+P 7650 3350
+F 0 "C4" H 7675 3450 50  0000 L CNN
+F 1 "CP" H 7675 3250 50  0000 L CNN
+F 2 "Capacitors_SMD:CP_Elec_6.3x5.7" H 7688 3200 50  0001 C CNN
+F 3 "" H 7650 3350 50  0000 C CNN
+	1    7650 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C3
+U 1 1 57751244
+P 4300 3650
+F 0 "C3" H 4325 3750 50  0000 L CNN
+F 1 "C" H 4325 3550 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 4338 3500 50  0001 C CNN
+F 3 "" H 4300 3650 50  0000 C CNN
+	1    4300 3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C2
+U 1 1 577512BB
+P 7450 3800
+F 0 "C2" H 7475 3900 50  0000 L CNN
+F 1 "C" H 7475 3700 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 7488 3650 50  0001 C CNN
+F 3 "" H 7450 3800 50  0000 C CNN
+	1    7450 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L INDUCTOR_SMALL L1
+U 1 1 57751411
+P 7300 2800
+F 0 "L1" H 7300 2900 50  0000 C CNN
+F 1 "INDUCTOR_SMALL" H 7300 2750 50  0000 C CNN
+F 2 "Inductors_SMD:L_12x12mm_h4.5mm" H 7300 2800 50  0001 C CNN
+F 3 "" H 7300 2800 50  0000 C CNN
+	1    7300 2800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6650 2350 6300 2350
+Wire Wire Line
+	6550 2650 6900 2650
+Wire Wire Line
+	7800 2800 7800 3300
+Wire Wire Line
+	7800 3400 7800 3650
+Wire Wire Line
+	5050 3300 5050 2300
+Wire Wire Line
+	5050 2300 6850 2300
+Wire Wire Line
+	6850 2300 6850 2650
+Connection ~ 6850 2650
+Connection ~ 4250 2900
+Wire Wire Line
+	3950 3100 3950 2900
+Connection ~ 3950 2900
+Wire Wire Line
+	3950 3400 3950 3650
+$Comp
+L POT-RESCUE-LM3485 RV1
+U 1 1 57751EEF
+P 7250 4050
+F 0 "RV1" H 7250 3950 50  0000 C CNN
+F 1 "POT" H 7250 4050 50  0000 C CNN
+F 2 "Potentiometers:Potentiometer_Trimmer_Bourns_3266Y" H 7250 4050 50  0001 C CNN
+F 3 "" H 7250 4050 50  0000 C CNN
+	1    7250 4050
+	0    1    1    0   
+$EndComp
+$Comp
+L GND #PWR01
+U 1 1 57752461
+P 3950 3650
+F 0 "#PWR01" H 3950 3400 50  0001 C CNN
+F 1 "GND" H 3950 3500 50  0000 C CNN
+F 2 "" H 3950 3650 50  0000 C CNN
+F 3 "" H 3950 3650 50  0000 C CNN
+	1    3950 3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR02
+U 1 1 577524D1
+P 7250 4850
+F 0 "#PWR02" H 7250 4600 50  0001 C CNN
+F 1 "GND" H 7250 4700 50  0000 C CNN
+F 2 "" H 7250 4850 50  0000 C CNN
+F 3 "" H 7250 4850 50  0000 C CNN
+	1    7250 4850
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR03
+U 1 1 57752509
+P 7800 3650
+F 0 "#PWR03" H 7800 3400 50  0001 C CNN
+F 1 "GND" H 7800 3500 50  0000 C CNN
+F 2 "" H 7800 3650 50  0000 C CNN
+F 3 "" H 7800 3650 50  0000 C CNN
+	1    7800 3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L BSS138 Q1
+U 1 1 57751537
+P 6350 2550
+F 0 "Q1" H 6550 2625 50  0000 L CNN
+F 1 "BSS138" H 6550 2550 50  0000 L CNN
+F 2 "TO_SOT_Packages_SMD:SOT-23" H 6550 2475 50  0000 L CIN
+F 3 "" H 6350 2550 50  0000 L CNN
+	1    6350 2550
+	0    1    1    0   
+$EndComp
+$Comp
+L GND #PWR04
+U 1 1 57752A53
+P 3600 3400
+F 0 "#PWR04" H 3600 3150 50  0001 C CNN
+F 1 "GND" H 3600 3250 50  0000 C CNN
+F 2 "" H 3600 3400 50  0000 C CNN
+F 3 "" H 3600 3400 50  0000 C CNN
+	1    3600 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L POT-RESCUE-LM3485 RV2
+U 1 1 57752CB5
+P 4650 3650
+F 0 "RV2" H 4650 3550 50  0000 C CNN
+F 1 "POT" H 4650 3650 50  0000 C CNN
+F 2 "Potentiometers:Potentiometer_Trimmer_Bourns_3266Y" H 4650 3650 50  0001 C CNN
+F 3 "" H 4650 3650 50  0000 C CNN
+	1    4650 3650
+	0    -1   -1   0   
+$EndComp
+$Comp
+L GND #PWR05
+U 1 1 5775329B
+P 6900 3350
+F 0 "#PWR05" H 6900 3100 50  0001 C CNN
+F 1 "GND" H 6900 3200 50  0000 C CNN
+F 2 "" H 6900 3350 50  0000 C CNN
+F 3 "" H 6900 3350 50  0000 C CNN
+	1    6900 3350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4300 3350 4300 3500
+Wire Wire Line
+	4300 3350 4650 3350
+Wire Wire Line
+	4650 3350 4650 3400
+Wire Wire Line
+	4300 3800 4300 4000
+Wire Wire Line
+	4300 4000 4500 4000
+Wire Wire Line
+	6450 4300 6450 4500
+Wire Wire Line
+	4500 4300 6450 4300
+Wire Wire Line
+	4450 3350 4450 3050
+Wire Wire Line
+	4450 3050 4250 3050
+Wire Wire Line
+	4250 3050 4250 2650
+Connection ~ 4450 3350
+Wire Wire Line
+	4250 2650 6150 2650
+Wire Wire Line
+	6450 3300 6450 3050
+Wire Wire Line
+	6450 3050 5400 3050
+Wire Wire Line
+	5400 3050 5400 2650
+Connection ~ 5400 2650
+Wire Wire Line
+	6450 3750 6650 3750
+Wire Wire Line
+	6650 3750 6650 2350
+Wire Wire Line
+	7550 2800 7800 2800
+Wire Wire Line
+	7650 3200 7800 3200
+Connection ~ 7800 3200
+Wire Wire Line
+	7800 3500 7650 3500
+Connection ~ 7800 3500
+$Comp
+L GND #PWR06
+U 1 1 5943CAA0
+P 6600 4100
+F 0 "#PWR06" H 6600 3850 50  0001 C CNN
+F 1 "GND" H 6600 3950 50  0000 C CNN
+F 2 "" H 6600 4100 50  0000 C CNN
+F 3 "" H 6600 4100 50  0000 C CNN
+	1    6600 4100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6500 4150 6500 4100
+Wire Wire Line
+	6500 4100 6600 4100
+Connection ~ 6450 4150
+$Comp
+L R Rvoltageset1
+U 1 1 5943CD1B
+P 7250 4550
+F 0 "Rvoltageset1" V 7330 4550 50  0000 C CNN
+F 1 "5k" V 7250 4550 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805" V 7180 4550 50  0001 C CNN
+F 3 "" H 7250 4550 50  0001 C CNN
+	1    7250 4550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7250 3800 7250 3600
+Wire Wire Line
+	7250 3600 7450 3600
+Wire Wire Line
+	7450 3600 7450 3650
+Wire Wire Line
+	7450 3950 7450 4350
+Wire Wire Line
+	7450 4050 7400 4050
+Connection ~ 7450 4050
+Wire Wire Line
+	7250 4700 7250 4850
+Wire Wire Line
+	5050 4500 5050 4900
+Wire Wire Line
+	5050 4900 6900 4900
+Wire Wire Line
+	6900 4900 6900 4350
+Wire Wire Line
+	7250 4400 7250 4300
+Wire Wire Line
+	6900 4350 7450 4350
+Wire Wire Line
+	7700 2800 7700 3050
+Wire Wire Line
+	7700 3050 7350 3050
+Wire Wire Line
+	7350 3050 7350 3600
+Connection ~ 7350 3600
+Connection ~ 7700 2800
+Wire Wire Line
+	4500 3650 4500 4300
+Connection ~ 4500 4000
+$Comp
+L R Radj1
+U 1 1 5943D238
+P 4650 4100
+F 0 "Radj1" V 4730 4100 50  0000 C CNN
+F 1 "470" V 4650 4100 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805" V 4580 4100 50  0001 C CNN
+F 3 "" H 4650 4100 50  0001 C CNN
+	1    4650 4100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4650 3900 4650 3950
+Wire Wire Line
+	4650 4250 4650 4300
+Connection ~ 4650 4300
+$Comp
+L CONN_01X01 J1
+U 1 1 5943D5BD
+P 7950 4200
+F 0 "J1" H 7950 4300 50  0000 C CNN
+F 1 "CONN_01X01" V 8050 4200 50  0000 C CNN
+F 2 "Socket_Strips:Socket_Strip_Straight_1x01_Pitch2.54mm" H 7950 4200 50  0001 C CNN
+F 3 "" H 7950 4200 50  0001 C CNN
+	1    7950 4200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7750 4200 7450 4200
+Connection ~ 7450 4200
+Wire Wire Line
+	6900 3350 6900 3300
+Wire Wire Line
+	6900 2650 6900 3100
+Wire Wire Line
+	7050 2800 6900 2800
+Connection ~ 6900 2800
+$EndSCHEMATC
