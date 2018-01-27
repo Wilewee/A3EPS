@@ -14,8 +14,8 @@
 /* Power mode */
 #define NORMAL_MODE		0x0
 #define PW_DOWN_1K		0x1
-#define PW_DOWN_100K	0x2
-#define PW_DOWN_500K	0x3
+#define PW_DOWN_100K		0x2
+#define PW_DOWN_500K		0x3
 
 typedef struct {
 	uint8_t address;
@@ -24,9 +24,9 @@ typedef struct {
 
 typedef struct {
 	uint8_t p_dacPM_REG;
-	uint16_t p_dacREG; // mV
+	uint16_t p_dacREG;
 	uint8_t p_dacPM_EEPROM;
-	uint16_t p_dacEEPROM; // mV
+	uint16_t p_dacEEPROM;
 } MCP4725_ReadValues;
 
 HAL_StatusTypeDef MCP4725_WriteFast(I2C_HandleTypeDef* p_hi2c, MCP4725_Handle p_dev, uint16_t p_dacIn);
