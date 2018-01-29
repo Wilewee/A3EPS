@@ -1,22 +1,43 @@
 # STM32 INA139 + Voltage Divider
-STM32 firmware to use the High-Side Measurement Current Shunt Monitor INA1x9 from Texas Instruments. Also includes voltage divider for bus-voltage measurement.
+STM32 code to use the High-Side Measurement Current Shunt Monitor INA1x9 from Texas Instruments. Also includes a voltage divider for bus-voltage measurement.
 
 ## Installation
-This guide will explain step-by-step how to include and use firmware. The example will show how to perform high-side current and voltage measurement every 500 ms using Nucleo-F446RE board. The A/D conversions will be controlled by DMA and conversion rate is timed with timer.
+This guide will explain step-by-step how to include and use the code. The example will show how to perform a high-side current and voltage measurement every 500 ms using Nucleo-F446RE board. The A/D conversions will be controlled by a DMA controller and conversion rate is timed with a timer.
 
 ### ADC, DMA and timer set-up with CubeMX
-First, select two ADC pins: one for current measurement (IN0) and other for voltage measurement (IN1). Also, enable timer TIM2 (or other timer which has TRGO line connected to ADC1), which will drive ADC peripheral.
+First, select two ADC pins: one for current measurement (IN0) and other for voltage measurement (IN1). Also, enable a timer TIM2 (or other timer which has TRGO line connected to ADC1), which will drive the ADC peripheral.
 
 ![pinout](https://user-images.githubusercontent.com/34322137/35531630-31ad51e6-0540-11e8-8c1d-88e3fcbbb836.png)
 **Figure 1.** Pinout selection.
 
-Next, go into "configuration"-tab and press ADC1 button. New menu will open where all configuration concerning ADC and DMA will be performed:
-- Because we have two ADC channels selected, set **Number of Conversion** field to two (2). This will create two **Rank** fields according to specified number of channels. Assign rank 1 to channel 0 (IN0) and rank 2 to channel 1 (IN1).
-- Next, we will choose sampling time for each channel. Total A/D conversion time is affected by resolution, clock prescaler and sampling time per channel. Conversion time is calculated according to the Equation 1. Because we want to measure current and voltage every 500 ms, we can choose slowest **Sampling time** (480 cycles) for all channels. We also want highest **Resolution** (12 bit) and we can leave **Clock prescaler** to default (4). Therefore, our total conversion time is about 23 us, which is more than enough.
+We will leave a clock tree alone and use the default values (84 MHz).
+
+Next, select the "configuration"-tab and press an ADC1 button. New menu will pop-up where all configuration concerning ADC and DMA will be performed (Figure 2):
+- Because we have two ADC channels selected, set **Number of Conversion** field to two (2). This will create two **Rank** fields according to specified number of channels. A rank is a logical index, which can be used to reorder input channels to form custom sampling sequences. Assign rank 1 to channel 0 (IN0) and rank 2 to channel 1 (IN1).
+- Next, we will choose sampling time for each channel. Total A/D conversion time is affected by a clock speed on AHB bus (where ADC sits), resolution, clock prescaler and sampling time per channel. Conversion time is calculated according to the Equation 1. Because we want to measure current and voltage every 500 ms, we can choose slowest **Sampling Time** (480 cycles) for all channels. We also want highest **Resolution** (12 bit) and we can leave **Clock Prescaler** to default (4). Therefore, our total conversion time is about 23 us, which is more than enough.
 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/34322137/35534124-337b9e58-0548-11e8-8e52-93ef69730919.gif">
 </p>
 
 **Equation 1.** A/D conversion time. ADCCLK is in MHz (cycles / us).
-- After setting conversion time for ADC channels, we need to choose conversion mode and setup DMA. 
+- After setting conversion time for ADC channels, we need to choose a conversion mode. Because we have multiple A/D channels, enable **Scan Conversion Mode** and set **EOC Flag** to fire after all channels have finished with conversions. Because ADC is triggered by a timer, make sure that **Continuous** and **Discontinuos** conversion modes are disabled.
+- Finally, let's configure DMA. Go into "DMA settings"-tab and enable a DMA request for ADC1. Make sure that DMA is in **circular** mode (and enable **DMA Continuous Requests** in "paramater settings"-tab), because we want to perform two conversion every 500 ms. Also, check **increment memory address**-box. The ADC results will be stored in an array and we want that memory increments address automatically. Lastly, set data width to **Half Word** (16 bits) so that 12 bits of A/D conversion result can fit the array.
+- Only thing left to do is to enable external triggering by a timer. In "parameter settings"-tab choose **Timer 2 Trigger Out event** for external trigger conversion source and make sure that the DMA controller triggers on rising edge.
+
+![adc_configuration](https://user-images.githubusercontent.com/34322137/35538475-b4421540-0556-11e8-87f8-5b304a11127c.png)
+**Figure 2.** ADC configuration.
+
+Lastly, we will set up a timer. In "configuration"-tab, press a TIM2 button. A pop-up menu, as in Figure 3, will appear. Here, we will choose how often the timer triggers with Equation 2. Because, we want to timer to trigger each 500 ms, we choose prescaler value 41999 and counter period 999, which equals 2 Hz according to Equation 2. The counter will count up and trigger  **update event** on the TRGO line.
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/34322137/35538652-5c66f9ca-0557-11e8-8481-a2068f60c983.gif">
+</p>
+
+
+**Equation 2.** Update event frequency. TIMCLK is in Hz.
+
+![timer](https://user-images.githubusercontent.com/34322137/35538844-eb976f58-0557-11e8-8154-3c7ae1d0bea5.png)
+**Figure 3.** Timer configuration.
+
+### Example
