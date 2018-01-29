@@ -1,8 +1,8 @@
 # STM32 MCP4725
-STM32 firmware to use the CJMCU-I2C DAC Breakout - MCP4725 module development board.
+STM32 code to use the CJMCU-I2C DAC Breakout - MCP4725 module development board.
 
 ## Installation
-To use this code, you need to generate base code for your STM32 micro with STM32CubeMX. After that you can simply insert mcp4725.c file into Src-folder and mcp4725.h file into Inc-folder. Include mcp4725.h in main.c and installation is done.
+To use this code, you need to generate a base code for your STM32 micro with STM32CubeMX (**TODO!!**). After that you can simply insert mcp4725.c file into Src-folder and mcp4725.h file into Inc-folder. Include mcp4725.h in main.c and installation is done.
 
 ## Example
 Here is a simple usage example
@@ -21,4 +21,4 @@ MCP4725_Read(&hi2c1, hdac1, &dac1_out);
 ```
 
 ## Notes
-There is some misunderstanding which I2C address you should use to communicate with MCP4725 module. In MCP4725 official datasheet, the default address is 0x60 (A0 to GND). However, this address is incorrect and instead you should use 0x62 (A0 to GND) or 0x63 (A0 to VCC).
+There is some misunderstanding which I2C address you should use to communicate with the MCP4725 module. In a official datasheet, the default address is 0x60 (A0 to GND). However, this address is incorrect and instead you should use 0x62 (A0 to GND) or 0x63 (A0 to VCC).
