@@ -1,0 +1,316 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:switches
+LIBS:relays
+LIBS:motors
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:Custom_Library
+LIBS:Bottom_side-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 19 25
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L TPS54302 U5
+U 1 1 5A5E4AD0
+P 4900 3200
+AR Path="/5A57B54F/5A5E496B/5A5E4AD0" Ref="U5"  Part="1" 
+AR Path="/5A57B54F/5A5E5DCC/5A5E4AD0" Ref="U6"  Part="1" 
+F 0 "U5" H 4900 3400 60  0000 C CNN
+F 1 "TPS54302" H 4900 3300 60  0000 C CNN
+F 2 "TO_SOT_Packages_SMD:SOT-23-6_Handsoldering" H 4900 3400 60  0001 C CNN
+F 3 "" H 4900 3400 60  0001 C CNN
+	1    4900 3200
+	1    0    0    -1  
+$EndComp
+$Comp
+L C CVCCbuck1
+U 1 1 5A5E4AD1
+P 4000 3400
+AR Path="/5A57B54F/5A5E496B/5A5E4AD1" Ref="CVCCbuck1"  Part="1" 
+AR Path="/5A57B54F/5A5E5DCC/5A5E4AD1" Ref="CVCCbuck2"  Part="1" 
+F 0 "CVCCbuck1" H 4025 3500 50  0000 L CNN
+F 1 "10u" H 4025 3300 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 4038 3250 50  0001 C CNN
+F 3 "" H 4000 3400 50  0001 C CNN
+	1    4000 3400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3650 3250 4450 3250
+Connection ~ 4000 3250
+Wire Wire Line
+	4000 3550 4200 3550
+Wire Wire Line
+	4200 3550 4200 3450
+Wire Wire Line
+	4200 3450 4450 3450
+Text Notes 4150 4400 0    60   ~ 0
+Float EN to enable\nPull LOW to disable\nMIGHT BE GOOD TO USE AS OUTPUT CONTROL?\n
+$Comp
+L C Cboot1
+U 1 1 5A5E4AD2
+P 5600 3400
+AR Path="/5A57B54F/5A5E496B/5A5E4AD2" Ref="Cboot1"  Part="1" 
+AR Path="/5A57B54F/5A5E5DCC/5A5E4AD2" Ref="Cboot2"  Part="1" 
+F 0 "Cboot1" H 5625 3500 50  0000 L CNN
+F 1 ".1uF" H 5625 3300 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 5638 3250 50  0001 C CNN
+F 3 "" H 5600 3400 50  0001 C CNN
+	1    5600 3400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5400 3550 5850 3550
+Wire Wire Line
+	5400 3550 5400 3450
+Wire Wire Line
+	5400 3450 5350 3450
+Wire Wire Line
+	5600 3250 5350 3250
+$Comp
+L L 5V_ind1
+U 1 1 5A5E4AD3
+P 6000 3550
+AR Path="/5A57B54F/5A5E496B/5A5E4AD3" Ref="5V_ind1"  Part="1" 
+AR Path="/5A57B54F/5A5E5DCC/5A5E4AD3" Ref="5V_ind2"  Part="1" 
+F 0 "5V_ind1" V 5950 3550 50  0000 C CNN
+F 1 "10u" V 6075 3550 50  0000 C CNN
+F 2 "Inductors_SMD:L_10.4x10.4_H4.8" H 6000 3550 50  0001 C CNN
+F 3 "" H 6000 3550 50  0001 C CNN
+	1    6000 3550
+	0    -1   -1   0   
+$EndComp
+$Comp
+L R R_fb_hi1
+U 1 1 5A5E4AD4
+P 6300 3700
+AR Path="/5A57B54F/5A5E496B/5A5E4AD4" Ref="R_fb_hi1"  Part="1" 
+AR Path="/5A57B54F/5A5E5DCC/5A5E4AD4" Ref="R_fb_hi2"  Part="1" 
+F 0 "R_fb_hi1" V 6380 3700 50  0000 C CNN
+F 1 "R" V 6300 3700 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 6230 3700 50  0001 C CNN
+F 3 "" H 6300 3700 50  0001 C CNN
+	1    6300 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R_fb_lo1
+U 1 1 5A5E4AD5
+P 6300 4100
+AR Path="/5A57B54F/5A5E496B/5A5E4AD5" Ref="R_fb_lo1"  Part="1" 
+AR Path="/5A57B54F/5A5E5DCC/5A5E4AD5" Ref="R_fb_lo2"  Part="1" 
+F 0 "R_fb_lo1" V 6380 4100 50  0000 C CNN
+F 1 "R" V 6300 4100 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 6230 4100 50  0001 C CNN
+F 3 "" H 6300 4100 50  0001 C CNN
+	1    6300 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L C CBulk1
+U 1 1 5A5E4AD6
+P 6600 3700
+AR Path="/5A57B54F/5A5E496B/5A5E4AD6" Ref="CBulk1"  Part="1" 
+AR Path="/5A57B54F/5A5E5DCC/5A5E4AD6" Ref="CBulk3"  Part="1" 
+F 0 "CBulk1" H 6450 3900 50  0000 L CNN
+F 1 "C" H 6625 3600 50  0000 L CNN
+F 2 "Capacitors_Tantalum_SMD:CP_Tantalum_Case-C_EIA-6032-28_Hand" H 6638 3550 50  0001 C CNN
+F 3 "" H 6600 3700 50  0001 C CNN
+	1    6600 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L C CBulk2
+U 1 1 5A5E4AD7
+P 6800 3700
+AR Path="/5A57B54F/5A5E496B/5A5E4AD7" Ref="CBulk2"  Part="1" 
+AR Path="/5A57B54F/5A5E5DCC/5A5E4AD7" Ref="CBulk4"  Part="1" 
+F 0 "CBulk2" H 6750 3900 50  0000 L CNN
+F 1 "C" H 6825 3600 50  0000 L CNN
+F 2 "Capacitors_Tantalum_SMD:CP_Tantalum_Case-C_EIA-6032-28_Hand" H 6838 3550 50  0001 C CNN
+F 3 "" H 6800 3700 50  0001 C CNN
+	1    6800 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR055
+U 1 1 5A5E4AD8
+P 6600 4350
+AR Path="/5A57B54F/5A5E496B/5A5E4AD8" Ref="#PWR055"  Part="1" 
+AR Path="/5A57B54F/5A5E5DCC/5A5E4AD8" Ref="#PWR060"  Part="1" 
+F 0 "#PWR060" H 6600 4100 50  0001 C CNN
+F 1 "GND" H 6600 4200 50  0000 C CNN
+F 2 "" H 6600 4350 50  0001 C CNN
+F 3 "" H 6600 4350 50  0001 C CNN
+	1    6600 4350
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR056
+U 1 1 5A5E4AD9
+P 6300 4350
+AR Path="/5A57B54F/5A5E496B/5A5E4AD9" Ref="#PWR056"  Part="1" 
+AR Path="/5A57B54F/5A5E5DCC/5A5E4AD9" Ref="#PWR061"  Part="1" 
+F 0 "#PWR061" H 6300 4100 50  0001 C CNN
+F 1 "GND" H 6300 4200 50  0000 C CNN
+F 2 "" H 6300 4350 50  0001 C CNN
+F 3 "" H 6300 4350 50  0001 C CNN
+	1    6300 4350
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR057
+U 1 1 5A5E4ADA
+P 6800 4350
+AR Path="/5A57B54F/5A5E496B/5A5E4ADA" Ref="#PWR057"  Part="1" 
+AR Path="/5A57B54F/5A5E5DCC/5A5E4ADA" Ref="#PWR062"  Part="1" 
+F 0 "#PWR062" H 6800 4100 50  0001 C CNN
+F 1 "GND" H 6800 4200 50  0000 C CNN
+F 2 "" H 6800 4350 50  0001 C CNN
+F 3 "" H 6800 4350 50  0001 C CNN
+	1    6800 4350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6600 4350 6600 3850
+Wire Wire Line
+	6800 3850 6800 4350
+Wire Wire Line
+	6300 4350 6300 4250
+Wire Wire Line
+	6300 3850 6300 3950
+Wire Wire Line
+	6150 3550 7450 3550
+Connection ~ 6600 3550
+Connection ~ 6300 3550
+Connection ~ 5600 3550
+Wire Wire Line
+	5350 3650 5950 3650
+Wire Wire Line
+	5950 3650 5950 3900
+Wire Wire Line
+	5950 3900 6300 3900
+Connection ~ 6300 3900
+Connection ~ 6800 3550
+$Comp
+L GND #PWR058
+U 1 1 5A5E4ADE
+P 4200 3550
+AR Path="/5A57B54F/5A5E496B/5A5E4ADE" Ref="#PWR058"  Part="1" 
+AR Path="/5A57B54F/5A5E5DCC/5A5E4ADE" Ref="#PWR063"  Part="1" 
+F 0 "#PWR063" H 4200 3300 50  0001 C CNN
+F 1 "GND" H 4200 3400 50  0000 C CNN
+F 2 "" H 4200 3550 50  0001 C CNN
+F 3 "" H 4200 3550 50  0001 C CNN
+	1    4200 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R_en_div_high1
+U 1 1 5A5E4EB0
+P 3850 3900
+AR Path="/5A57B54F/5A5E496B/5A5E4EB0" Ref="R_en_div_high1"  Part="1" 
+AR Path="/5A57B54F/5A5E5DCC/5A5E4EB0" Ref="R_en_div_high2"  Part="1" 
+F 0 "R_en_div_high1" V 3750 4000 50  0000 C CNN
+F 1 "R" V 3850 3900 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 3780 3900 50  0001 C CNN
+F 3 "" H 3850 3900 50  0001 C CNN
+	1    3850 3900
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R_en_div_low1
+U 1 1 5A5E50C3
+P 3850 4300
+AR Path="/5A57B54F/5A5E496B/5A5E50C3" Ref="R_en_div_low1"  Part="1" 
+AR Path="/5A57B54F/5A5E5DCC/5A5E50C3" Ref="R_en_div_low2"  Part="1" 
+F 0 "R_en_div_low1" V 4050 4200 50  0000 C CNN
+F 1 "R" V 3850 4300 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 3780 4300 50  0001 C CNN
+F 3 "" H 3850 4300 50  0001 C CNN
+	1    3850 4300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3850 4150 3850 4050
+Wire Wire Line
+	3500 4100 4450 4100
+Wire Wire Line
+	4450 4100 4450 3650
+Connection ~ 3850 4100
+Wire Wire Line
+	3850 4450 3850 4550
+$Comp
+L GND #PWR059
+U 1 1 5A5E5227
+P 3850 4550
+AR Path="/5A57B54F/5A5E496B/5A5E5227" Ref="#PWR059"  Part="1" 
+AR Path="/5A57B54F/5A5E5DCC/5A5E5227" Ref="#PWR064"  Part="1" 
+F 0 "#PWR064" H 3850 4300 50  0001 C CNN
+F 1 "GND" H 3850 4400 50  0000 C CNN
+F 2 "" H 3850 4550 50  0001 C CNN
+F 3 "" H 3850 4550 50  0001 C CNN
+	1    3850 4550
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R_enable1
+U 1 1 5A5E5285
+P 3500 4250
+AR Path="/5A57B54F/5A5E496B/5A5E5285" Ref="R_enable1"  Part="1" 
+AR Path="/5A57B54F/5A5E5DCC/5A5E5285" Ref="R_enable2"  Part="1" 
+F 0 "R_enable1" V 3580 4250 50  0000 C CNN
+F 1 "R" V 3500 4250 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 3430 4250 50  0001 C CNN
+F 3 "" H 3500 4250 50  0001 C CNN
+	1    3500 4250
+	1    0    0    -1  
+$EndComp
+Text HLabel 3500 4400 3    60   Input ~ 0
+ENABLE_5V
+Wire Wire Line
+	3850 3750 3850 3250
+Connection ~ 3850 3250
+Text HLabel 3650 3250 0    60   Input ~ 0
+Vin
+Text HLabel 7450 3550 2    60   Input ~ 0
+5V_OUT
+$EndSCHEMATC
