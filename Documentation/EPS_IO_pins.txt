@@ -32,3 +32,7 @@ Enable 5V1
 Enable 5V2
 
 Main Power SW
+
+Bus:
+I2C
+CAN
