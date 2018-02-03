@@ -1,0 +1,38 @@
+ADC:
+
+Vin1
+Vin2
+Vin3
+
+Iin1
+Iin2
+Iin3
+
+Iout1
+Iout2
+Iout3
+
+Vbatt1 (1 cell)
+Vbatt
+
+Iout5V1
+Iout5V2
+IoutVbatt1
+IoutVbatt2
+
+Optional:
+Vout5V1
+Vout5V2
+
+
+I/O:
+Enable Vbatt1
+Enable Vbatt2
+Enable 5V1
+Enable 5V2
+
+Main Power SW
+
+Bus:
+I2C
+CAN
