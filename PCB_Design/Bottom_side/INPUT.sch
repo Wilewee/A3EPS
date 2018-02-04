@@ -1,9 +1,6 @@
 EESchema Schematic File Version 2
 LIBS:power
 LIBS:device
-LIBS:switches
-LIBS:relays
-LIBS:motors
 LIBS:transistors
 LIBS:conn
 LIBS:linear
@@ -31,12 +28,12 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:Bottom_side-cache
+LIBS:Full_PCB-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 2 26
+Sheet 3 26
 Title ""
 Date ""
 Rev ""
@@ -79,9 +76,6 @@ F7 "I_in_3" I L 3900 2300 60
 F8 "FB3" I L 3900 3550 60 
 F9 "I_out_2" I R 5250 2150 60 
 F10 "I_out_3" I R 5250 2300 60 
-F11 "PWM1" I L 3900 2650 60 
-F12 "PWM2" I L 3900 2750 60 
-F13 "PWM3" I L 3900 2850 60 
 $EndSheet
 $Sheet
 S 3950 4450 1300 750 
@@ -150,6 +144,8 @@ $Comp
 L R R_BDIV_H1
 U 1 1 5A5EF949
 P 7700 2750
+AR Path="/5A57B48D/5A5EF949" Ref="R_BDIV_H1"  Part="1" 
+AR Path="/5A799B71/5A77D148/5A5EF949" Ref="R_BDIV_H1"  Part="1" 
 F 0 "R_BDIV_H1" V 7780 2750 50  0000 C CNN
 F 1 "220k" V 7700 2750 50  0000 C CNN
 F 2 "Resistors_SMD:R_0603" V 7630 2750 50  0001 C CNN
@@ -161,6 +157,8 @@ $Comp
 L R R_BDIV_L1
 U 1 1 5A5EFA6C
 P 7700 3150
+AR Path="/5A57B48D/5A5EFA6C" Ref="R_BDIV_L1"  Part="1" 
+AR Path="/5A799B71/5A77D148/5A5EFA6C" Ref="R_BDIV_L1"  Part="1" 
 F 0 "R_BDIV_L1" V 7780 3150 50  0000 C CNN
 F 1 "100k" V 7700 3150 50  0000 C CNN
 F 2 "Resistors_SMD:R_0603" V 7630 3150 50  0001 C CNN
@@ -172,6 +170,8 @@ $Comp
 L GND #PWR01
 U 1 1 5A5EFD29
 P 7700 3400
+AR Path="/5A57B48D/5A5EFD29" Ref="#PWR01"  Part="1" 
+AR Path="/5A799B71/5A77D148/5A5EFD29" Ref="#PWR01"  Part="1" 
 F 0 "#PWR01" H 7700 3150 50  0001 C CNN
 F 1 "GND" H 7700 3250 50  0000 C CNN
 F 2 "" H 7700 3400 50  0001 C CNN
@@ -269,7 +269,11 @@ Wire Wire Line
 	1850 3550 1950 3550
 Wire Wire Line
 	3850 5100 3950 5100
+Wire Wire Line
+	7400 2300 7400 2600
 Connection ~ 7400 2300
+Wire Wire Line
+	7400 2600 7700 2600
 Wire Wire Line
 	7700 3300 7700 3400
 Wire Wire Line
@@ -289,20 +293,4 @@ Wire Wire Line
 	7400 2150 7400 2000
 Connection ~ 7400 2000
 Connection ~ 7400 2150
-Text GLabel 7700 2450 2    60   Input ~ 0
-Battery_+
-Wire Wire Line
-	7700 2450 7700 2600
-Text HLabel 3800 2650 0    60   Input ~ 0
-PWM1
-Wire Wire Line
-	3800 2650 3900 2650
-Text HLabel 3800 2750 0    60   Input ~ 0
-PWM2
-Text HLabel 3800 2850 0    60   Input ~ 0
-PWM3
-Wire Wire Line
-	3800 2750 3900 2750
-Wire Wire Line
-	3900 2850 3800 2850
 $EndSCHEMATC

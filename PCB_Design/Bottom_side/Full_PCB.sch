@@ -33,7 +33,7 @@ EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 3
+Sheet 1 26
 Title ""
 Date ""
 Rev ""
@@ -48,5 +48,11 @@ S 2100 1650 2400 4250
 U 5A799B71
 F0 "Bottom_Layer" 60
 F1 "Bottom_Layer.sch" 60
+$EndSheet
+$Sheet
+S 5900 1650 2450 4300
+U 5A77505C
+F0 "TopLayers" 60
+F1 "Top_Layer.sch" 60
 $EndSheet
 $EndSCHEMATC

@@ -1,9 +1,6 @@
 EESchema Schematic File Version 2
 LIBS:power
 LIBS:device
-LIBS:switches
-LIBS:relays
-LIBS:motors
 LIBS:transistors
 LIBS:conn
 LIBS:linear
@@ -31,7 +28,7 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:Bottom_side-cache
+LIBS:Full_PCB-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
@@ -54,7 +51,6 @@ F1 "MAX668.sch" 60
 F2 "I_in" I L 2100 1550 60 
 F3 "I_out" I R 2900 1550 60 
 F4 "FB" I L 2100 2000 60 
-F5 "PWM_CTRL" I L 2100 1800 60 
 $EndSheet
 Text HLabel 1300 1500 0    60   Input ~ 0
 I_in_1
@@ -148,33 +144,19 @@ Wire Wire Line
 $Sheet
 S 2100 2500 800  1050
 U 5A68364F
-F0 "MAX668_2" 60
+F0 "MAX668" 60
 F1 "MAX668.sch" 60
 F2 "I_in" I L 2100 2850 60 
 F3 "I_out" I R 2900 2850 60 
 F4 "FB" I L 2100 3300 60 
-F5 "PWM_CTRL" I L 2100 3100 60 
 $EndSheet
 $Sheet
 S 2100 3750 800  1050
 U 5A683771
-F0 "MAX668_3" 60
+F0 "MAX668" 60
 F1 "MAX668.sch" 60
 F2 "I_in" I L 2100 4100 60 
 F3 "I_out" I R 2900 4100 60 
 F4 "FB" I L 2100 4550 60 
-F5 "PWM_CTRL" I L 2100 4350 60 
 $EndSheet
-Text HLabel 1950 1800 0    60   Input ~ 0
-PWM1
-Wire Wire Line
-	1950 1800 2100 1800
-Text HLabel 1950 3100 0    60   Input ~ 0
-PWM2
-Wire Wire Line
-	1950 3100 2100 3100
-Text HLabel 1900 4350 0    60   Input ~ 0
-PWM3
-Wire Wire Line
-	1900 4350 2100 4350
 $EndSCHEMATC

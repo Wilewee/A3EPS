@@ -29,11 +29,12 @@ LIBS:atmel
 LIBS:contrib
 LIBS:valves
 LIBS:Full_PCB-cache
+LIBS:Bottom_side-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 3
+Sheet 1 7
 Title ""
 Date ""
 Rev ""
@@ -43,10 +44,4 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-$Sheet
-S 2100 1650 2400 4250
-U 5A799B71
-F0 "Bottom_Layer" 60
-F1 "Bottom_Layer.sch" 60
-$EndSheet
 $EndSCHEMATC

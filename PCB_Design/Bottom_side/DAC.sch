@@ -1,9 +1,6 @@
 EESchema Schematic File Version 2
 LIBS:power
 LIBS:device
-LIBS:switches
-LIBS:relays
-LIBS:motors
 LIBS:transistors
 LIBS:conn
 LIBS:linear
@@ -31,7 +28,7 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:Bottom_side-cache
+LIBS:Full_PCB-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
@@ -73,10 +70,10 @@ Wire Wire Line
 Wire Wire Line
 	3650 2500 4100 2500
 $Comp
-L GND #PWR047
+L GND #PWR041
 U 1 1 5A57FCC2
 P 3900 2800
-F 0 "#PWR047" H 3900 2550 50  0001 C CNN
+F 0 "#PWR041" H 3900 2550 50  0001 C CNN
 F 1 "GND" H 3900 2650 50  0000 C CNN
 F 2 "" H 3900 2800 50  0001 C CNN
 F 3 "" H 3900 2800 50  0001 C CNN
@@ -96,10 +93,10 @@ F 3 "" H 3650 2650 50  0001 C CNN
 $EndComp
 Connection ~ 3900 2500
 $Comp
-L GND #PWR048
+L GND #PWR042
 U 1 1 5A57FCFF
 P 3650 2800
-F 0 "#PWR048" H 3650 2550 50  0001 C CNN
+F 0 "#PWR042" H 3650 2550 50  0001 C CNN
 F 1 "GND" H 3650 2650 50  0000 C CNN
 F 2 "" H 3650 2800 50  0001 C CNN
 F 3 "" H 3650 2800 50  0001 C CNN
@@ -127,21 +124,21 @@ Wire Wire Line
 	5050 3350 5050 2950
 NoConn ~ 4700 3450
 $Comp
-L GND #PWR049
+L GND #PWR043
 U 1 1 5A57FDA0
 P 4100 3650
-F 0 "#PWR049" H 4100 3400 50  0001 C CNN
+F 0 "#PWR043" H 4100 3400 50  0001 C CNN
 F 1 "GND" H 4100 3500 50  0000 C CNN
 F 2 "" H 4100 3650 50  0001 C CNN
 F 3 "" H 4100 3650 50  0001 C CNN
 	1    4100 3650
 	1    0    0    -1  
 $EndComp
-Text HLabel 5050 2950 1    60   Input ~ 0
+Text HLabel 4850 2950 1    60   Input ~ 0
 Dac_1
 Text HLabel 4950 2950 1    60   Input ~ 0
 Dac_2
-Text HLabel 4850 2950 1    60   Input ~ 0
+Text HLabel 5050 2950 1    60   Input ~ 0
 Dac_3
 Text HLabel 3250 3150 0    60   Input ~ 0
 scl

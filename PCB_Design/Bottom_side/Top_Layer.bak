@@ -43,10 +43,4 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-$Sheet
-S 2100 1650 2400 4250
-U 5A799B71
-F0 "Bottom_Layer" 60
-F1 "Bottom_Layer.sch" 60
-$EndSheet
 $EndSCHEMATC
