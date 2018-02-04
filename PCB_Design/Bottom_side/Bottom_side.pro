@@ -1,4 +1,4 @@
-update=24.1.2018 23.06.26
+update=3.2.2018 23.37.46
 version=1
 last_client=kicad
 [pcbnew]
@@ -27,7 +27,7 @@ NetIExt=net
 version=1
 [eeschema]
 version=1
-LibDir=
+LibDir=../../PCB_Design;Battery_Holder_Lib.pretty
 [eeschema/libraries]
 LibName1=power
 LibName2=device
@@ -61,4 +61,3 @@ LibName29=opto
 LibName30=atmel
 LibName31=contrib
 LibName32=valves
-LibName33=C:/Users/ville/Documents/GitHub/A3EPS/Custom_Library

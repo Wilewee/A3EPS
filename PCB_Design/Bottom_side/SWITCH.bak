@@ -31,13 +31,12 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:Custom_Library
 LIBS:Bottom_side-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 16 25
+Sheet 16 26
 Title ""
 Date ""
 Rev ""
@@ -80,8 +79,6 @@ F 3 "" H 3700 1800 50  0000 C CNN
 	1    3700 1800
 	0    1    1    0   
 $EndComp
-Text Notes 2900 2350 0    60   ~ 0
-Optional diode\n
 Text Notes 3850 3300 0    60   ~ 0
 THESE TWO SWITCHES \nCAN BE CONTROLLED BY MCU
 $Comp
@@ -95,8 +92,8 @@ F 3 "" H 3700 2000 50  0000 C CNN
 	1    3700 2000
 	0    1    1    0   
 $EndComp
-Text Notes 2750 2900 0    60   ~ 0
-No MCU control\nOnly RBF
+Text Notes 1900 1500 0    60   ~ 0
+First RBF switch cuts all power
 Wire Wire Line
 	4300 2500 4100 2500
 Wire Wire Line
@@ -154,7 +151,7 @@ Wire Wire Line
 Wire Wire Line
 	4500 950  4500 800 
 Text Notes 4950 1900 0    60   ~ 0
-MCU high impedance => ON\nMCU pull to ground => OFF
+MCU high impedance / high => ON\nMCU pull to ground => OFF
 $Comp
 L R RDivLo1
 U 1 1 5A584A01
@@ -172,10 +169,10 @@ Wire Wire Line
 	3550 1800 3500 1800
 Connection ~ 3500 1800
 $Comp
-L GND #PWR053
+L GND #PWR059
 U 1 1 5A584A02
 P 4250 1800
-F 0 "#PWR053" H 4250 1550 50  0001 C CNN
+F 0 "#PWR059" H 4250 1550 50  0001 C CNN
 F 1 "GND" H 4250 1650 50  0000 C CNN
 F 2 "" H 4250 1800 50  0001 C CNN
 F 3 "" H 4250 1800 50  0001 C CNN
@@ -189,8 +186,8 @@ Wire Wire Line
 Wire Wire Line
 	4800 1700 4800 1550
 Connection ~ 3900 1800
-Text Notes 3650 1650 0    60   ~ 0
-Voltage divider\n3.6V max
+Text Notes 3650 1550 0    60   ~ 0
+Voltage divider\n3.6V max\nFor MCU safety
 Text HLabel 2200 2500 0    60   Input ~ 0
 Vin
 Text HLabel 2450 1850 1    60   Input ~ 0
@@ -252,10 +249,10 @@ F 3 "" H 3400 3800 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR054
+L GND #PWR060
 U 1 1 5A70AB37
 P 3750 4150
-F 0 "#PWR054" H 3750 3900 50  0001 C CNN
+F 0 "#PWR060" H 3750 3900 50  0001 C CNN
 F 1 "GND" H 3750 4000 50  0000 C CNN
 F 2 "" H 3750 4150 50  0001 C CNN
 F 3 "" H 3750 4150 50  0001 C CNN
@@ -330,4 +327,10 @@ Wire Wire Line
 Wire Wire Line
 	3150 3650 3150 3800
 Connection ~ 3150 3800
+Text Notes 4150 3950 0    60   ~ 0
+Dual switch for redundancy
+Text Notes 3950 2300 0    60   ~ 0
+Two switches required by CubeSat standard safety requirements
+Text Notes 4650 950  0    60   ~ 0
+Second RBF switch cuts battery output
 $EndSCHEMATC

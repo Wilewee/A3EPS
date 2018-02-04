@@ -31,13 +31,12 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:Custom_Library
 LIBS:Bottom_side-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 12 25
+Sheet 12 26
 Title ""
 Date ""
 Rev ""
@@ -47,7 +46,7 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-Text Notes 4050 2600 0    60   ~ 0
+Text Notes 4000 2500 0    60   ~ 0
 This includes the 3 INA139 for boost output (charging) current measurement
 Text HLabel 1050 1600 0    60   Input ~ 0
 I_in_1
@@ -55,11 +54,11 @@ Text HLabel 1050 2750 0    60   Input ~ 0
 I_in_2
 Text HLabel 1050 3800 0    60   Input ~ 0
 I_in_3
-Text HLabel 4150 1550 2    60   Input ~ 0
+Text HLabel 5250 1550 2    60   Input ~ 0
 I_out_1
-Text HLabel 4150 2700 2    60   Input ~ 0
+Text HLabel 5350 2650 2    60   Input ~ 0
 I_out_2
-Text HLabel 4150 3750 2    60   Input ~ 0
+Text HLabel 5350 3700 2    60   Input ~ 0
 I_out_3
 Text HLabel 2350 1350 0    60   Input ~ 0
 3V3
@@ -80,9 +79,7 @@ Text HLabel 2350 3450 0    60   Input ~ 0
 Wire Wire Line
 	2350 3450 2550 3450
 Wire Wire Line
-	3650 2650 4150 2650
-Wire Wire Line
-	4150 2650 4150 2700
+	3650 2650 4800 2650
 Wire Wire Line
 	1050 2750 2300 2750
 Wire Wire Line
@@ -96,9 +93,7 @@ Wire Wire Line
 Wire Wire Line
 	2450 3700 2550 3700
 Wire Wire Line
-	3650 3700 4150 3700
-Wire Wire Line
-	4150 3700 4150 3750
+	3650 3700 4800 3700
 Text HLabel 2450 1850 0    60   Input ~ 0
 Cur_1_out
 Wire Wire Line
@@ -128,7 +123,7 @@ $EndSheet
 $Sheet
 S 2550 2200 1100 800 
 U 5A68448E
-F0 "INA_out" 60
+F0 "INA_out_2" 60
 F1 "INA_out.sch" 60
 F2 "3V3" I L 2550 2400 60 
 F3 "I_in" I L 2550 2650 60 
@@ -138,11 +133,139 @@ $EndSheet
 $Sheet
 S 2550 3250 1100 800 
 U 5A6847B9
-F0 "INA_out" 60
+F0 "INA_out_3" 60
 F1 "INA_out.sch" 60
 F2 "3V3" I L 2550 3450 60 
 F3 "I_in" I L 2550 3700 60 
 F4 "I_out" I R 3650 3700 60 
 F5 "Ina_Analog" I L 2550 3950 60 
 $EndSheet
+Wire Wire Line
+	4150 1550 4700 1550
+Wire Wire Line
+	5250 1550 5100 1550
+Text HLabel 4900 2100 0    60   Input ~ 0
+PWM_CTRL
+$Comp
+L R R?
+U 1 1 5A79719D
+P 5050 1950
+F 0 "R?" V 5130 1950 50  0000 C CNN
+F 1 "220k" V 5050 1950 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 4980 1950 50  0001 C CNN
+F 3 "" H 5050 1950 50  0001 C CNN
+	1    5050 1950
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4900 1850 4900 2100
+Connection ~ 4900 1950
+Wire Wire Line
+	5200 1950 5350 1950
+$Comp
+L GND #PWR?
+U 1 1 5A7971A7
+P 5350 1950
+F 0 "#PWR?" H 5350 1700 50  0001 C CNN
+F 1 "GND" H 5350 1800 50  0000 C CNN
+F 2 "" H 5350 1950 50  0001 C CNN
+F 3 "" H 5350 1950 50  0001 C CNN
+	1    5350 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Q_PMOS_GSD Q?
+U 1 1 5A7971AD
+P 4900 1650
+F 0 "Q?" V 4800 1750 50  0000 L CNN
+F 1 "Q_PMOS_GSD" V 4800 1050 50  0000 L CNN
+F 2 "TO_SOT_Packages_SMD:SOT-23" H 5100 1750 50  0001 C CNN
+F 3 "" H 4900 1650 50  0001 C CNN
+	1    4900 1650
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5350 2650 5200 2650
+Text HLabel 5000 3200 0    60   Input ~ 0
+PWM_CTRL
+$Comp
+L R R?
+U 1 1 5A797538
+P 5150 3050
+F 0 "R?" V 5230 3050 50  0000 C CNN
+F 1 "220k" V 5150 3050 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 5080 3050 50  0001 C CNN
+F 3 "" H 5150 3050 50  0001 C CNN
+	1    5150 3050
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5000 2950 5000 3200
+Connection ~ 5000 3050
+Wire Wire Line
+	5300 3050 5450 3050
+$Comp
+L GND #PWR?
+U 1 1 5A797542
+P 5450 3050
+F 0 "#PWR?" H 5450 2800 50  0001 C CNN
+F 1 "GND" H 5450 2900 50  0000 C CNN
+F 2 "" H 5450 3050 50  0001 C CNN
+F 3 "" H 5450 3050 50  0001 C CNN
+	1    5450 3050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Q_PMOS_GSD Q?
+U 1 1 5A797548
+P 5000 2750
+F 0 "Q?" V 4950 2900 50  0000 L CNN
+F 1 "Q_PMOS_GSD" V 4950 2150 50  0000 L CNN
+F 2 "TO_SOT_Packages_SMD:SOT-23" H 5200 2850 50  0001 C CNN
+F 3 "" H 5000 2750 50  0001 C CNN
+	1    5000 2750
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5350 3700 5200 3700
+Text HLabel 5000 4250 3    60   Input ~ 0
+PWM_CTRL
+$Comp
+L R R?
+U 1 1 5A797B85
+P 5150 4100
+F 0 "R?" V 5230 4100 50  0000 C CNN
+F 1 "220k" V 5150 4100 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 5080 4100 50  0001 C CNN
+F 3 "" H 5150 4100 50  0001 C CNN
+	1    5150 4100
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5000 4000 5000 4250
+Connection ~ 5000 4100
+Wire Wire Line
+	5300 4100 5450 4100
+$Comp
+L GND #PWR?
+U 1 1 5A797B8F
+P 5450 4100
+F 0 "#PWR?" H 5450 3850 50  0001 C CNN
+F 1 "GND" H 5450 3950 50  0000 C CNN
+F 2 "" H 5450 4100 50  0001 C CNN
+F 3 "" H 5450 4100 50  0001 C CNN
+	1    5450 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Q_PMOS_GSD Q?
+U 1 1 5A797B95
+P 5000 3800
+F 0 "Q?" V 4950 3950 50  0000 L CNN
+F 1 "Q_PMOS_GSD" V 4950 3200 50  0000 L CNN
+F 2 "TO_SOT_Packages_SMD:SOT-23" H 5200 3900 50  0001 C CNN
+F 3 "" H 5000 3800 50  0001 C CNN
+	1    5000 3800
+	0    -1   -1   0   
+$EndComp
 $EndSCHEMATC

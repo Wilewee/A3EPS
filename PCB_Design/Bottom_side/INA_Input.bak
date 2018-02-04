@@ -31,13 +31,12 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:Custom_Library
 LIBS:Bottom_side-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 3 25
+Sheet 3 26
 Title ""
 Date ""
 Rev ""
@@ -50,7 +49,7 @@ $EndDescr
 $Sheet
 S 2550 1150 1100 800 
 U 5A57B5E1
-F0 "INA" 60
+F0 "INA_1" 60
 F1 "INA.sch" 60
 F2 "3V3" I L 2550 1350 60 
 F3 "I_in" I L 2550 1600 60 
@@ -252,7 +251,7 @@ Wire Wire Line
 $Sheet
 S 2550 2300 1100 800 
 U 5A681ED4
-F0 "INA" 60
+F0 "INA_2" 60
 F1 "INA.sch" 60
 F2 "3V3" I L 2550 2500 60 
 F3 "I_in" I L 2550 2750 60 
@@ -262,7 +261,7 @@ $EndSheet
 $Sheet
 S 2550 3250 1100 800 
 U 5A6821BC
-F0 "INA" 60
+F0 "INA_3" 60
 F1 "INA.sch" 60
 F2 "3V3" I L 2550 3450 60 
 F3 "I_in" I L 2550 3700 60 

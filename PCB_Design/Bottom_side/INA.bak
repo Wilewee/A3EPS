@@ -31,13 +31,12 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:Custom_Library
 LIBS:Bottom_side-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 6 25
+Sheet 4 26
 Title "INA139 & Voltage Divider for Voltage Measurement"
 Date "2017-06-14"
 Rev "R1"
