@@ -1,0 +1,523 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:EPS_library
+LIBS:Custom Library
+LIBS:Full_PCB-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 25 27
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Text HLabel 2750 3750 0    60   Input ~ 0
+CAN_1_L
+Text HLabel 2750 3850 0    60   Input ~ 0
+CAN_1_H
+Text HLabel 2750 4050 0    60   Input ~ 0
+CAN_2_L
+Text HLabel 2750 3950 0    60   Input ~ 0
+CAN_2_H
+Text HLabel 2250 6400 3    60   Input ~ 0
+5V_1
+Text HLabel 2700 6400 3    60   Input ~ 0
+5V_2
+Text HLabel 3150 6400 3    60   Input ~ 0
+Batt_V_1
+Text HLabel 3550 6400 3    60   Input ~ 0
+Batt_V_2
+Text HLabel 2900 7300 3    60   Input ~ 0
+RBF_DEPL
+Text HLabel 2800 7300 3    60   Input ~ 0
+RBF_POWER
+Text HLabel 3000 7300 3    60   Input ~ 0
+DSW_1
+Text HLabel 3200 7300 3    60   Input ~ 0
+DSW_3
+Text HLabel 3100 7300 3    60   Input ~ 0
+DSW_2
+$Sheet
+S 900  5150 700  1000
+U 5A694BCE
+F0 "Ideal_Diodes" 60
+F1 "Ideal_Diodes.sch" 60
+F2 "X+" I R 1600 5350 60 
+F3 "X-" I R 1600 5450 60 
+F4 "Y+" I R 1600 5550 60 
+F5 "Y-" I R 1600 5650 60 
+F6 "Z+" I R 1600 5750 60 
+F7 "Z-" I R 1600 5850 60 
+F8 "X-O" I L 900 5450 60 
+F9 "Y+O" I L 900 5550 60 
+F10 "Y-O" I L 900 5650 60 
+F11 "Z+O" I L 900 5750 60 
+F12 "Z-O" I L 900 5850 60 
+F13 "X+O" I L 900 5350 60 
+$EndSheet
+Text HLabel 850  5450 0    60   Input ~ 0
+X-
+Text HLabel 850  5850 0    60   Input ~ 0
+Z-
+Text HLabel 850  5750 0    60   Input ~ 0
+Z+
+Text HLabel 850  5650 0    60   Input ~ 0
+Y-
+Text HLabel 850  5550 0    60   Input ~ 0
+Y+
+Text HLabel 850  5350 0    60   Input ~ 0
+X+
+Wire Wire Line
+	850  5350 900  5350
+Wire Wire Line
+	850  5450 900  5450
+Wire Wire Line
+	850  5550 900  5550
+Wire Wire Line
+	850  5650 900  5650
+Wire Wire Line
+	850  5750 900  5750
+Wire Wire Line
+	850  5850 900  5850
+Text HLabel 2250 7250 3    60   Input ~ 0
+Batt_Temp1
+Text HLabel 2350 7250 3    60   Input ~ 0
+Batt_Temp2
+$Comp
+L Conn_01x02 Solar_X1
+U 1 1 5A764BE8
+P 1750 4650
+AR Path="/5A6B2220/5A764BE8" Ref="Solar_X1"  Part="1" 
+AR Path="/5A799B71/5A782352/5A764BE8" Ref="Solar_X1"  Part="1" 
+AR Path="/5A799B71/5A6B2220/5A764BE8" Ref="Solar_X1"  Part="1" 
+F 0 "Solar_X1" H 1750 4750 50  0000 C CNN
+F 1 "JST_Connector" H 1750 4450 50  0000 C CNN
+F 2 "Connectors_JST:JST_XH_B02B-XH-A_02x2.50mm_Straight" H 1750 4650 50  0001 C CNN
+F 3 "" H 1750 4650 50  0001 C CNN
+	1    1750 4650
+	0    1    -1   0   
+$EndComp
+$Comp
+L Conn_01x02 Solar_Y1
+U 1 1 5A764D01
+P 2550 4650
+AR Path="/5A6B2220/5A764D01" Ref="Solar_Y1"  Part="1" 
+AR Path="/5A799B71/5A782352/5A764D01" Ref="Solar_Y1"  Part="1" 
+AR Path="/5A799B71/5A6B2220/5A764D01" Ref="Solar_Y1"  Part="1" 
+F 0 "Solar_Y1" H 2550 4750 50  0000 C CNN
+F 1 "JST_Connector" H 2550 4450 50  0000 C CNN
+F 2 "Connectors_JST:JST_XH_B02B-XH-A_02x2.50mm_Straight" H 2550 4650 50  0001 C CNN
+F 3 "" H 2550 4650 50  0001 C CNN
+	1    2550 4650
+	0    1    -1   0   
+$EndComp
+$Comp
+L Conn_01x02 Solar_Z1
+U 1 1 5A764D5F
+P 3350 4650
+AR Path="/5A6B2220/5A764D5F" Ref="Solar_Z1"  Part="1" 
+AR Path="/5A799B71/5A782352/5A764D5F" Ref="Solar_Z1"  Part="1" 
+AR Path="/5A799B71/5A6B2220/5A764D5F" Ref="Solar_Z1"  Part="1" 
+F 0 "Solar_Z1" H 3350 4750 50  0000 C CNN
+F 1 "JST_Connector" H 3350 4450 50  0000 C CNN
+F 2 "Connectors_JST:JST_XH_B02B-XH-A_02x2.50mm_Straight" H 3350 4650 50  0001 C CNN
+F 3 "" H 3350 4650 50  0001 C CNN
+	1    3350 4650
+	0    1    -1   0   
+$EndComp
+Wire Wire Line
+	1600 5450 2050 5450
+Wire Wire Line
+	1600 5550 2450 5550
+Wire Wire Line
+	1600 5650 2850 5650
+Wire Wire Line
+	1600 5750 3250 5750
+Wire Wire Line
+	1600 5850 3650 5850
+$Comp
+L Conn_01x02 5V_2
+U 1 1 5A76545A
+P 2600 6200
+AR Path="/5A6B2220/5A76545A" Ref="5V_2"  Part="1" 
+AR Path="/5A799B71/5A782352/5A76545A" Ref="5V_2"  Part="1" 
+AR Path="/5A799B71/5A6B2220/5A76545A" Ref="5V_2"  Part="1" 
+F 0 "5V_2" H 2600 6300 50  0000 C CNN
+F 1 "Jst_Conn" H 2600 6000 50  0000 C CNN
+F 2 "Connectors_JST:JST_XH_B02B-XH-A_02x2.50mm_Straight" H 2600 6200 50  0001 C CNN
+F 3 "" H 2600 6200 50  0001 C CNN
+	1    2600 6200
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Conn_01x02 Temp_Connector1
+U 1 1 5A765AA1
+P 2250 7050
+AR Path="/5A6B2220/5A765AA1" Ref="Temp_Connector1"  Part="1" 
+AR Path="/5A799B71/5A782352/5A765AA1" Ref="Temp_Connector1"  Part="1" 
+AR Path="/5A799B71/5A6B2220/5A765AA1" Ref="Temp_Connector1"  Part="1" 
+F 0 "Temp_Connector1" H 2250 7150 50  0000 C CNN
+F 1 "JST_conn" H 2250 6850 50  0000 C CNN
+F 2 "Connectors_JST:JST_XH_B02B-XH-A_02x2.50mm_Straight" H 2250 7050 50  0001 C CNN
+F 3 "" H 2250 7050 50  0001 C CNN
+	1    2250 7050
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Conn_01x05 RBF_control_pins1
+U 1 1 5A765D7B
+P 3000 7100
+AR Path="/5A6B2220/5A765D7B" Ref="RBF_control_pins1"  Part="1" 
+AR Path="/5A799B71/5A782352/5A765D7B" Ref="RBF_control_pins1"  Part="1" 
+AR Path="/5A799B71/5A6B2220/5A765D7B" Ref="RBF_control_pins1"  Part="1" 
+F 0 "RBF_control_pins1" H 3000 7400 50  0000 C CNN
+F 1 "5_pin_2.56" H 3000 6800 50  0000 C CNN
+F 2 "Socket_Strips:Socket_Strip_Straight_1x05_Pitch2.54mm" H 3000 7100 50  0001 C CNN
+F 3 "" H 3000 7100 50  0001 C CNN
+	1    3000 7100
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Conn_01x05 Ground_Pins1
+U 1 1 5A7660ED
+P 4000 7100
+AR Path="/5A6B2220/5A7660ED" Ref="Ground_Pins1"  Part="1" 
+AR Path="/5A799B71/5A782352/5A7660ED" Ref="Ground_Pins1"  Part="1" 
+AR Path="/5A799B71/5A6B2220/5A7660ED" Ref="Ground_Pins1"  Part="1" 
+F 0 "Ground_Pins1" H 4000 7400 50  0000 C CNN
+F 1 "2.56_socket_male" H 4000 6800 50  0000 C CNN
+F 2 "Socket_Strips:Socket_Strip_Straight_1x05_Pitch2.54mm" H 4000 7100 50  0001 C CNN
+F 3 "" H 4000 7100 50  0001 C CNN
+	1    4000 7100
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Conn_01x02 Batt_V_2
+U 1 1 5A7664EE
+P 3450 6200
+AR Path="/5A6B2220/5A7664EE" Ref="Batt_V_2"  Part="1" 
+AR Path="/5A799B71/5A782352/5A7664EE" Ref="Batt_V_2"  Part="1" 
+AR Path="/5A799B71/5A6B2220/5A7664EE" Ref="Batt_V_2"  Part="1" 
+F 0 "Batt_V_2" H 3450 6300 50  0000 C CNN
+F 1 "Jst_Conn" H 3450 6000 50  0000 C CNN
+F 2 "Connectors_JST:JST_XH_B02B-XH-A_02x2.50mm_Straight" H 3450 6200 50  0001 C CNN
+F 3 "" H 3450 6200 50  0001 C CNN
+	1    3450 6200
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Conn_01x02 Batt_V_1
+U 1 1 5A766597
+P 3050 6200
+AR Path="/5A6B2220/5A766597" Ref="Batt_V_1"  Part="1" 
+AR Path="/5A799B71/5A782352/5A766597" Ref="Batt_V_1"  Part="1" 
+AR Path="/5A799B71/5A6B2220/5A766597" Ref="Batt_V_1"  Part="1" 
+F 0 "Batt_V_1" H 3050 6300 50  0000 C CNN
+F 1 "Jst_Conn" H 3050 6000 50  0000 C CNN
+F 2 "Connectors_JST:JST_XH_B02B-XH-A_02x2.50mm_Straight" H 3050 6200 50  0001 C CNN
+F 3 "" H 3050 6200 50  0001 C CNN
+	1    3050 6200
+	0    -1   -1   0   
+$EndComp
+$Comp
+L GND #PWR083
+U 1 1 5A766AC5
+P 4000 7500
+AR Path="/5A6B2220/5A766AC5" Ref="#PWR083"  Part="1" 
+AR Path="/5A799B71/5A782352/5A766AC5" Ref="#PWR083"  Part="1" 
+AR Path="/5A799B71/5A6B2220/5A766AC5" Ref="#PWR083"  Part="1" 
+F 0 "#PWR083" H 4000 7250 50  0001 C CNN
+F 1 "GND" H 4000 7350 50  0000 C CNN
+F 2 "" H 4000 7500 50  0001 C CNN
+F 3 "" H 4000 7500 50  0001 C CNN
+	1    4000 7500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3800 7450 4200 7450
+Wire Wire Line
+	3800 7450 3800 7300
+Wire Wire Line
+	3900 7450 3900 7300
+Connection ~ 3900 7450
+Wire Wire Line
+	4000 7300 4000 7500
+Connection ~ 4000 7450
+Wire Wire Line
+	4100 7450 4100 7300
+Wire Wire Line
+	4200 7450 4200 7300
+Connection ~ 4100 7450
+$Comp
+L Conn_01x05 CAN_BUS1
+U 1 1 5A76703A
+P 2950 3850
+AR Path="/5A6B2220/5A76703A" Ref="CAN_BUS1"  Part="1" 
+AR Path="/5A799B71/5A782352/5A76703A" Ref="CAN_BUS1"  Part="1" 
+AR Path="/5A799B71/5A6B2220/5A76703A" Ref="CAN_BUS1"  Part="1" 
+F 0 "CAN_BUS1" H 2950 4150 50  0000 C CNN
+F 1 "5_pin_2.56" H 2950 3550 50  0000 C CNN
+F 2 "Socket_Strips:Socket_Strip_Straight_1x05_Pitch2.54mm" H 2950 3850 50  0001 C CNN
+F 3 "" H 2950 3850 50  0001 C CNN
+	1    2950 3850
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR084
+U 1 1 5A7671CB
+P 2750 3650
+AR Path="/5A6B2220/5A7671CB" Ref="#PWR084"  Part="1" 
+AR Path="/5A799B71/5A782352/5A7671CB" Ref="#PWR084"  Part="1" 
+AR Path="/5A799B71/5A6B2220/5A7671CB" Ref="#PWR084"  Part="1" 
+F 0 "#PWR084" H 2750 3400 50  0001 C CNN
+F 1 "GND" H 2750 3500 50  0000 C CNN
+F 2 "" H 2750 3650 50  0001 C CNN
+F 3 "" H 2750 3650 50  0001 C CNN
+	1    2750 3650
+	0    1    1    0   
+$EndComp
+$Comp
+L Conn_01x02 Solar_X2
+U 1 1 5A769724
+P 2150 4650
+AR Path="/5A6B2220/5A769724" Ref="Solar_X2"  Part="1" 
+AR Path="/5A799B71/5A782352/5A769724" Ref="Solar_X2"  Part="1" 
+AR Path="/5A799B71/5A6B2220/5A769724" Ref="Solar_X2"  Part="1" 
+F 0 "Solar_X2" H 2150 4750 50  0000 C CNN
+F 1 "JST_Connector" H 2150 4450 50  0000 C CNN
+F 2 "Connectors_JST:JST_XH_B02B-XH-A_02x2.50mm_Straight" H 2150 4650 50  0001 C CNN
+F 3 "" H 2150 4650 50  0001 C CNN
+	1    2150 4650
+	0    1    -1   0   
+$EndComp
+$Comp
+L Conn_01x02 Solar_Y2
+U 1 1 5A769916
+P 2950 4650
+AR Path="/5A6B2220/5A769916" Ref="Solar_Y2"  Part="1" 
+AR Path="/5A799B71/5A782352/5A769916" Ref="Solar_Y2"  Part="1" 
+AR Path="/5A799B71/5A6B2220/5A769916" Ref="Solar_Y2"  Part="1" 
+F 0 "Solar_Y2" H 2950 4750 50  0000 C CNN
+F 1 "JST_Connector" H 2950 4450 50  0000 C CNN
+F 2 "Connectors_JST:JST_XH_B02B-XH-A_02x2.50mm_Straight" H 2950 4650 50  0001 C CNN
+F 3 "" H 2950 4650 50  0001 C CNN
+	1    2950 4650
+	0    1    -1   0   
+$EndComp
+$Comp
+L Conn_01x02 Solar_Z2
+U 1 1 5A769AAD
+P 3750 4650
+AR Path="/5A6B2220/5A769AAD" Ref="Solar_Z2"  Part="1" 
+AR Path="/5A799B71/5A782352/5A769AAD" Ref="Solar_Z2"  Part="1" 
+AR Path="/5A799B71/5A6B2220/5A769AAD" Ref="Solar_Z2"  Part="1" 
+F 0 "Solar_Z2" H 3750 4750 50  0000 C CNN
+F 1 "JST_Connector" H 3750 4450 50  0000 C CNN
+F 2 "Connectors_JST:JST_XH_B02B-XH-A_02x2.50mm_Straight" H 3750 4650 50  0001 C CNN
+F 3 "" H 3750 4650 50  0001 C CNN
+	1    3750 4650
+	0    1    -1   0   
+$EndComp
+Wire Wire Line
+	1600 5350 1650 5350
+Wire Wire Line
+	1650 5350 1650 4850
+Wire Wire Line
+	2050 5450 2050 4850
+Wire Wire Line
+	2450 5550 2450 4850
+Wire Wire Line
+	2850 5650 2850 4850
+Wire Wire Line
+	3250 5750 3250 4850
+Wire Wire Line
+	3650 5850 3650 4850
+$Comp
+L GND #PWR085
+U 1 1 5A76A63E
+P 1750 4850
+AR Path="/5A6B2220/5A76A63E" Ref="#PWR085"  Part="1" 
+AR Path="/5A799B71/5A782352/5A76A63E" Ref="#PWR085"  Part="1" 
+AR Path="/5A799B71/5A6B2220/5A76A63E" Ref="#PWR085"  Part="1" 
+F 0 "#PWR085" H 1750 4600 50  0001 C CNN
+F 1 "GND" H 1750 4700 50  0000 C CNN
+F 2 "" H 1750 4850 50  0001 C CNN
+F 3 "" H 1750 4850 50  0001 C CNN
+	1    1750 4850
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR086
+U 1 1 5A76A6BB
+P 2150 4850
+AR Path="/5A6B2220/5A76A6BB" Ref="#PWR086"  Part="1" 
+AR Path="/5A799B71/5A782352/5A76A6BB" Ref="#PWR086"  Part="1" 
+AR Path="/5A799B71/5A6B2220/5A76A6BB" Ref="#PWR086"  Part="1" 
+F 0 "#PWR086" H 2150 4600 50  0001 C CNN
+F 1 "GND" H 2150 4700 50  0000 C CNN
+F 2 "" H 2150 4850 50  0001 C CNN
+F 3 "" H 2150 4850 50  0001 C CNN
+	1    2150 4850
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR087
+U 1 1 5A76A738
+P 2550 4850
+AR Path="/5A6B2220/5A76A738" Ref="#PWR087"  Part="1" 
+AR Path="/5A799B71/5A782352/5A76A738" Ref="#PWR087"  Part="1" 
+AR Path="/5A799B71/5A6B2220/5A76A738" Ref="#PWR087"  Part="1" 
+F 0 "#PWR087" H 2550 4600 50  0001 C CNN
+F 1 "GND" H 2550 4700 50  0000 C CNN
+F 2 "" H 2550 4850 50  0001 C CNN
+F 3 "" H 2550 4850 50  0001 C CNN
+	1    2550 4850
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR088
+U 1 1 5A76A7B5
+P 2950 4850
+AR Path="/5A6B2220/5A76A7B5" Ref="#PWR088"  Part="1" 
+AR Path="/5A799B71/5A782352/5A76A7B5" Ref="#PWR088"  Part="1" 
+AR Path="/5A799B71/5A6B2220/5A76A7B5" Ref="#PWR088"  Part="1" 
+F 0 "#PWR088" H 2950 4600 50  0001 C CNN
+F 1 "GND" H 2950 4700 50  0000 C CNN
+F 2 "" H 2950 4850 50  0001 C CNN
+F 3 "" H 2950 4850 50  0001 C CNN
+	1    2950 4850
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR089
+U 1 1 5A76A832
+P 3350 4850
+AR Path="/5A6B2220/5A76A832" Ref="#PWR089"  Part="1" 
+AR Path="/5A799B71/5A782352/5A76A832" Ref="#PWR089"  Part="1" 
+AR Path="/5A799B71/5A6B2220/5A76A832" Ref="#PWR089"  Part="1" 
+F 0 "#PWR089" H 3350 4600 50  0001 C CNN
+F 1 "GND" H 3350 4700 50  0000 C CNN
+F 2 "" H 3350 4850 50  0001 C CNN
+F 3 "" H 3350 4850 50  0001 C CNN
+	1    3350 4850
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR090
+U 1 1 5A76A8AF
+P 3750 4850
+AR Path="/5A6B2220/5A76A8AF" Ref="#PWR090"  Part="1" 
+AR Path="/5A799B71/5A782352/5A76A8AF" Ref="#PWR090"  Part="1" 
+AR Path="/5A799B71/5A6B2220/5A76A8AF" Ref="#PWR090"  Part="1" 
+F 0 "#PWR090" H 3750 4600 50  0001 C CNN
+F 1 "GND" H 3750 4700 50  0000 C CNN
+F 2 "" H 3750 4850 50  0001 C CNN
+F 3 "" H 3750 4850 50  0001 C CNN
+	1    3750 4850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Conn_01x02 5V_1
+U 1 1 5A76B9F6
+P 2150 6200
+AR Path="/5A6B2220/5A76B9F6" Ref="5V_1"  Part="1" 
+AR Path="/5A799B71/5A782352/5A76B9F6" Ref="5V_1"  Part="1" 
+AR Path="/5A799B71/5A6B2220/5A76B9F6" Ref="5V_1"  Part="1" 
+F 0 "5V_1" H 2150 6300 50  0000 C CNN
+F 1 "Jst_Conn" H 2150 6000 50  0000 C CNN
+F 2 "Connectors_JST:JST_XH_B02B-XH-A_02x2.50mm_Straight" H 2150 6200 50  0001 C CNN
+F 3 "" H 2150 6200 50  0001 C CNN
+	1    2150 6200
+	0    -1   -1   0   
+$EndComp
+$Comp
+L GND #PWR091
+U 1 1 5A76BD99
+P 2150 6400
+AR Path="/5A6B2220/5A76BD99" Ref="#PWR091"  Part="1" 
+AR Path="/5A799B71/5A782352/5A76BD99" Ref="#PWR091"  Part="1" 
+AR Path="/5A799B71/5A6B2220/5A76BD99" Ref="#PWR091"  Part="1" 
+F 0 "#PWR091" H 2150 6150 50  0001 C CNN
+F 1 "GND" H 2150 6250 50  0000 C CNN
+F 2 "" H 2150 6400 50  0001 C CNN
+F 3 "" H 2150 6400 50  0001 C CNN
+	1    2150 6400
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR092
+U 1 1 5A76BE16
+P 2600 6400
+AR Path="/5A6B2220/5A76BE16" Ref="#PWR092"  Part="1" 
+AR Path="/5A799B71/5A782352/5A76BE16" Ref="#PWR092"  Part="1" 
+AR Path="/5A799B71/5A6B2220/5A76BE16" Ref="#PWR092"  Part="1" 
+F 0 "#PWR092" H 2600 6150 50  0001 C CNN
+F 1 "GND" H 2600 6250 50  0000 C CNN
+F 2 "" H 2600 6400 50  0001 C CNN
+F 3 "" H 2600 6400 50  0001 C CNN
+	1    2600 6400
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR093
+U 1 1 5A76BE93
+P 3050 6400
+AR Path="/5A6B2220/5A76BE93" Ref="#PWR093"  Part="1" 
+AR Path="/5A799B71/5A782352/5A76BE93" Ref="#PWR093"  Part="1" 
+AR Path="/5A799B71/5A6B2220/5A76BE93" Ref="#PWR093"  Part="1" 
+F 0 "#PWR093" H 3050 6150 50  0001 C CNN
+F 1 "GND" H 3050 6250 50  0000 C CNN
+F 2 "" H 3050 6400 50  0001 C CNN
+F 3 "" H 3050 6400 50  0001 C CNN
+	1    3050 6400
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR094
+U 1 1 5A76BF10
+P 3450 6400
+AR Path="/5A6B2220/5A76BF10" Ref="#PWR094"  Part="1" 
+AR Path="/5A799B71/5A782352/5A76BF10" Ref="#PWR094"  Part="1" 
+AR Path="/5A799B71/5A6B2220/5A76BF10" Ref="#PWR094"  Part="1" 
+F 0 "#PWR094" H 3450 6150 50  0001 C CNN
+F 1 "GND" H 3450 6250 50  0000 C CNN
+F 2 "" H 3450 6400 50  0001 C CNN
+F 3 "" H 3450 6400 50  0001 C CNN
+	1    3450 6400
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC
