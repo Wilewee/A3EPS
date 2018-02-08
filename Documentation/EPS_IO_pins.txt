@@ -43,3 +43,15 @@ CAN1_L
 
 CAN2_H
 CAN2_L
+
+// Debug
+SWCLK
+SWDIO
+NRST
+
+USART_TX
+USART_RX
+
+// Oscillator
+RCC_OSC_IN
+RCC_OSC_OUT
