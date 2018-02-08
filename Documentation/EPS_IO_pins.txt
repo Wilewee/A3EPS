@@ -16,8 +16,8 @@ I3_OUT
 I_5V_BUS
 I_3V6_BUS
 
-I1_BATT
-I2_BATT
+I_BATT1
+I_BATT2
 
 // Battery temperature (ADC)
 TEMP_BATT1
