@@ -1,38 +1,45 @@
-ADC:
+// Boost input (ADC)
+I1_IN
+I2_IN
+I3_IN
 
-Vin1
-Vin2
-Vin3
+V1_IN
+V2_IN
+V3_IN
 
-Iin1
-Iin2
-Iin3
+// Boost output (ADC)
+I1_OUT
+I2_OUT
+I3_OUT
 
-Iout1
-Iout2
-Iout3
+// Bus output (ADC)
+I_5V_BUS
+I_3V6_BUS
 
-Vbatt1 (1 cell)
-Vbatt
+I1_BATT
+I2_BATT
 
-Iout5V1
-Iout5V2
-IoutVbatt1
-IoutVbatt2
+// Battery temperature (ADC)
+TEMP_BATT1
+TEMP_BATT2
 
-Optional:
-Vout5V1
-Vout5V2
+// Switch (GPIO)
+MAIN_PWR_SW
 
+BATT_VOUT1
+BATT_VOUT2
 
-I/O:
-Enable Vbatt1
-Enable Vbatt2
-Enable 5V1
-Enable 5V2
+5V_SW
+3V6_SW
 
-Main Power SW
+// DAC (I2C)
+SDA
+SCL
+LDAC (GPIO)
 
-Bus:
-I2C
-CAN
+// CAN
+CAN1_H
+CAN1_L
+
+CAN2_H
+CAN2_L
