@@ -1,0 +1,290 @@
+EESchema Schematic File Version 2
+LIBS:STM32-rescue
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:stm32f446re
+LIBS:ina139
+LIBS:max668_669
+LIBS:STM32-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 10
+Title "EPS"
+Date "2018-02-11"
+Rev "R1"
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Sheet
+S 2150 4400 1850 2750
+U 5A7760E8
+F0 "STM32_block" 60
+F1 "STM32_block.sch" 60
+F2 "5V_BUS" I L 2150 4600 60 
+F3 "CAN1_H" B R 4000 4600 60 
+F4 "CAN1_L" B R 4000 4700 60 
+F5 "CAN2_H" B R 4000 4800 60 
+F6 "CAN2_L" B R 4000 4900 60 
+F7 "LDAC" O R 4000 5475 60 
+F8 "MAIN_PWR_SW" O R 4000 5950 60 
+F9 "BATT1_BUS_SW" O R 4000 6050 60 
+F10 "BATT2_BUS_SW" O R 4000 6150 60 
+F11 "BUS_5V_SW" O R 4000 6250 60 
+F12 "BUS_3V6_SW" O R 4000 6350 60 
+F13 "BUS_5V_SW_MOS" O R 4000 6450 60 
+F14 "BUS_3V6_SW_MOS" O R 4000 6550 60 
+F15 "TEMP_BATT2" I L 2150 6625 60 
+F16 "TEMP_BATT1" I L 2150 6525 60 
+F17 "I_BATT2" I L 2150 6425 60 
+F18 "I_BATT1" I L 2150 6325 60 
+F19 "I_3V6_BUS" I L 2150 7000 60 
+F20 "I_5V_BUS" I L 2150 6900 60 
+F21 "I3_OUT" I L 2150 6000 60 
+F22 "I2_OUT" I L 2150 5900 60 
+F23 "I1_OUT" I L 2150 5800 60 
+F24 "V3_IN" I L 2150 5525 60 
+F25 "I3_IN" I L 2150 5425 60 
+F26 "V2_IN" I L 2150 5275 60 
+F27 "V1_IN" I L 2150 5025 60 
+F28 "I1_IN" I L 2150 4925 60 
+F29 "I2_IN" I L 2150 5175 60 
+F30 "SDA" B R 4000 5275 60 
+F31 "SCL" I R 4000 5375 60 
+$EndSheet
+$Comp
+L Conn_01x07 J8
+U 1 1 5A8B7DD0
+P 4600 6250
+F 0 "J8" H 4600 6650 50  0000 C CNN
+F 1 "SWITCHES" H 4600 5850 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x07_Pitch1.00mm" H 4600 6250 50  0001 C CNN
+F 3 "" H 4600 6250 50  0001 C CNN
+	1    4600 6250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4000 5950 4400 5950
+Wire Wire Line
+	4400 6050 4000 6050
+Wire Wire Line
+	4000 6150 4400 6150
+Wire Wire Line
+	4400 6250 4000 6250
+Wire Wire Line
+	4000 6350 4400 6350
+Wire Wire Line
+	4400 6450 4000 6450
+Wire Wire Line
+	4000 6550 4400 6550
+$Comp
+L Conn_01x03 J7
+U 1 1 5A8B8DC0
+P 4600 5375
+F 0 "J7" H 4600 5575 50  0000 C CNN
+F 1 "DAC" H 4600 5175 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x03_Pitch1.00mm" H 4600 5375 50  0001 C CNN
+F 3 "" H 4600 5375 50  0001 C CNN
+	1    4600 5375
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4400 5275 4000 5275
+Wire Wire Line
+	4000 5375 4400 5375
+Wire Wire Line
+	4000 5475 4400 5475
+$Comp
+L Conn_01x04 J6
+U 1 1 5A8B991C
+P 4600 4700
+F 0 "J6" H 4600 4900 50  0000 C CNN
+F 1 "CAN" H 4600 4400 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x04_Pitch1.00mm" H 4600 4700 50  0001 C CNN
+F 3 "" H 4600 4700 50  0001 C CNN
+	1    4600 4700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4400 4600 4000 4600
+Wire Wire Line
+	4000 4700 4400 4700
+Wire Wire Line
+	4000 4800 4400 4800
+Wire Wire Line
+	4000 4900 4400 4900
+$Comp
+L Conn_01x06 J2
+U 1 1 5A8BB95D
+P 1350 5275
+F 0 "J2" H 1350 5575 50  0000 C CNN
+F 1 "INPUT MEASUREMENT" H 1350 4875 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x06_Pitch1.00mm" H 1350 5275 50  0001 C CNN
+F 3 "" H 1350 5275 50  0001 C CNN
+	1    1350 5275
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	1550 4975 1925 4975
+Wire Wire Line
+	1925 4975 1925 4925
+Wire Wire Line
+	1925 4925 2150 4925
+Wire Wire Line
+	2150 5025 1925 5025
+Wire Wire Line
+	1925 5025 1925 5075
+Wire Wire Line
+	1925 5075 1550 5075
+Wire Wire Line
+	2150 5175 1550 5175
+Wire Wire Line
+	1550 5275 2150 5275
+Wire Wire Line
+	2150 5425 1925 5425
+Wire Wire Line
+	1925 5425 1925 5375
+Wire Wire Line
+	1925 5375 1550 5375
+Wire Wire Line
+	2150 5525 1925 5525
+Wire Wire Line
+	1925 5525 1925 5475
+Wire Wire Line
+	1925 5475 1550 5475
+$Comp
+L Conn_01x03 J3
+U 1 1 5A8BD635
+P 1350 5900
+F 0 "J3" H 1350 6100 50  0000 C CNN
+F 1 "OUTPUT MEASUREMENT" H 1350 5700 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x03_Pitch1.00mm" H 1350 5900 50  0001 C CNN
+F 3 "" H 1350 5900 50  0001 C CNN
+	1    1350 5900
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2150 5800 1550 5800
+Wire Wire Line
+	1550 5900 2150 5900
+Wire Wire Line
+	2150 6000 1550 6000
+$Comp
+L Conn_01x04 J4
+U 1 1 5A8BE68B
+P 1350 6525
+F 0 "J4" H 1350 6725 50  0000 C CNN
+F 1 "BATT MEASUREMENT" H 1350 6225 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x04_Pitch1.00mm" H 1350 6525 50  0001 C CNN
+F 3 "" H 1350 6525 50  0001 C CNN
+	1    1350 6525
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2150 6625 1550 6625
+Wire Wire Line
+	2150 6525 1550 6525
+Wire Wire Line
+	2150 6425 1550 6425
+Wire Wire Line
+	2150 6325 1550 6325
+$Comp
+L Conn_01x02 J5
+U 1 1 5A8C03D6
+P 1350 7000
+F 0 "J5" H 1350 7100 50  0000 C CNN
+F 1 "BUS MEASUREMENT" H 1350 6800 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x02_Pitch1.00mm" H 1350 7000 50  0001 C CNN
+F 3 "" H 1350 7000 50  0001 C CNN
+	1    1350 7000
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2150 6900 1550 6900
+Wire Wire Line
+	1550 7000 2150 7000
+$Comp
+L Conn_01x01 J1
+U 1 1 5A8C2587
+P 1350 4600
+F 0 "J1" H 1350 4700 50  0000 C CNN
+F 1 "INPUT VOLTAGE" H 1350 4500 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x01_Pitch1.00mm" H 1350 4600 50  0001 C CNN
+F 3 "" H 1350 4600 50  0001 C CNN
+	1    1350 4600
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	1550 4600 2150 4600
+$Comp
+L PWR_FLAG #FLG01
+U 1 1 5A8C58E1
+P 1825 4450
+F 0 "#FLG01" H 1825 4525 50  0001 C CNN
+F 1 "PWR_FLAG" H 1825 4600 50  0000 C CNN
+F 2 "" H 1825 4450 50  0001 C CNN
+F 3 "" H 1825 4450 50  0001 C CNN
+	1    1825 4450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1825 4450 1825 4600
+Connection ~ 1825 4600
+Text Notes 2450 3950 0    60   ~ 0
+Connectors are temporary.
+$Sheet
+S 2400 975  1725 1875
+U 5A8103BF
+F0 "Input" 60
+F1 "Input.sch" 60
+$EndSheet
+$Sheet
+S 4625 900  1825 1950
+U 5A810502
+F0 "Switches" 60
+F1 "Switches.sch" 60
+$EndSheet
+$Sheet
+S 6675 925  1400 1400
+U 5A810635
+F0 "Output" 60
+F1 "Output.sch" 60
+$EndSheet
+$Sheet
+S 7100 3725 1300 1900
+U 5A810768
+F0 "Connectors" 60
+F1 "Connectors.sch" 60
+$EndSheet
+$EndSCHEMATC
