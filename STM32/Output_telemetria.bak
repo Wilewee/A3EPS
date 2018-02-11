@@ -1,0 +1,422 @@
+EESchema Schematic File Version 2
+LIBS:STM32-rescue
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:stm32f446re
+LIBS:ina139
+LIBS:max668_669
+LIBS:STM32-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 7 10
+Title "Output telemetria"
+Date "2018-02-12"
+Rev "R1"
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L INA139 INA?
+U 1 1 5A824969
+P 5850 1725
+F 0 "INA?" H 5850 1450 60  0000 C CNN
+F 1 "INA139" H 5850 2000 60  0000 C CNN
+F 2 "" H 5725 1775 60  0001 C CNN
+F 3 "" H 5725 1775 60  0001 C CNN
+	1    5850 1725
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R_s?
+U 1 1 5A824970
+P 5850 2375
+F 0 "R_s?" V 5930 2375 50  0000 C CNN
+F 1 "R" V 5850 2375 50  0000 C CNN
+F 2 "" V 5780 2375 50  0001 C CNN
+F 3 "" H 5850 2375 50  0001 C CNN
+	1    5850 2375
+	0    1    1    0   
+$EndComp
+$Comp
+L R R_l?
+U 1 1 5A824977
+P 4525 1800
+F 0 "R_l?" V 4605 1800 50  0000 C CNN
+F 1 "R" V 4525 1800 50  0000 C CNN
+F 2 "" V 4455 1800 50  0001 C CNN
+F 3 "" H 4525 1800 50  0001 C CNN
+	1    4525 1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C?
+U 1 1 5A82497E
+P 6625 1375
+F 0 "C?" H 6650 1475 50  0000 L CNN
+F 1 "0.1u" H 6650 1275 50  0000 L CNN
+F 2 "" H 6663 1225 50  0001 C CNN
+F 3 "" H 6625 1375 50  0001 C CNN
+	1    6625 1375
+	0    -1   -1   0   
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 5A824985
+P 5025 1725
+F 0 "#PWR?" H 5025 1475 50  0001 C CNN
+F 1 "GND" H 5025 1575 50  0000 C CNN
+F 2 "" H 5025 1725 50  0001 C CNN
+F 3 "" H 5025 1725 50  0001 C CNN
+	1    5025 1725
+	0    1    1    0   
+$EndComp
+$Comp
+L +3.3V #PWR?
+U 1 1 5A82498B
+P 6475 1025
+F 0 "#PWR?" H 6475 875 50  0001 C CNN
+F 1 "+3.3V" H 6475 1165 50  0000 C CNN
+F 2 "" H 6475 1025 50  0001 C CNN
+F 3 "" H 6475 1025 50  0001 C CNN
+	1    6475 1025
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6475 1575 6300 1575
+Wire Wire Line
+	6475 1025 6475 1575
+Connection ~ 6475 1375
+$Comp
+L GND #PWR?
+U 1 1 5A824994
+P 7000 1375
+F 0 "#PWR?" H 7000 1125 50  0001 C CNN
+F 1 "GND" H 7000 1225 50  0000 C CNN
+F 2 "" H 7000 1375 50  0001 C CNN
+F 3 "" H 7000 1375 50  0001 C CNN
+	1    7000 1375
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	7000 1375 6775 1375
+Wire Wire Line
+	5025 1725 5375 1725
+Wire Wire Line
+	5375 1875 5300 1875
+Wire Wire Line
+	5300 1875 5300 2375
+Wire Wire Line
+	5150 2375 5700 2375
+Wire Wire Line
+	6000 2375 6575 2375
+Wire Wire Line
+	6400 2375 6400 1875
+Wire Wire Line
+	6400 1875 6300 1875
+$Comp
+L GND #PWR?
+U 1 1 5A8249A2
+P 4525 2050
+F 0 "#PWR?" H 4525 1800 50  0001 C CNN
+F 1 "GND" H 4525 1900 50  0000 C CNN
+F 2 "" H 4525 2050 50  0001 C CNN
+F 3 "" H 4525 2050 50  0001 C CNN
+	1    4525 2050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4525 2050 4525 1950
+Wire Wire Line
+	4400 1575 5375 1575
+Wire Wire Line
+	4525 1575 4525 1650
+Text HLabel 4400 1575 0    60   Output ~ 0
+I1_OUT
+Connection ~ 4525 1575
+Text HLabel 5150 2375 0    60   Input ~ 0
+INA1_OUT+
+Connection ~ 5300 2375
+Text HLabel 6575 2375 2    60   Output ~ 0
+INA1_OUT-
+Connection ~ 6400 2375
+$Comp
+L INA139 INA?
+U 1 1 5A8249B1
+P 5775 3450
+F 0 "INA?" H 5775 3175 60  0000 C CNN
+F 1 "INA139" H 5775 3725 60  0000 C CNN
+F 2 "" H 5650 3500 60  0001 C CNN
+F 3 "" H 5650 3500 60  0001 C CNN
+	1    5775 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R_s?
+U 1 1 5A8249B8
+P 5775 4100
+F 0 "R_s?" V 5855 4100 50  0000 C CNN
+F 1 "R" V 5775 4100 50  0000 C CNN
+F 2 "" V 5705 4100 50  0001 C CNN
+F 3 "" H 5775 4100 50  0001 C CNN
+	1    5775 4100
+	0    1    1    0   
+$EndComp
+$Comp
+L R R_l?
+U 1 1 5A8249BF
+P 4450 3525
+F 0 "R_l?" V 4530 3525 50  0000 C CNN
+F 1 "R" V 4450 3525 50  0000 C CNN
+F 2 "" V 4380 3525 50  0001 C CNN
+F 3 "" H 4450 3525 50  0001 C CNN
+	1    4450 3525
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C?
+U 1 1 5A8249C6
+P 6550 3100
+F 0 "C?" H 6575 3200 50  0000 L CNN
+F 1 "0.1u" H 6575 3000 50  0000 L CNN
+F 2 "" H 6588 2950 50  0001 C CNN
+F 3 "" H 6550 3100 50  0001 C CNN
+	1    6550 3100
+	0    -1   -1   0   
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 5A8249CD
+P 4950 3450
+F 0 "#PWR?" H 4950 3200 50  0001 C CNN
+F 1 "GND" H 4950 3300 50  0000 C CNN
+F 2 "" H 4950 3450 50  0001 C CNN
+F 3 "" H 4950 3450 50  0001 C CNN
+	1    4950 3450
+	0    1    1    0   
+$EndComp
+$Comp
+L +3.3V #PWR?
+U 1 1 5A8249D3
+P 6400 2750
+F 0 "#PWR?" H 6400 2600 50  0001 C CNN
+F 1 "+3.3V" H 6400 2890 50  0000 C CNN
+F 2 "" H 6400 2750 50  0001 C CNN
+F 3 "" H 6400 2750 50  0001 C CNN
+	1    6400 2750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6400 3300 6225 3300
+Wire Wire Line
+	6400 2750 6400 3300
+Connection ~ 6400 3100
+$Comp
+L GND #PWR?
+U 1 1 5A8249DC
+P 6925 3100
+F 0 "#PWR?" H 6925 2850 50  0001 C CNN
+F 1 "GND" H 6925 2950 50  0000 C CNN
+F 2 "" H 6925 3100 50  0001 C CNN
+F 3 "" H 6925 3100 50  0001 C CNN
+	1    6925 3100
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6925 3100 6700 3100
+Wire Wire Line
+	4950 3450 5300 3450
+Wire Wire Line
+	5300 3600 5225 3600
+Wire Wire Line
+	5225 3600 5225 4100
+Wire Wire Line
+	5075 4100 5625 4100
+Wire Wire Line
+	5925 4100 6500 4100
+Wire Wire Line
+	6325 4100 6325 3600
+Wire Wire Line
+	6325 3600 6225 3600
+$Comp
+L GND #PWR?
+U 1 1 5A8249EA
+P 4450 3775
+F 0 "#PWR?" H 4450 3525 50  0001 C CNN
+F 1 "GND" H 4450 3625 50  0000 C CNN
+F 2 "" H 4450 3775 50  0001 C CNN
+F 3 "" H 4450 3775 50  0001 C CNN
+	1    4450 3775
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4450 3775 4450 3675
+Wire Wire Line
+	4325 3300 5300 3300
+Wire Wire Line
+	4450 3300 4450 3375
+Text HLabel 4325 3300 0    60   Output ~ 0
+I2_OUT
+Connection ~ 4450 3300
+Text HLabel 5075 4100 0    60   Input ~ 0
+INA2_OUT+
+Connection ~ 5225 4100
+Text HLabel 6500 4100 2    60   Output ~ 0
+INA2_OUT-
+Connection ~ 6325 4100
+$Comp
+L INA139 INA?
+U 1 1 5A8249F9
+P 5700 5125
+F 0 "INA?" H 5700 4850 60  0000 C CNN
+F 1 "INA139" H 5700 5400 60  0000 C CNN
+F 2 "" H 5575 5175 60  0001 C CNN
+F 3 "" H 5575 5175 60  0001 C CNN
+	1    5700 5125
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R_s?
+U 1 1 5A824A00
+P 5700 5775
+F 0 "R_s?" V 5780 5775 50  0000 C CNN
+F 1 "R" V 5700 5775 50  0000 C CNN
+F 2 "" V 5630 5775 50  0001 C CNN
+F 3 "" H 5700 5775 50  0001 C CNN
+	1    5700 5775
+	0    1    1    0   
+$EndComp
+$Comp
+L R R_l?
+U 1 1 5A824A07
+P 4375 5200
+F 0 "R_l?" V 4455 5200 50  0000 C CNN
+F 1 "R" V 4375 5200 50  0000 C CNN
+F 2 "" V 4305 5200 50  0001 C CNN
+F 3 "" H 4375 5200 50  0001 C CNN
+	1    4375 5200
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C?
+U 1 1 5A824A0E
+P 6475 4775
+F 0 "C?" H 6500 4875 50  0000 L CNN
+F 1 "0.1u" H 6500 4675 50  0000 L CNN
+F 2 "" H 6513 4625 50  0001 C CNN
+F 3 "" H 6475 4775 50  0001 C CNN
+	1    6475 4775
+	0    -1   -1   0   
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 5A824A15
+P 4875 5125
+F 0 "#PWR?" H 4875 4875 50  0001 C CNN
+F 1 "GND" H 4875 4975 50  0000 C CNN
+F 2 "" H 4875 5125 50  0001 C CNN
+F 3 "" H 4875 5125 50  0001 C CNN
+	1    4875 5125
+	0    1    1    0   
+$EndComp
+$Comp
+L +3.3V #PWR?
+U 1 1 5A824A1B
+P 6325 4425
+F 0 "#PWR?" H 6325 4275 50  0001 C CNN
+F 1 "+3.3V" H 6325 4565 50  0000 C CNN
+F 2 "" H 6325 4425 50  0001 C CNN
+F 3 "" H 6325 4425 50  0001 C CNN
+	1    6325 4425
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6325 4975 6150 4975
+Wire Wire Line
+	6325 4425 6325 4975
+Connection ~ 6325 4775
+$Comp
+L GND #PWR?
+U 1 1 5A824A24
+P 6850 4775
+F 0 "#PWR?" H 6850 4525 50  0001 C CNN
+F 1 "GND" H 6850 4625 50  0000 C CNN
+F 2 "" H 6850 4775 50  0001 C CNN
+F 3 "" H 6850 4775 50  0001 C CNN
+	1    6850 4775
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6850 4775 6625 4775
+Wire Wire Line
+	4875 5125 5225 5125
+Wire Wire Line
+	5225 5275 5150 5275
+Wire Wire Line
+	5150 5275 5150 5775
+Wire Wire Line
+	5000 5775 5550 5775
+Wire Wire Line
+	5850 5775 6425 5775
+Wire Wire Line
+	6250 5775 6250 5275
+Wire Wire Line
+	6250 5275 6150 5275
+$Comp
+L GND #PWR?
+U 1 1 5A824A32
+P 4375 5450
+F 0 "#PWR?" H 4375 5200 50  0001 C CNN
+F 1 "GND" H 4375 5300 50  0000 C CNN
+F 2 "" H 4375 5450 50  0001 C CNN
+F 3 "" H 4375 5450 50  0001 C CNN
+	1    4375 5450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4375 5450 4375 5350
+Wire Wire Line
+	4250 4975 5225 4975
+Wire Wire Line
+	4375 4975 4375 5050
+Text HLabel 4250 4975 0    60   Output ~ 0
+I3_OUT
+Connection ~ 4375 4975
+Text HLabel 5000 5775 0    60   Input ~ 0
+INA3_OUT+
+Connection ~ 5150 5775
+Text HLabel 6425 5775 2    60   Output ~ 0
+INA3_OUT-
+Connection ~ 6250 5775
+$EndSCHEMATC
