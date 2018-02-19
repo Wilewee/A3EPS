@@ -39,6 +39,7 @@ LIBS:tps54302
 LIBS:bq29209
 LIBS:max40200
 LIBS:tps7a7002
+LIBS:max5395
 LIBS:EPS-cache
 EELAYER 25 0
 EELAYER END
@@ -573,5 +574,11 @@ Wire Wire Line
 	8425 5450 8250 5450
 Connection ~ 8250 5450
 Text Notes 8700 1250 0    60   ~ 0
-Resistor values for voltage dividers:\nTODO
+Resistor values for voltage dividers:\n5.5V max :\n180k/(140k + 180k)*5.5V =  3.1V
+Text Notes 8425 1625 0    79   ~ 0
+180k
+Text Notes 8425 2100 0    79   ~ 0
+140k
+Text Notes 1050 4300 0    79   ~ 0
+Power loss at 500mA\nR					P						%(2,2W)		\n0.02		5mW						0			\n0.05		12,5mW		0,5			\n0.1			25mW				1,1			\n0.2			50mW				2,3			\n0.5			125mW			5,7%		
 $EndSCHEMATC

@@ -1,4 +1,4 @@
-update=16.2.2018 22.44.43
+update=2018 February 19, Monday 22:45:37
 version=1
 last_client=kicad
 [general]
@@ -29,7 +29,7 @@ version=1
 NetIExt=net
 [eeschema]
 version=1
-LibDir=INA139;MAX668_669;STM32F466RE;TPS54302;BQ29209;MAX40200;TPS7A7002
+LibDir=INA139;MAX668_669;STM32F466RE;TPS54302;BQ29209;MAX40200;TPS7A7002;MAX5395
 [eeschema/libraries]
 LibName1=EPS-rescue
 LibName2=power
@@ -71,3 +71,4 @@ LibName37=TPS54302/tps54302
 LibName38=BQ29209/bq29209
 LibName39=MAX40200/max40200
 LibName40=TPS7A7002/tps7a7002
+LibName41=MAX5395/max5395

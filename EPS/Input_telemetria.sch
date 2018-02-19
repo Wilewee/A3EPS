@@ -39,6 +39,7 @@ LIBS:tps54302
 LIBS:bq29209
 LIBS:max40200
 LIBS:tps7a7002
+LIBS:max5395
 LIBS:EPS-cache
 EELAYER 25 0
 EELAYER END
@@ -123,7 +124,9 @@ $EndComp
 Wire Wire Line
 	6600 1500 6425 1500
 Wire Wire Line
-	6600 950  6600 1500
+	6600 950  6600 1300
+Wire Wire Line
+	6600 1300 6600 1500
 Connection ~ 6600 1300
 $Comp
 L GND #PWR?
@@ -147,9 +150,13 @@ Wire Wire Line
 Wire Wire Line
 	5425 1800 5425 2300
 Wire Wire Line
-	5275 2300 5825 2300
+	5275 2300 5425 2300
 Wire Wire Line
-	6125 2300 6700 2300
+	5425 2300 5825 2300
+Wire Wire Line
+	6125 2300 6525 2300
+Wire Wire Line
+	6525 2300 6700 2300
 Wire Wire Line
 	6525 2300 6525 1800
 Wire Wire Line
@@ -168,7 +175,9 @@ $EndComp
 Wire Wire Line
 	4650 1975 4650 1875
 Wire Wire Line
-	4525 1500 5500 1500
+	4525 1500 4650 1500
+Wire Wire Line
+	4650 1500 5500 1500
 Wire Wire Line
 	4650 1500 4650 1575
 Text HLabel 4525 1500 0    60   Output ~ 0
@@ -249,7 +258,9 @@ $EndComp
 Wire Wire Line
 	6525 3225 6350 3225
 Wire Wire Line
-	6525 2675 6525 3225
+	6525 2675 6525 3025
+Wire Wire Line
+	6525 3025 6525 3225
 Connection ~ 6525 3025
 $Comp
 L GND #PWR?
@@ -271,9 +282,13 @@ Wire Wire Line
 Wire Wire Line
 	5350 3525 5350 4025
 Wire Wire Line
-	5200 4025 5750 4025
+	5200 4025 5350 4025
 Wire Wire Line
-	6050 4025 6625 4025
+	5350 4025 5750 4025
+Wire Wire Line
+	6050 4025 6450 4025
+Wire Wire Line
+	6450 4025 6625 4025
 Wire Wire Line
 	6450 4025 6450 3525
 Wire Wire Line
@@ -292,7 +307,9 @@ $EndComp
 Wire Wire Line
 	4575 3700 4575 3600
 Wire Wire Line
-	4450 3225 5425 3225
+	4450 3225 4575 3225
+Wire Wire Line
+	4575 3225 5425 3225
 Wire Wire Line
 	4575 3225 4575 3300
 Text HLabel 4450 3225 0    60   Output ~ 0
@@ -373,7 +390,9 @@ $EndComp
 Wire Wire Line
 	6450 4900 6275 4900
 Wire Wire Line
-	6450 4350 6450 4900
+	6450 4350 6450 4700
+Wire Wire Line
+	6450 4700 6450 4900
 Connection ~ 6450 4700
 $Comp
 L GND #PWR?
@@ -395,9 +414,13 @@ Wire Wire Line
 Wire Wire Line
 	5275 5200 5275 5700
 Wire Wire Line
-	5125 5700 5675 5700
+	5125 5700 5275 5700
 Wire Wire Line
-	5975 5700 6550 5700
+	5275 5700 5675 5700
+Wire Wire Line
+	5975 5700 6375 5700
+Wire Wire Line
+	6375 5700 6550 5700
 Wire Wire Line
 	6375 5700 6375 5200
 Wire Wire Line
@@ -416,7 +439,9 @@ $EndComp
 Wire Wire Line
 	4500 5375 4500 5275
 Wire Wire Line
-	4375 4900 5350 4900
+	4375 4900 4500 4900
+Wire Wire Line
+	4500 4900 5350 4900
 Wire Wire Line
 	4500 4900 4500 4975
 Text HLabel 4375 4900 0    60   Output ~ 0
@@ -470,7 +495,9 @@ Wire Wire Line
 Wire Wire Line
 	8250 1150 8250 1425
 Wire Wire Line
-	8250 1900 8250 1725
+	8250 1900 8250 1825
+Wire Wire Line
+	8250 1825 8250 1725
 Text HLabel 8425 1825 2    60   Output ~ 0
 V1_IN
 Wire Wire Line
@@ -518,7 +545,9 @@ Wire Wire Line
 Wire Wire Line
 	8250 2900 8250 3175
 Wire Wire Line
-	8250 3650 8250 3475
+	8250 3650 8250 3575
+Wire Wire Line
+	8250 3575 8250 3475
 Text HLabel 8425 3575 2    60   Output ~ 0
 V2_IN
 Wire Wire Line
@@ -566,12 +595,20 @@ Wire Wire Line
 Wire Wire Line
 	8250 4775 8250 5050
 Wire Wire Line
-	8250 5525 8250 5350
+	8250 5525 8250 5450
+Wire Wire Line
+	8250 5450 8250 5350
 Text HLabel 8425 5450 2    60   Output ~ 0
 V3_IN
 Wire Wire Line
 	8425 5450 8250 5450
 Connection ~ 8250 5450
 Text Notes 8700 1250 0    60   ~ 0
-Resistor values for voltage dividers:\nTODO
+Resistor values for voltage dividers:\n5.5V max :\n180k/(140k + 180k)*5.5V =  3.1V
+Text Notes 8425 1625 0    79   ~ 0
+180k
+Text Notes 8425 2100 0    79   ~ 0
+140k
+Text Notes 1050 4300 0    79   ~ 0
+Power loss at 500mA\nR					P						%(2,2W)		\n0.02		5mW						0			\n0.05		12,5mW		0,5			\n0.1			25mW				1,1			\n0.2			50mW				2,3			\n0.5			125mW			5,7%		
 $EndSCHEMATC

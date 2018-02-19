@@ -39,6 +39,7 @@ LIBS:tps54302
 LIBS:bq29209
 LIBS:max40200
 LIBS:tps7a7002
+LIBS:max5395
 LIBS:EPS-cache
 EELAYER 25 0
 EELAYER END
@@ -75,7 +76,7 @@ $EndSheet
 $Sheet
 S 5150 1625 1300 1150
 U 5A812530
-F0 "Boost_converters" 60
+F0 "Boost_converters with digi pot" 60
 F1 "Boost_converters.sch" 60
 F2 "BOOST1_IN" I L 5150 1775 60 
 F3 "FB1" I L 5150 2400 60 
@@ -195,14 +196,6 @@ Text Notes 2025 2775 0    60   ~ 0
 To ADC
 Text Notes 6475 2550 0    60   ~ 0
 To ADC
-Text Notes 4900 4000 0    60   ~ 0
-OpAmp feedback control here (or in own sheet)
-Text GLabel 5000 2400 0    60   Input ~ 0
-DAC1
-Text GLabel 5000 2525 0    60   Input ~ 0
-DAC2
-Text GLabel 5000 2650 0    60   Input ~ 0
-DAC3
 Text GLabel 6575 5525 1    60   Output ~ 0
 DAC1
 Text GLabel 6675 5525 1    60   Output ~ 0
@@ -244,7 +237,11 @@ Wire Wire Line
 Wire Wire Line
 	5775 6450 5775 6350
 Wire Wire Line
-	5775 4625 5775 5650
+	5775 4625 5775 4950
+Wire Wire Line
+	5775 4950 5775 5350
+Wire Wire Line
+	5775 5350 5775 5650
 Wire Wire Line
 	5775 5350 5825 5350
 Wire Wire Line
@@ -328,23 +325,15 @@ Wire Wire Line
 Wire Wire Line
 	8625 2025 8850 2025
 Wire Wire Line
-	8850 2025 8850 1775
+	8850 2025 8850 1900
 Wire Wire Line
-	8625 1775 9000 1775
+	8850 1900 8850 1775
+Wire Wire Line
+	8625 1775 8850 1775
+Wire Wire Line
+	8850 1775 9000 1775
 Connection ~ 8850 1775
 Wire Wire Line
 	8625 1900 8850 1900
 Connection ~ 8850 1900
-Wire Notes Line
-	4850 2825 4850 3700
-Wire Notes Line
-	4850 3700 5775 3700
-Wire Notes Line
-	5775 3700 5775 3800
-Wire Notes Line
-	6850 4100 6850 5000
-Wire Notes Line
-	6850 5000 6675 5000
-Wire Notes Line
-	6675 5000 6675 5125
 $EndSCHEMATC
