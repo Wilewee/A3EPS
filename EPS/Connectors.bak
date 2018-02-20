@@ -40,15 +40,17 @@ LIBS:bq29209
 LIBS:max40200
 LIBS:tps7a7002
 LIBS:max5395
+LIBS:ina210
+LIBS:ncs20071
 LIBS:EPS-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 12 13
-Title "Connectors"
-Date "2018-02-16"
-Rev "R1"
+Sheet 13 15
+Title ""
+Date ""
+Rev ""
 Comp ""
 Comment1 ""
 Comment2 ""
@@ -133,30 +135,6 @@ F 3 "" H 9500 3275 60  0001 C CNN
 	1    9550 3275
 	1    0    0    -1  
 $EndComp
-Text GLabel 4475 3150 0    60   Input ~ 0
-PV_X+
-Text GLabel 4475 3750 0    60   Input ~ 0
-PV_X-
-Text GLabel 6750 3150 0    60   Input ~ 0
-PV_Y+
-Text GLabel 6750 3750 0    60   Input ~ 0
-PV_Y-
-Text GLabel 9100 3150 0    60   Input ~ 0
-PV_Z+
-Text GLabel 9100 3750 0    60   Input ~ 0
-PV_Z-
-Text GLabel 5350 3150 2    60   Input ~ 0
-PV_X
-Text GLabel 5350 3750 2    60   Input ~ 0
-PV_X
-Text GLabel 7625 3150 2    60   Input ~ 0
-PV_Y
-Text GLabel 7625 3750 2    60   Input ~ 0
-PV_Y
-Text GLabel 9975 3150 2    60   Input ~ 0
-PV_Z
-Text GLabel 9975 3750 2    60   Input ~ 0
-PV_Z
 $Comp
 L GND #PWR?
 U 1 1 5A8B7527
@@ -223,18 +201,6 @@ F 3 "" H 9100 3900 50  0001 C CNN
 	1    9100 3900
 	0    1    1    0   
 $EndComp
-Text GLabel 4475 3450 0    60   Input ~ 0
-PV_DIODE_ENABLE
-Text GLabel 4475 4050 0    60   Input ~ 0
-PV_DIODE_ENABLE
-Text GLabel 6750 4050 0    60   Input ~ 0
-PV_DIODE_ENABLE
-Text GLabel 6750 3450 0    60   Input ~ 0
-PV_DIODE_ENABLE
-Text GLabel 9100 3450 0    60   Input ~ 0
-PV_DIODE_ENABLE
-Text GLabel 9100 4050 0    60   Input ~ 0
-PV_DIODE_ENABLE
 Text Notes 3925 2875 0    118  ~ 0
 X axis diodes
 Text Notes 6200 2875 0    118  ~ 0
@@ -243,4 +209,428 @@ Text Notes 8650 2875 0    118  ~ 0
 Z axis diodes
 Wire Notes Line
 	5750 4450 5750 2650
+Text HLabel 2750 3750 0    60   Input ~ 0
+CAN_1_L
+Text HLabel 2750 3850 0    60   Input ~ 0
+CAN_1_H
+Text HLabel 2750 4050 0    60   Input ~ 0
+CAN_2_L
+Text HLabel 2750 3950 0    60   Input ~ 0
+CAN_2_H
+Text HLabel 2250 6400 3    60   Input ~ 0
+5V_1
+Text HLabel 2700 6400 3    60   Input ~ 0
+5V_2
+Text HLabel 3150 6400 3    60   Input ~ 0
+Batt_V_1
+Text HLabel 3550 6400 3    60   Input ~ 0
+Batt_V_2
+Text HLabel 2900 7300 3    60   Input ~ 0
+RBF_DEPL
+Text HLabel 2800 7300 3    60   Input ~ 0
+RBF_POWER
+Text HLabel 3000 7300 3    60   Input ~ 0
+DSW_1
+Text HLabel 3200 7300 3    60   Input ~ 0
+DSW_3
+Text HLabel 3100 7300 3    60   Input ~ 0
+DSW_2
+Text HLabel 1550 5450 0    60   Input ~ 0
+X-
+Text HLabel 1550 5850 0    60   Input ~ 0
+Z-
+Text HLabel 1550 5750 0    60   Input ~ 0
+Z+
+Text HLabel 1550 5650 0    60   Input ~ 0
+Y-
+Text HLabel 1550 5550 0    60   Input ~ 0
+Y+
+Text HLabel 1550 5350 0    60   Input ~ 0
+X+
+Wire Wire Line
+	1550 5350 1650 5350
+Wire Wire Line
+	1550 5450 2050 5450
+Wire Wire Line
+	1550 5550 2450 5550
+Wire Wire Line
+	1550 5650 2850 5650
+Wire Wire Line
+	1550 5750 3250 5750
+Wire Wire Line
+	1550 5850 3650 5850
+Text HLabel 2250 7250 3    60   Input ~ 0
+Batt_Temp1
+Text HLabel 2350 7250 3    60   Input ~ 0
+Batt_Temp2
+$Comp
+L Conn_01x02 Solar_X?
+U 1 1 5A8D807D
+P 1750 4650
+F 0 "Solar_X?" H 1750 4750 50  0000 C CNN
+F 1 "JST_Connector" H 1750 4450 50  0000 C CNN
+F 2 "Connectors_JST:JST_XH_B02B-XH-A_02x2.50mm_Straight" H 1750 4650 50  0001 C CNN
+F 3 "" H 1750 4650 50  0001 C CNN
+	1    1750 4650
+	0    1    -1   0   
+$EndComp
+$Comp
+L Conn_01x02 Solar_Y?
+U 1 1 5A8D807E
+P 2550 4650
+F 0 "Solar_Y?" H 2550 4750 50  0000 C CNN
+F 1 "JST_Connector" H 2550 4450 50  0000 C CNN
+F 2 "Connectors_JST:JST_XH_B02B-XH-A_02x2.50mm_Straight" H 2550 4650 50  0001 C CNN
+F 3 "" H 2550 4650 50  0001 C CNN
+	1    2550 4650
+	0    1    -1   0   
+$EndComp
+$Comp
+L Conn_01x02 Solar_Z?
+U 1 1 5A8D807F
+P 3350 4650
+F 0 "Solar_Z?" H 3350 4750 50  0000 C CNN
+F 1 "JST_Connector" H 3350 4450 50  0000 C CNN
+F 2 "Connectors_JST:JST_XH_B02B-XH-A_02x2.50mm_Straight" H 3350 4650 50  0001 C CNN
+F 3 "" H 3350 4650 50  0001 C CNN
+	1    3350 4650
+	0    1    -1   0   
+$EndComp
+$Comp
+L Conn_01x02 5V_?
+U 1 1 5A8D8080
+P 2600 6200
+F 0 "5V_?" H 2600 6300 50  0000 C CNN
+F 1 "Jst_Conn" H 2600 6000 50  0000 C CNN
+F 2 "Connectors_JST:JST_XH_B02B-XH-A_02x2.50mm_Straight" H 2600 6200 50  0001 C CNN
+F 3 "" H 2600 6200 50  0001 C CNN
+	1    2600 6200
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Conn_01x02 Temp_Connector?
+U 1 1 5A8D8081
+P 2250 7050
+F 0 "Temp_Connector?" H 2250 7150 50  0000 C CNN
+F 1 "JST_conn" H 2250 6850 50  0000 C CNN
+F 2 "Connectors_JST:JST_XH_B02B-XH-A_02x2.50mm_Straight" H 2250 7050 50  0001 C CNN
+F 3 "" H 2250 7050 50  0001 C CNN
+	1    2250 7050
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Conn_01x05 RBF_control_pins?
+U 1 1 5A8D8082
+P 3000 7100
+F 0 "RBF_control_pins?" H 3000 7400 50  0000 C CNN
+F 1 "5_pin_2.56" H 3000 6800 50  0000 C CNN
+F 2 "Socket_Strips:Socket_Strip_Straight_1x05_Pitch2.54mm" H 3000 7100 50  0001 C CNN
+F 3 "" H 3000 7100 50  0001 C CNN
+	1    3000 7100
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Conn_01x05 Ground_Pins?
+U 1 1 5A8D8083
+P 4000 7100
+F 0 "Ground_Pins?" H 4000 7400 50  0000 C CNN
+F 1 "2.56_socket_male" H 4000 6800 50  0000 C CNN
+F 2 "Socket_Strips:Socket_Strip_Straight_1x05_Pitch2.54mm" H 4000 7100 50  0001 C CNN
+F 3 "" H 4000 7100 50  0001 C CNN
+	1    4000 7100
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Conn_01x02 Batt_V_?
+U 1 1 5A8D8084
+P 3450 6200
+F 0 "Batt_V_?" H 3450 6300 50  0000 C CNN
+F 1 "Jst_Conn" H 3450 6000 50  0000 C CNN
+F 2 "Connectors_JST:JST_XH_B02B-XH-A_02x2.50mm_Straight" H 3450 6200 50  0001 C CNN
+F 3 "" H 3450 6200 50  0001 C CNN
+	1    3450 6200
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Conn_01x02 Batt_V_?
+U 1 1 5A8D8085
+P 3050 6200
+F 0 "Batt_V_?" H 3050 6300 50  0000 C CNN
+F 1 "Jst_Conn" H 3050 6000 50  0000 C CNN
+F 2 "Connectors_JST:JST_XH_B02B-XH-A_02x2.50mm_Straight" H 3050 6200 50  0001 C CNN
+F 3 "" H 3050 6200 50  0001 C CNN
+	1    3050 6200
+	0    -1   -1   0   
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 5A8D8086
+P 4000 7500
+F 0 "#PWR?" H 4000 7250 50  0001 C CNN
+F 1 "GND" H 4000 7350 50  0000 C CNN
+F 2 "" H 4000 7500 50  0001 C CNN
+F 3 "" H 4000 7500 50  0001 C CNN
+	1    4000 7500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3800 7450 4200 7450
+Wire Wire Line
+	3800 7450 3800 7300
+Wire Wire Line
+	3900 7450 3900 7300
+Connection ~ 3900 7450
+Wire Wire Line
+	4000 7300 4000 7500
+Connection ~ 4000 7450
+Wire Wire Line
+	4100 7450 4100 7300
+Wire Wire Line
+	4200 7450 4200 7300
+Connection ~ 4100 7450
+$Comp
+L Conn_01x05 CAN_BUS?
+U 1 1 5A8D8087
+P 2950 3850
+F 0 "CAN_BUS?" H 2950 4150 50  0000 C CNN
+F 1 "5_pin_2.56" H 2950 3550 50  0000 C CNN
+F 2 "Socket_Strips:Socket_Strip_Straight_1x05_Pitch2.54mm" H 2950 3850 50  0001 C CNN
+F 3 "" H 2950 3850 50  0001 C CNN
+	1    2950 3850
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 5A8D8088
+P 2750 3650
+F 0 "#PWR?" H 2750 3400 50  0001 C CNN
+F 1 "GND" H 2750 3500 50  0000 C CNN
+F 2 "" H 2750 3650 50  0001 C CNN
+F 3 "" H 2750 3650 50  0001 C CNN
+	1    2750 3650
+	0    1    1    0   
+$EndComp
+$Comp
+L Conn_01x02 Solar_X?
+U 1 1 5A8D8089
+P 2150 4650
+F 0 "Solar_X?" H 2150 4750 50  0000 C CNN
+F 1 "JST_Connector" H 2150 4450 50  0000 C CNN
+F 2 "Connectors_JST:JST_XH_B02B-XH-A_02x2.50mm_Straight" H 2150 4650 50  0001 C CNN
+F 3 "" H 2150 4650 50  0001 C CNN
+	1    2150 4650
+	0    1    -1   0   
+$EndComp
+$Comp
+L Conn_01x02 Solar_Y?
+U 1 1 5A8D808A
+P 2950 4650
+F 0 "Solar_Y?" H 2950 4750 50  0000 C CNN
+F 1 "JST_Connector" H 2950 4450 50  0000 C CNN
+F 2 "Connectors_JST:JST_XH_B02B-XH-A_02x2.50mm_Straight" H 2950 4650 50  0001 C CNN
+F 3 "" H 2950 4650 50  0001 C CNN
+	1    2950 4650
+	0    1    -1   0   
+$EndComp
+$Comp
+L Conn_01x02 Solar_Z?
+U 1 1 5A8D808B
+P 3750 4650
+F 0 "Solar_Z?" H 3750 4750 50  0000 C CNN
+F 1 "JST_Connector" H 3750 4450 50  0000 C CNN
+F 2 "Connectors_JST:JST_XH_B02B-XH-A_02x2.50mm_Straight" H 3750 4650 50  0001 C CNN
+F 3 "" H 3750 4650 50  0001 C CNN
+	1    3750 4650
+	0    1    -1   0   
+$EndComp
+Wire Wire Line
+	1650 5350 1650 4850
+Wire Wire Line
+	2050 5450 2050 4850
+Wire Wire Line
+	2450 5550 2450 4850
+Wire Wire Line
+	2850 5650 2850 4850
+Wire Wire Line
+	3250 5750 3250 4850
+Wire Wire Line
+	3650 5850 3650 4850
+$Comp
+L GND #PWR?
+U 1 1 5A8D808C
+P 1750 4850
+F 0 "#PWR?" H 1750 4600 50  0001 C CNN
+F 1 "GND" H 1750 4700 50  0000 C CNN
+F 2 "" H 1750 4850 50  0001 C CNN
+F 3 "" H 1750 4850 50  0001 C CNN
+	1    1750 4850
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 5A8D808D
+P 2150 4850
+F 0 "#PWR?" H 2150 4600 50  0001 C CNN
+F 1 "GND" H 2150 4700 50  0000 C CNN
+F 2 "" H 2150 4850 50  0001 C CNN
+F 3 "" H 2150 4850 50  0001 C CNN
+	1    2150 4850
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 5A8D808E
+P 2550 4850
+F 0 "#PWR?" H 2550 4600 50  0001 C CNN
+F 1 "GND" H 2550 4700 50  0000 C CNN
+F 2 "" H 2550 4850 50  0001 C CNN
+F 3 "" H 2550 4850 50  0001 C CNN
+	1    2550 4850
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 5A8D808F
+P 2950 4850
+F 0 "#PWR?" H 2950 4600 50  0001 C CNN
+F 1 "GND" H 2950 4700 50  0000 C CNN
+F 2 "" H 2950 4850 50  0001 C CNN
+F 3 "" H 2950 4850 50  0001 C CNN
+	1    2950 4850
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 5A8D8090
+P 3350 4850
+F 0 "#PWR?" H 3350 4600 50  0001 C CNN
+F 1 "GND" H 3350 4700 50  0000 C CNN
+F 2 "" H 3350 4850 50  0001 C CNN
+F 3 "" H 3350 4850 50  0001 C CNN
+	1    3350 4850
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 5A8D8091
+P 3750 4850
+F 0 "#PWR?" H 3750 4600 50  0001 C CNN
+F 1 "GND" H 3750 4700 50  0000 C CNN
+F 2 "" H 3750 4850 50  0001 C CNN
+F 3 "" H 3750 4850 50  0001 C CNN
+	1    3750 4850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Conn_01x02 5V_?
+U 1 1 5A8D8092
+P 2150 6200
+F 0 "5V_?" H 2150 6300 50  0000 C CNN
+F 1 "Jst_Conn" H 2150 6000 50  0000 C CNN
+F 2 "Connectors_JST:JST_XH_B02B-XH-A_02x2.50mm_Straight" H 2150 6200 50  0001 C CNN
+F 3 "" H 2150 6200 50  0001 C CNN
+	1    2150 6200
+	0    -1   -1   0   
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 5A8D8093
+P 2150 6400
+F 0 "#PWR?" H 2150 6150 50  0001 C CNN
+F 1 "GND" H 2150 6250 50  0000 C CNN
+F 2 "" H 2150 6400 50  0001 C CNN
+F 3 "" H 2150 6400 50  0001 C CNN
+	1    2150 6400
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 5A8D8094
+P 2600 6400
+F 0 "#PWR?" H 2600 6150 50  0001 C CNN
+F 1 "GND" H 2600 6250 50  0000 C CNN
+F 2 "" H 2600 6400 50  0001 C CNN
+F 3 "" H 2600 6400 50  0001 C CNN
+	1    2600 6400
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 5A8D8095
+P 3050 6400
+F 0 "#PWR?" H 3050 6150 50  0001 C CNN
+F 1 "GND" H 3050 6250 50  0000 C CNN
+F 2 "" H 3050 6400 50  0001 C CNN
+F 3 "" H 3050 6400 50  0001 C CNN
+	1    3050 6400
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 5A8D8096
+P 3450 6400
+F 0 "#PWR?" H 3450 6150 50  0001 C CNN
+F 1 "GND" H 3450 6250 50  0000 C CNN
+F 2 "" H 3450 6400 50  0001 C CNN
+F 3 "" H 3450 6400 50  0001 C CNN
+	1    3450 6400
+	1    0    0    -1  
+$EndComp
+Text HLabel 4475 3150 0    60   Input ~ 0
+X+
+Text HLabel 4475 3750 0    60   Input ~ 0
+X+
+Text HLabel 6750 3150 0    60   Input ~ 0
+Y+
+Text HLabel 6750 3750 0    60   Input ~ 0
+Y-
+Text HLabel 9100 3150 0    60   Input ~ 0
+Z+
+Text HLabel 9100 3750 0    60   Input ~ 0
+Z-
+Text HLabel 4475 3450 0    60   Input ~ 0
+Diode_enable
+Text HLabel 4475 4050 0    60   Input ~ 0
+Diode_enable
+Text HLabel 6750 3450 0    60   Input ~ 0
+Diode_enable
+Text HLabel 6750 4050 0    60   Input ~ 0
+Diode_enable
+Text HLabel 9100 3450 0    60   Input ~ 0
+Diode_enable
+Text HLabel 9100 4050 0    60   Input ~ 0
+Diode_enable
+Text HLabel 5525 3625 2    60   Input ~ 0
+X_PV_IN
+Wire Wire Line
+	5350 3150 5475 3150
+Wire Wire Line
+	5475 3150 5475 3750
+Wire Wire Line
+	5475 3625 5525 3625
+Wire Wire Line
+	5475 3750 5350 3750
+Connection ~ 5475 3625
+Text HLabel 7800 3625 2    60   Input ~ 0
+Y_PV_IN
+Wire Wire Line
+	7625 3150 7750 3150
+Wire Wire Line
+	7750 3150 7750 3750
+Wire Wire Line
+	7750 3625 7800 3625
+Wire Wire Line
+	7750 3750 7625 3750
+Connection ~ 7750 3625
+Wire Wire Line
+	9975 3150 10100 3150
+Wire Wire Line
+	10100 3150 10100 3750
+Wire Wire Line
+	10100 3625 10150 3625
+Wire Wire Line
+	10100 3750 9975 3750
+Connection ~ 10100 3625
+Text HLabel 10150 3625 2    60   Input ~ 0
+Z_PV_IN
 $EndSCHEMATC

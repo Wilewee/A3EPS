@@ -40,12 +40,14 @@ LIBS:bq29209
 LIBS:max40200
 LIBS:tps7a7002
 LIBS:max5395
+LIBS:ina210
+LIBS:ncs20071
 LIBS:EPS-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 13
+Sheet 1 14
 Title "EPS"
 Date "2018-02-16"
 Rev "R1"
@@ -168,8 +170,33 @@ $EndSheet
 $Sheet
 S 7550 4175 1300 1900
 U 5A810768
-F0 "Connectors" 60
-F1 "Connectors.sch" 60
+F0 "Connectors_diodes" 60
+F1 "Connectors_diodes.sch" 60
+F2 "CAN_1_L" I L 7550 4300 60 
+F3 "CAN_1_H" I L 7550 4400 60 
+F4 "CAN_2_L" I L 7550 4500 60 
+F5 "CAN_2_H" I L 7550 4600 60 
+F6 "5V_1" I L 7550 4775 60 
+F7 "5V_2" I L 7550 4875 60 
+F8 "Batt_V_1" I L 7550 5025 60 
+F9 "Batt_V_2" I L 7550 5125 60 
+F10 "RBF_DEPL" I L 7550 5275 60 
+F11 "RBF_POWER" I L 7550 5350 60 
+F12 "DSW_1" I L 7550 5425 60 
+F13 "DSW_3" I L 7550 5500 60 
+F14 "DSW_2" I L 7550 5575 60 
+F15 "X-" I R 8850 4875 60 
+F16 "Z-" I R 8850 4450 60 
+F17 "Z+" I R 8850 4550 60 
+F18 "Y-" I R 8850 4750 60 
+F19 "Y+" I R 8850 4675 60 
+F20 "X+" I R 8850 4950 60 
+F21 "Batt_Temp1" I L 7550 5700 60 
+F22 "Batt_Temp2" I L 7550 5800 60 
+F23 "Diode_enable" I L 7550 5925 60 
+F24 "X_PV_IN" I R 8850 5200 60 
+F25 "Y_PV_IN" I R 8850 5300 60 
+F26 "Z_PV_IN" I R 8850 5400 60 
 $EndSheet
 $Comp
 L Conn_01x03 J?
@@ -439,4 +466,33 @@ Wire Wire Line
 	9675 1350 9475 1350
 Text GLabel 2325 4450 0    60   Input ~ 0
 3V6
+Wire Wire Line
+	8850 4450 8925 4450
+Wire Wire Line
+	8850 4550 8925 4550
+Wire Wire Line
+	8850 4675 8925 4675
+Wire Wire Line
+	8850 4750 8925 4750
+Wire Wire Line
+	8850 4875 8925 4875
+Wire Wire Line
+	8850 4950 8925 4950
+NoConn ~ 8925 4950
+NoConn ~ 8925 4875
+NoConn ~ 8925 4750
+NoConn ~ 8925 4675
+NoConn ~ 8925 4550
+NoConn ~ 8925 4450
+Text Notes 9050 4125 3    60   ~ 0
+Connected within sheet\n
+Text GLabel 5275 975  0    60   Input ~ 0
+VBATT_EPS
+Wire Wire Line
+	5275 975  5375 975 
+Wire Wire Line
+	5375 975  5375 1100
+Connection ~ 5375 1100
+Text Notes 4725 900  0    60   ~ 0
+For op amps
 $EndSCHEMATC

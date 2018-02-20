@@ -40,12 +40,14 @@ LIBS:bq29209
 LIBS:max40200
 LIBS:tps7a7002
 LIBS:max5395
+LIBS:ina210
+LIBS:ncs20071
 LIBS:EPS-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 13 13
+Sheet 14 14
 Title "Battery pack"
 Date "2018-02-16"
 Rev "R1"

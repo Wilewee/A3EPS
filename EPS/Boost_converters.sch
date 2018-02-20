@@ -40,12 +40,14 @@ LIBS:bq29209
 LIBS:max40200
 LIBS:tps7a7002
 LIBS:max5395
+LIBS:ina210
+LIBS:ncs20071
 LIBS:EPS-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 6 13
+Sheet 6 14
 Title "Boost converters"
 Date "2018-02-13"
 Rev "R1"
@@ -148,15 +150,11 @@ Wire Wire Line
 Wire Wire Line
 	3075 1800 3075 1850
 Wire Wire Line
-	2650 1850 3075 1850
-Wire Wire Line
-	3075 1850 3275 1850
+	2650 1850 3275 1850
 Wire Wire Line
 	2650 1450 3075 1450
 Wire Wire Line
-	3075 1400 3075 1450
-Wire Wire Line
-	3075 1450 3075 1500
+	3075 1400 3075 1500
 Connection ~ 3075 1450
 $Comp
 L GND #PWR?
@@ -197,15 +195,11 @@ F 3 "" H 2700 750 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3075 875  3075 925 
-Wire Wire Line
-	3075 925  3075 1000
+	3075 875  3075 1000
 Wire Wire Line
 	3075 600  3075 675 
 Wire Wire Line
-	2175 600  2700 600 
-Wire Wire Line
-	2700 600  3075 600 
+	2175 600  3075 600 
 $Comp
 L GND #PWR?
 U 1 1 5A8319DF
@@ -237,24 +231,14 @@ F 3 "" H 4200 1900 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2650 2100 3450 2100
-Wire Wire Line
-	3450 2100 4200 2100
-Wire Wire Line
-	4200 2100 4675 2100
+	2650 2100 4675 2100
 Wire Wire Line
 	4200 2050 4200 2100
 Connection ~ 4200 2100
 Text HLabel 4675 2100 2    60   Input ~ 0
 FB1
 Wire Wire Line
-	3900 925  4200 925 
-Wire Wire Line
-	4200 925  4650 925 
-Wire Wire Line
-	4650 925  4925 925 
-Wire Wire Line
-	4925 925  5225 925 
+	3900 925  5225 925 
 Wire Wire Line
 	4200 925  4200 1750
 $Comp
@@ -372,15 +356,11 @@ BOOST1_OUT
 Text GLabel 1075 1750 0    60   Input ~ 0
 Vcc1
 Wire Wire Line
-	1075 1750 1300 1750
-Wire Wire Line
-	1300 1750 1500 1750
+	1075 1750 1500 1750
 Text GLabel 4925 825  1    60   Output ~ 0
 Vcc1
 Wire Wire Line
-	4925 825  4925 925 
-Wire Wire Line
-	4925 925  4925 975 
+	4925 825  4925 975 
 Connection ~ 4925 925 
 Wire Wire Line
 	1250 2650 1500 2650
@@ -389,9 +369,7 @@ Wire Wire Line
 Wire Wire Line
 	950  2500 750  2500
 Wire Wire Line
-	750  2500 750  2575
-Wire Wire Line
-	750  2575 750  2650
+	750  2500 750  2650
 Wire Wire Line
 	750  2650 950  2650
 Connection ~ 750  2575
@@ -488,15 +466,11 @@ Wire Wire Line
 Wire Wire Line
 	3075 4200 3075 4250
 Wire Wire Line
-	2650 4250 3075 4250
-Wire Wire Line
-	3075 4250 3275 4250
+	2650 4250 3275 4250
 Wire Wire Line
 	2650 3850 3075 3850
 Wire Wire Line
-	3075 3800 3075 3850
-Wire Wire Line
-	3075 3850 3075 3900
+	3075 3800 3075 3900
 Connection ~ 3075 3850
 $Comp
 L GND #PWR?
@@ -537,15 +511,11 @@ F 3 "" H 2700 3150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3075 3275 3075 3325
-Wire Wire Line
-	3075 3325 3075 3400
+	3075 3275 3075 3400
 Wire Wire Line
 	3075 3000 3075 3075
 Wire Wire Line
-	2175 3000 2700 3000
-Wire Wire Line
-	2700 3000 3075 3000
+	2175 3000 3075 3000
 $Comp
 L GND #PWR?
 U 1 1 5A83D33A
@@ -577,24 +547,14 @@ F 3 "" H 4200 4300 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2650 4500 3450 4500
-Wire Wire Line
-	3450 4500 4200 4500
-Wire Wire Line
-	4200 4500 4675 4500
+	2650 4500 4675 4500
 Wire Wire Line
 	4200 4450 4200 4500
 Connection ~ 4200 4500
 Text HLabel 4675 4500 2    60   Input ~ 0
 FB2
 Wire Wire Line
-	3900 3325 4200 3325
-Wire Wire Line
-	4200 3325 4650 3325
-Wire Wire Line
-	4650 3325 4925 3325
-Wire Wire Line
-	4925 3325 5225 3325
+	3900 3325 5225 3325
 Wire Wire Line
 	4200 3325 4200 4150
 $Comp
@@ -712,15 +672,11 @@ BOOST2_OUT
 Text GLabel 1075 4150 0    60   Input ~ 0
 Vcc2
 Wire Wire Line
-	1075 4150 1300 4150
-Wire Wire Line
-	1300 4150 1500 4150
+	1075 4150 1500 4150
 Text GLabel 4925 3225 1    60   Output ~ 0
 Vcc2
 Wire Wire Line
-	4925 3225 4925 3325
-Wire Wire Line
-	4925 3325 4925 3375
+	4925 3225 4925 3375
 Connection ~ 4925 3325
 Wire Wire Line
 	1250 5050 1500 5050
@@ -729,9 +685,7 @@ Wire Wire Line
 Wire Wire Line
 	950  4900 750  4900
 Wire Wire Line
-	750  4900 750  4975
-Wire Wire Line
-	750  4975 750  5050
+	750  4900 750  5050
 Wire Wire Line
 	750  5050 950  5050
 Connection ~ 750  4975
@@ -836,15 +790,11 @@ Wire Wire Line
 Wire Wire Line
 	3075 6600 3075 6650
 Wire Wire Line
-	2650 6650 3075 6650
-Wire Wire Line
-	3075 6650 3275 6650
+	2650 6650 3275 6650
 Wire Wire Line
 	2650 6250 3075 6250
 Wire Wire Line
-	3075 6200 3075 6250
-Wire Wire Line
-	3075 6250 3075 6300
+	3075 6200 3075 6300
 Connection ~ 3075 6250
 $Comp
 L GND #PWR?
@@ -885,15 +835,11 @@ F 3 "" H 2700 5550 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3075 5675 3075 5725
-Wire Wire Line
-	3075 5725 3075 5800
+	3075 5675 3075 5800
 Wire Wire Line
 	3075 5400 3075 5475
 Wire Wire Line
-	2175 5400 2700 5400
-Wire Wire Line
-	2700 5400 3075 5400
+	2175 5400 3075 5400
 $Comp
 L GND #PWR?
 U 1 1 5A83F3FE
@@ -925,24 +871,14 @@ F 3 "" H 4200 6700 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2650 6900 3450 6900
-Wire Wire Line
-	3450 6900 4200 6900
-Wire Wire Line
-	4200 6900 4675 6900
+	2650 6900 4675 6900
 Wire Wire Line
 	4200 6850 4200 6900
 Connection ~ 4200 6900
 Text HLabel 4675 6900 2    60   Input ~ 0
 FB3
 Wire Wire Line
-	3900 5725 4200 5725
-Wire Wire Line
-	4200 5725 4650 5725
-Wire Wire Line
-	4650 5725 4925 5725
-Wire Wire Line
-	4925 5725 5225 5725
+	3900 5725 5225 5725
 Wire Wire Line
 	4200 5725 4200 6550
 $Comp
@@ -1060,15 +996,11 @@ BOOST3_OUT
 Text GLabel 1075 6550 0    60   Input ~ 0
 Vcc3
 Wire Wire Line
-	1075 6550 1300 6550
-Wire Wire Line
-	1300 6550 1500 6550
+	1075 6550 1500 6550
 Text GLabel 4925 5625 1    60   Output ~ 0
 Vcc3
 Wire Wire Line
-	4925 5625 4925 5725
-Wire Wire Line
-	4925 5725 4925 5775
+	4925 5625 4925 5775
 Connection ~ 4925 5725
 Wire Wire Line
 	1250 7450 1500 7450
@@ -1077,9 +1009,7 @@ Wire Wire Line
 Wire Wire Line
 	950  7300 750  7300
 Wire Wire Line
-	750  7300 750  7375
-Wire Wire Line
-	750  7375 750  7450
+	750  7300 750  7450
 Wire Wire Line
 	750  7450 950  7450
 Connection ~ 750  7375

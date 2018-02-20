@@ -40,12 +40,14 @@ LIBS:bq29209
 LIBS:max40200
 LIBS:tps7a7002
 LIBS:max5395
+LIBS:ina210
+LIBS:ncs20071
 LIBS:EPS-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 3 13
+Sheet 3 14
 Title "CAN transceivers"
 Date "2018-02-08"
 Rev "R1"
