@@ -49,7 +49,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 4 14
 Title "Input"
-Date "2018-02-13"
+Date "2018-02-22"
 Rev "R1"
 Comp ""
 Comment1 ""
@@ -76,7 +76,7 @@ F12 "V2_IN" O L 1775 2975 60
 F13 "V3_IN" O L 1775 3100 60 
 $EndSheet
 $Sheet
-S 3900 1625 1300 1150
+S 3900 1625 1300 975 
 U 5A812530
 F0 "Boost" 60
 F1 "Boost.sch" 60
@@ -86,6 +86,8 @@ F4 "BOOST2_IN" I L 3900 1900 60
 F5 "BOOST2_OUT" O R 5200 1900 60 
 F6 "BOOST3_IN" I L 3900 2025 60 
 F7 "BOOST3_OUT" O R 5200 2025 60 
+F8 "SCL" I L 3900 2425 60 
+F9 "SDA" B L 3900 2300 60 
 $EndSheet
 $Sheet
 S 6100 1625 1300 1600
@@ -130,6 +132,37 @@ Text HLabel 6025 2525 0    60   Output ~ 0
 I2_OUT
 Text HLabel 6025 2650 0    60   Output ~ 0
 I3_OUT
+$Sheet
+S 8200 1600 1200 1675
+U 5A8CBBB0
+F0 "Current_Limiters" 60
+F1 "Current_Limiters.sch" 60
+F2 "BOOSTED_V_2" I L 8200 1900 60 
+F3 "BOOSTED_V_3" I L 8200 2025 60 
+F4 "BOOSTED_V_1" I L 8200 1775 60 
+F5 "VBATT_EPS" I L 8200 2725 60 
+F6 "SCL" I L 8200 3050 60 
+F7 "SDA" B L 8200 2950 60 
+F8 "LDAC" I L 8200 3150 60 
+F9 "PV_Y" I L 8200 2350 60 
+F10 "PV_Z" I L 8200 2450 60 
+F11 "PV_X" I L 8200 2250 60 
+F12 "V_OUT" O R 9400 1775 60 
+$EndSheet
+Text Label 1450 1350 3    60   ~ 0
+PV_X
+Text Label 1550 1350 3    60   ~ 0
+PV_Y
+Text Label 1650 1350 3    60   ~ 0
+PV_Z
+Text Label 7950 2250 0    60   ~ 0
+PV_X
+Text Label 7950 2350 0    60   ~ 0
+PV_Y
+Text Label 7950 2450 0    60   ~ 0
+PV_Z
+Text HLabel 9600 1775 2    60   Output ~ 0
+VOUT
 Wire Notes Line
 	1225 2325 1125 2325
 Wire Notes Line
@@ -170,25 +203,6 @@ Wire Wire Line
 	6025 2525 6100 2525
 Wire Wire Line
 	6025 2650 6100 2650
-$Sheet
-S 8200 1600 1300 675 
-U 5A8CBBB0
-F0 "Current_Limiters" 60
-F1 "Current_Limiters.sch" 60
-F2 "PV2" I R 9500 1725 60 
-F3 "BOOSTED_V_2" I L 8200 1900 60 
-F4 "CURRENT_OUT" I R 9500 2200 60 
-F5 "PV3" I R 9500 1800 60 
-F6 "BOOSTED_V_3" I L 8200 2025 60 
-F7 "PV1" I R 9500 1650 60 
-F8 "BOOSTED_V_1" I L 8200 1775 60 
-$EndSheet
-Text GLabel 9800 1600 2    60   Input ~ 0
-PV_X
-Text GLabel 9800 1700 2    60   Input ~ 0
-PV_Y
-Text GLabel 9800 1800 2    60   Input ~ 0
-PV_Z
 Wire Wire Line
 	5200 1775 6100 1775
 Wire Wire Line
@@ -198,21 +212,50 @@ Wire Wire Line
 Wire Wire Line
 	6100 2025 5200 2025
 Wire Wire Line
-	9800 1800 9500 1800
-Wire Wire Line
-	9500 1725 9800 1725
-Wire Wire Line
-	9800 1725 9800 1700
-Wire Wire Line
-	9500 1650 9775 1650
-Wire Wire Line
-	9775 1650 9775 1600
-Wire Wire Line
-	9775 1600 9800 1600
-Wire Wire Line
 	7400 1775 8200 1775
 Wire Wire Line
 	8200 1900 7400 1900
 Wire Wire Line
 	7400 2025 8200 2025
+Wire Wire Line
+	1450 1775 1450 1350
+Connection ~ 1450 1775
+Wire Wire Line
+	1550 1900 1550 1350
+Connection ~ 1550 1900
+Wire Wire Line
+	1650 2025 1650 1350
+Connection ~ 1650 2025
+Wire Wire Line
+	7950 2250 8200 2250
+Wire Wire Line
+	7950 2350 8200 2350
+Wire Wire Line
+	7950 2450 8200 2450
+Wire Wire Line
+	9600 1775 9400 1775
+Text HLabel 8025 2950 0    60   BiDi ~ 0
+SDA
+Wire Wire Line
+	8025 2950 8200 2950
+Text HLabel 8025 3050 0    60   Input ~ 0
+SCL
+Wire Wire Line
+	8025 3050 8200 3050
+Text HLabel 8025 3150 0    60   Input ~ 0
+LDAC
+Wire Wire Line
+	8025 3150 8200 3150
+Text HLabel 3725 2300 0    60   BiDi ~ 0
+SDA
+Wire Wire Line
+	3725 2300 3900 2300
+Text HLabel 3725 2425 0    60   BiDi ~ 0
+SCL
+Wire Wire Line
+	3725 2425 3900 2425
+Text HLabel 8025 2725 0    60   Input ~ 0
+VBATT_EPS
+Wire Wire Line
+	8025 2725 8200 2725
 $EndSCHEMATC

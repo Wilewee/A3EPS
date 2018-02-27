@@ -123,9 +123,9 @@ CAN1_RX
 Wire Wire Line
 	4925 2700 5025 2700
 Text HLabel 6225 2700 2    60   BiDi ~ 0
-CAN1_H
+CAN_H
 Text HLabel 6225 2800 2    60   BiDi ~ 0
-CAN1_L
+CAN_L
 Wire Wire Line
 	5825 2700 6225 2700
 Wire Wire Line
@@ -211,9 +211,9 @@ CAN2_RX
 Wire Wire Line
 	4950 4500 5050 4500
 Text HLabel 6250 4500 2    60   BiDi ~ 0
-CAN2_H
+CAN_H
 Text HLabel 6250 4600 2    60   BiDi ~ 0
-CAN2_L
+CAN_L
 Wire Wire Line
 	5850 4500 6250 4500
 Wire Wire Line

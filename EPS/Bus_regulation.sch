@@ -47,9 +47,9 @@ EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 10 14
+Sheet 9 14
 Title "Output regulation"
-Date "2018-02-15"
+Date "2018-02-22"
 Rev "R1"
 Comp ""
 Comment1 ""
@@ -72,12 +72,8 @@ Text HLabel 3175 2375 0    60   Input ~ 0
 VIN
 Text HLabel 3925 3725 0    60   Input ~ 0
 3V6_BUS_SW1
-Wire Wire Line
-	3925 3725 4100 3725
 Text HLabel 3925 3850 0    60   Input ~ 0
 3V6_BUS_SW2
-Wire Wire Line
-	3925 3850 4100 3850
 $Sheet
 S 5600 2250 1325 2450
 U 5A96FF88
@@ -88,13 +84,83 @@ F3 "INA1_BUS+" I L 5600 2375 60
 F4 "INA1_BUS-" O R 6925 2375 60 
 F5 "I1_3V6_BUS" O L 5600 4400 60 
 F6 "INA2_BUS+" I L 5600 3250 60 
-F7 "INA2_BUS-" O R 6925 3250 60 
-F8 "INA3_BUS-" O R 6925 3375 60 
+F7 "INA2_BUS-" O R 6925 3875 60 
+F8 "INA3_BUS-" O R 6925 4000 60 
 F9 "INA3_BUS+" I L 5600 3375 60 
 F10 "I2_3V6_BUS" O L 5600 4525 60 
 $EndSheet
+Text HLabel 3925 4275 0    60   Output ~ 0
+I_RAW
+Text HLabel 3925 4400 0    60   Output ~ 0
+I1_3V6_BUS
+Text HLabel 3925 4525 0    60   Output ~ 0
+I2_3V6_BUS
+Text HLabel 8700 2375 2    60   Output ~ 0
+RAW_OUT
+Text HLabel 8275 3875 2    60   Output ~ 0
+3V6_OUT1
+Text HLabel 8275 4000 2    60   Output ~ 0
+3V6_OUT2
+Text HLabel 7750 3100 0    60   Input ~ 0
+RAW_BUS_SW
+Text Notes 7100 4750 0    60   ~ 0
+If EN works on buck-converters, then we don't need mosfets on\n3V6 output rail
+Text Notes 7275 1675 0    60   ~ 0
+Another mosfet in parallel for redundancy
+Text Notes 3650 2250 0    60   ~ 0
+How many battery buses we want?
+$Comp
+L R R43
+U 1 1 5A9F980B
+P 7725 2625
+F 0 "R43" V 7805 2625 50  0000 C CNN
+F 1 "R" V 7725 2625 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 7655 2625 50  0001 C CNN
+F 3 "" H 7725 2625 50  0001 C CNN
+	1    7725 2625
+	-1   0    0    1   
+$EndComp
+$Comp
+L Q_NMOS_GSD Q10
+U 1 1 5A9F9825
+P 8050 3100
+F 0 "Q10" H 8250 3150 50  0000 L CNN
+F 1 "Q_NMOS_GSD" H 8250 3050 50  0000 L CNN
+F 2 "TO_SOT_Packages_SMD:SOT-23" H 8250 3200 50  0001 C CNN
+F 3 "" H 8050 3100 50  0001 C CNN
+	1    8050 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR0110
+U 1 1 5A9F982C
+P 8150 3375
+F 0 "#PWR0110" H 8150 3125 50  0001 C CNN
+F 1 "GND" H 8150 3225 50  0000 C CNN
+F 2 "" H 8150 3375 50  0001 C CNN
+F 3 "" H 8150 3375 50  0001 C CNN
+	1    8150 3375
+	1    0    0    -1  
+$EndComp
+Text Notes 8325 2925 0    60   ~ 0
+GND = OFF\nFLOAT = ON
+$Comp
+L Q_PMOS_GSD Q11
+U 1 1 5A9FD422
+P 8150 2475
+F 0 "Q11" H 8350 2525 50  0000 L CNN
+F 1 "Q_PMOS_GSD" H 8350 2425 50  0000 L CNN
+F 2 "TO_SOT_Packages_SMD:SOT-23" H 8350 2575 50  0001 C CNN
+F 3 "" H 8150 2475 50  0001 C CNN
+	1    8150 2475
+	0    1    -1   0   
+$EndComp
 Wire Wire Line
-	5600 2375 3175 2375
+	3925 3725 4100 3725
+Wire Wire Line
+	3925 3850 4100 3850
+Wire Wire Line
+	3175 2375 5600 2375
 Wire Wire Line
 	3350 2375 3350 3250
 Wire Wire Line
@@ -104,53 +170,132 @@ Wire Wire Line
 	5275 3250 5600 3250
 Wire Wire Line
 	5275 3375 5600 3375
-Text HLabel 3925 4275 0    60   Output ~ 0
-I_RAW
 Wire Wire Line
 	3925 4275 5600 4275
-Text HLabel 3925 4400 0    60   Output ~ 0
-I1_3V6_BUS
 Wire Wire Line
 	3925 4400 5600 4400
-Text HLabel 3925 4525 0    60   Output ~ 0
-I2_3V6_BUS
 Wire Wire Line
 	3925 4525 5600 4525
+Wire Wire Line
+	6925 2375 7950 2375
+Wire Wire Line
+	8350 2375 8700 2375
+Wire Wire Line
+	7725 2475 7725 2375
+Connection ~ 7725 2375
+Wire Wire Line
+	7725 2775 7725 2825
+Wire Wire Line
+	7725 2825 8150 2825
+Wire Wire Line
+	8150 2675 8150 2900
+Connection ~ 8150 2825
+Wire Wire Line
+	8150 3375 8150 3300
+Wire Wire Line
+	7850 3100 7750 3100
+Wire Wire Line
+	6925 3875 8275 3875
+Wire Wire Line
+	8275 4000 6925 4000
 $Comp
-L Q_NMOS_GSD Q?
-U 1 1 5A9C3DA7
-P 7750 2475
-F 0 "Q?" H 7950 2525 50  0000 L CNN
-F 1 "Q_NMOS_GSD" H 7950 2425 50  0000 L CNN
-F 2 "" H 7950 2575 50  0001 C CNN
-F 3 "" H 7750 2475 50  0001 C CNN
-	1    7750 2475
-	0    -1   -1   0   
+L CP C52
+U 1 1 5A96ADC2
+P 7525 4200
+F 0 "C52" H 7550 4300 50  0000 L CNN
+F 1 "CP" H 7550 4100 50  0000 L CNN
+F 2 "Capacitors_Tantalum_SMD:CP_Tantalum_Case-C_EIA-6032-28_Reflow" H 7563 4050 50  0001 C CNN
+F 3 "" H 7525 4200 50  0001 C CNN
+	1    7525 4200
+	1    0    0    -1  
+$EndComp
+$Comp
+L CP C51
+U 1 1 5A96AE4D
+P 7325 4200
+F 0 "C51" H 7350 4300 50  0000 L CNN
+F 1 "CP" H 7350 4100 50  0000 L CNN
+F 2 "Capacitors_Tantalum_SMD:CP_Tantalum_Case-C_EIA-6032-28_Reflow" H 7363 4050 50  0001 C CNN
+F 3 "" H 7325 4200 50  0001 C CNN
+	1    7325 4200
+	1    0    0    -1  
+$EndComp
+$Comp
+L CP C60
+U 1 1 5A96AF69
+P 7725 4200
+F 0 "C60" H 7750 4300 50  0000 L CNN
+F 1 "CP" H 7750 4100 50  0000 L CNN
+F 2 "Capacitors_Tantalum_SMD:CP_Tantalum_Case-C_EIA-6032-28_Reflow" H 7763 4050 50  0001 C CNN
+F 3 "" H 7725 4200 50  0001 C CNN
+	1    7725 4200
+	1    0    0    -1  
+$EndComp
+$Comp
+L CP C61
+U 1 1 5A96AFE3
+P 7925 4200
+F 0 "C61" H 7950 4300 50  0000 L CNN
+F 1 "CP" H 7950 4100 50  0000 L CNN
+F 2 "Capacitors_Tantalum_SMD:CP_Tantalum_Case-C_EIA-6032-28_Reflow" H 7963 4050 50  0001 C CNN
+F 3 "" H 7925 4200 50  0001 C CNN
+	1    7925 4200
+	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	7550 2375 6925 2375
-Text HLabel 8275 2375 2    60   Output ~ 0
-RAW_OUT
+	7925 4050 7925 3875
+Connection ~ 7925 3875
 Wire Wire Line
-	8275 2375 7950 2375
-Text HLabel 8275 3250 2    60   Output ~ 0
-3V6_OUT1
-Text HLabel 8275 3375 2    60   Output ~ 0
-3V6_OUT2
+	7725 4050 7725 3875
+Connection ~ 7725 3875
 Wire Wire Line
-	8275 3375 6925 3375
+	7525 4050 7525 4000
+Connection ~ 7525 4000
 Wire Wire Line
-	6925 3250 8275 3250
-Text HLabel 7650 2825 0    60   Input ~ 0
-RAW_BUS_SW
-Wire Wire Line
-	7650 2825 7750 2825
-Wire Wire Line
-	7750 2825 7750 2675
-Text Notes 7125 3775 0    60   ~ 0
-If EN works on buck-converters, then we don't need mosfets on\n3V6 output rail
-Text Notes 7300 1725 0    60   ~ 0
-Another mosfet in parallel for redundancy
-Text Notes 3650 2250 0    60   ~ 0
-How many battery buses we want?
+	7325 4050 7325 4000
+Connection ~ 7325 4000
+$Comp
+L GND #PWR0111
+U 1 1 5A96B19C
+P 7325 4350
+F 0 "#PWR0111" H 7325 4100 50  0001 C CNN
+F 1 "GND" H 7325 4200 50  0000 C CNN
+F 2 "" H 7325 4350 50  0001 C CNN
+F 3 "" H 7325 4350 50  0001 C CNN
+	1    7325 4350
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR0112
+U 1 1 5A96B210
+P 7525 4350
+F 0 "#PWR0112" H 7525 4100 50  0001 C CNN
+F 1 "GND" H 7525 4200 50  0000 C CNN
+F 2 "" H 7525 4350 50  0001 C CNN
+F 3 "" H 7525 4350 50  0001 C CNN
+	1    7525 4350
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR0113
+U 1 1 5A96B284
+P 7725 4350
+F 0 "#PWR0113" H 7725 4100 50  0001 C CNN
+F 1 "GND" H 7725 4200 50  0000 C CNN
+F 2 "" H 7725 4350 50  0001 C CNN
+F 3 "" H 7725 4350 50  0001 C CNN
+	1    7725 4350
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR0114
+U 1 1 5A96B2F8
+P 7925 4350
+F 0 "#PWR0114" H 7925 4100 50  0001 C CNN
+F 1 "GND" H 7925 4200 50  0000 C CNN
+F 2 "" H 7925 4350 50  0001 C CNN
+F 3 "" H 7925 4350 50  0001 C CNN
+	1    7925 4350
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

@@ -47,7 +47,7 @@ EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 14 14
+Sheet 13 14
 Title "Battery pack"
 Date "2018-02-16"
 Rev "R1"
@@ -58,34 +58,34 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L Battery_Cell BT?
+L Battery_Cell BT2
 U 1 1 5AA2DD58
 P 3525 4800
-F 0 "BT?" H 3625 4900 50  0000 L CNN
+F 0 "BT2" H 3625 4900 50  0000 L CNN
 F 1 "Cell1" H 3625 4800 50  0000 L CNN
-F 2 "" V 3525 4860 50  0001 C CNN
+F 2 "Battery_Holder_Lib:18650_Holder_FULL" V 3525 4860 50  0001 C CNN
 F 3 "" V 3525 4860 50  0001 C CNN
 	1    3525 4800
 	1    0    0    -1  
 $EndComp
 $Comp
-L Battery_Cell BT?
+L Battery_Cell BT1
 U 1 1 5AA2DEE2
 P 3525 4075
-F 0 "BT?" H 3625 4175 50  0000 L CNN
+F 0 "BT1" H 3625 4175 50  0000 L CNN
 F 1 "Cell2" H 3625 4075 50  0000 L CNN
-F 2 "" V 3525 4135 50  0001 C CNN
+F 2 "Battery_Holder_Lib:18650_Holder_FULL" V 3525 4135 50  0001 C CNN
 F 3 "" V 3525 4135 50  0001 C CNN
 	1    3525 4075
 	1    0    0    -1  
 $EndComp
 $Comp
-L BQ29209 BQ?
+L BQ29209 BQ1
 U 1 1 5AA2DF38
 P 5550 4175
-F 0 "BQ?" H 5700 3725 60  0000 C CNN
+F 0 "BQ1" H 5700 3725 60  0000 C CNN
 F 1 "BQ29209" H 5700 4475 60  0000 C CNN
-F 2 "" H 5550 4175 60  0000 C CNN
+F 2 "Housings_SON:Texas_S-PVSON-N8" H 5550 4175 60  0001 C CNN
 F 3 "" H 5550 4175 60  0000 C CNN
 	1    5550 4175
 	1    0    0    -1  
@@ -96,43 +96,263 @@ Text Notes 900  1450 0    60   ~ 0
 We assume that cells have internal under-voltage protection\n(bq29209 has over-voltage protection).\n
 Text Notes 925  1900 0    60   ~ 0
 Do we need over-current protection?\n(Most likely yes, but does cells already\nprovide overdischarge protection?)\n
-Wire Notes Line
-	1150 2075 1150 2275
 Text Notes 900  2400 0    60   ~ 0
 Aleksi, find out ;)
 $Comp
-L R R?
+L R R53
 U 1 1 5A8766C1
 P 4350 4175
-F 0 "R?" V 4430 4175 50  0000 C CNN
+F 0 "R53" V 4430 4175 50  0000 C CNN
 F 1 "R" V 4350 4175 50  0000 C CNN
-F 2 "" V 4280 4175 50  0001 C CNN
+F 2 "Resistors_SMD:R_0603" V 4280 4175 50  0001 C CNN
 F 3 "" H 4350 4175 50  0001 C CNN
 	1    4350 4175
 	0    1    1    0   
 $EndComp
 $Comp
-L C C?
+L C C57
 U 1 1 5A876742
 P 4700 4875
-F 0 "C?" H 4725 4975 50  0000 L CNN
+F 0 "C57" H 4725 4975 50  0000 L CNN
 F 1 "0.1u" H 4725 4775 50  0000 L CNN
-F 2 "" H 4738 4725 50  0001 C CNN
+F 2 "Capacitors_SMD:C_0603" H 4738 4725 50  0001 C CNN
 F 3 "" H 4700 4875 50  0001 C CNN
 	1    4700 4875
 	1    0    0    -1  
 $EndComp
 $Comp
-L R R?
+L R R54
 U 1 1 5A876E84
 P 4350 4575
-F 0 "R?" V 4430 4575 50  0000 C CNN
+F 0 "R54" V 4430 4575 50  0000 C CNN
 F 1 "R" V 4350 4575 50  0000 C CNN
-F 2 "" V 4280 4575 50  0001 C CNN
+F 2 "Resistors_SMD:R_0603" V 4280 4575 50  0001 C CNN
 F 3 "" H 4350 4575 50  0001 C CNN
 	1    4350 4575
 	0    1    1    0   
 $EndComp
+$Comp
+L C C56
+U 1 1 5A877784
+P 4700 3975
+F 0 "C56" H 4725 4075 50  0000 L CNN
+F 1 "0.1u" H 4725 3875 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 4738 3825 50  0001 C CNN
+F 3 "" H 4700 3975 50  0001 C CNN
+	1    4700 3975
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R52
+U 1 1 5A8779E5
+P 4350 3775
+F 0 "R52" V 4430 3775 50  0000 C CNN
+F 1 "R" V 4350 3775 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 4280 3775 50  0001 C CNN
+F 3 "" H 4350 3775 50  0001 C CNN
+	1    4350 3775
+	0    1    1    0   
+$EndComp
+$Comp
+L C C58
+U 1 1 5A8784C0
+P 5100 4875
+F 0 "C58" H 5125 4975 50  0000 L CNN
+F 1 "C" H 5125 4775 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 5138 4725 50  0001 C CNN
+F 3 "" H 5100 4875 50  0001 C CNN
+	1    5100 4875
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R55
+U 1 1 5A87952C
+P 6650 3700
+F 0 "R55" V 6730 3700 50  0000 C CNN
+F 1 "R" V 6650 3700 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 6580 3700 50  0001 C CNN
+F 3 "" H 6650 3700 50  0001 C CNN
+	1    6650 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C59
+U 1 1 5A879687
+P 6650 4850
+F 0 "C59" H 6675 4950 50  0000 L CNN
+F 1 "0.1u" H 6675 4750 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 6688 4700 50  0001 C CNN
+F 3 "" H 6650 4850 50  0001 C CNN
+	1    6650 4850
+	1    0    0    -1  
+$EndComp
+Text HLabel 7825 5125 2    60   BiDi ~ 0
+BATT-
+Text HLabel 7825 3450 2    60   BiDi ~ 0
+BATT+
+$Comp
+L GND #PWR0153
+U 1 1 5A87BAD8
+P 5700 5250
+F 0 "#PWR0153" H 5700 5000 50  0001 C CNN
+F 1 "GND" H 5700 5100 50  0000 C CNN
+F 2 "" H 5700 5250 50  0001 C CNN
+F 3 "" H 5700 5250 50  0001 C CNN
+	1    5700 5250
+	1    0    0    -1  
+$EndComp
+Text Notes 6500 5375 0    60   ~ 0
+HIGH => overvoltage condition\nWhat is voltage level that is outputed?
+Text Notes 3725 2850 0    60   ~ 0
+Choose resistor and capacitor values for\noptimal balancing current\n
+Text Notes 2350 3700 0    60   ~ 0
+Battery voltage\nand current \nmeasurements here
+$Comp
+L Conn_01x02 Resistive_wire_connector1
+U 1 1 5A8DA99C
+P 8150 3800
+F 0 "Resistive_wire_connector1" H 8150 3900 50  0000 C CNN
+F 1 "Molex" H 8150 3600 50  0000 C CNN
+F 2 "Connectors_Molex:Molex_KK-6410-02_02x2.54mm_Straight" H 8150 3800 50  0001 C CNN
+F 3 "" H 8150 3800 50  0001 C CNN
+	1    8150 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Q_NMOS_DGS Q12
+U 1 1 5A8DAAA5
+P 7800 4400
+F 0 "Q12" H 7600 4450 50  0000 L CNN
+F 1 "Q_NMOS_DGS" H 7300 4550 50  0000 L CNN
+F 2 "TO_SOT_Packages_SMD:SOT-23" H 8000 4500 50  0001 C CNN
+F 3 "" H 7800 4400 50  0001 C CNN
+	1    7800 4400
+	-1   0    0    -1  
+$EndComp
+$Comp
+L R R57
+U 1 1 5A8DAE10
+P 8000 4700
+F 0 "R57" V 8080 4700 50  0000 C CNN
+F 1 "10k" V 8000 4700 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 7930 4700 50  0001 C CNN
+F 3 "" H 8000 4700 50  0001 C CNN
+	1    8000 4700
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR0154
+U 1 1 5A8DAE81
+P 8000 4850
+F 0 "#PWR0154" H 8000 4600 50  0001 C CNN
+F 1 "GND" H 8000 4700 50  0000 C CNN
+F 2 "" H 8000 4850 50  0001 C CNN
+F 3 "" H 8000 4850 50  0001 C CNN
+	1    8000 4850
+	1    0    0    -1  
+$EndComp
+Text HLabel 8375 4400 2    60   Input ~ 0
+BATT_HEATER
+$Comp
+L R R50
+U 1 1 5A8EC8AE
+P 3025 3775
+F 0 "R50" V 3105 3775 50  0000 C CNN
+F 1 "R" V 3025 3775 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 2955 3775 50  0001 C CNN
+F 3 "" H 3025 3775 50  0001 C CNN
+	1    3025 3775
+	0    1    1    0   
+$EndComp
+$Comp
+L R R51
+U 1 1 5A8EC9BC
+P 3025 4375
+F 0 "R51" V 3105 4375 50  0000 C CNN
+F 1 "R" V 3025 4375 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 2955 4375 50  0001 C CNN
+F 3 "" H 3025 4375 50  0001 C CNN
+	1    3025 4375
+	0    1    1    0   
+$EndComp
+$Comp
+L R R48
+U 1 1 5A8ECC34
+P 2875 4025
+F 0 "R48" V 2955 4025 50  0000 C CNN
+F 1 "R" V 2875 4025 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 2805 4025 50  0001 C CNN
+F 3 "" H 2875 4025 50  0001 C CNN
+	1    2875 4025
+	-1   0    0    1   
+$EndComp
+$Comp
+L R R49
+U 1 1 5A8ECCC7
+P 2875 4650
+F 0 "R49" V 2955 4650 50  0000 C CNN
+F 1 "R" V 2875 4650 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 2805 4650 50  0001 C CNN
+F 3 "" H 2875 4650 50  0001 C CNN
+	1    2875 4650
+	-1   0    0    1   
+$EndComp
+$Comp
+L GND #PWR0155
+U 1 1 5A8ECDA3
+P 2875 4175
+F 0 "#PWR0155" H 2875 3925 50  0001 C CNN
+F 1 "GND" H 3000 4125 50  0000 C CNN
+F 2 "" H 2875 4175 50  0001 C CNN
+F 3 "" H 2875 4175 50  0001 C CNN
+	1    2875 4175
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR0156
+U 1 1 5A8ECDEB
+P 2875 4800
+F 0 "#PWR0156" H 2875 4550 50  0001 C CNN
+F 1 "GND" H 2875 4650 50  0000 C CNN
+F 2 "" H 2875 4800 50  0001 C CNN
+F 3 "" H 2875 4800 50  0001 C CNN
+	1    2875 4800
+	1    0    0    -1  
+$EndComp
+Text HLabel 2700 4375 0    60   Output ~ 0
+BATT_CELL1_VOLTAGE
+Text HLabel 2700 3775 0    60   Output ~ 0
+BATT_CELL2_VOLTAGE
+Text Notes 6400 3050 0    60   ~ 0
+Fuse
+Text Notes 8400 3900 0    60   ~ 0
+External charger
+$Comp
+L D_Zener LM335A1
+U 1 1 5A906262
+P 7350 4550
+F 0 "LM335A1" H 7350 4650 50  0000 C CNN
+F 1 "D_Zener" H 7350 4450 50  0000 C CNN
+F 2 "TO_SOT_Packages_THT:TO-92_Inline_Narrow_Oval" H 7350 4550 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm335.pdf" H 7350 4550 50  0001 C CNN
+	1    7350 4550
+	0    1    1    0   
+$EndComp
+$Comp
+L R R56
+U 1 1 5A906F99
+P 7350 4050
+F 0 "R56" V 7430 4050 50  0000 C CNN
+F 1 "5.4k" V 7350 4050 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 7280 4050 50  0001 C CNN
+F 3 "" H 7350 4050 50  0001 C CNN
+	1    7350 4050
+	1    0    0    -1  
+$EndComp
+Text HLabel 7050 4400 3    60   Output ~ 0
+BATT_TEMP
+Wire Notes Line
+	1150 2075 1150 2275
 Wire Wire Line
 	4500 4175 5150 4175
 Wire Wire Line
@@ -144,40 +364,18 @@ Wire Wire Line
 Wire Wire Line
 	3925 4575 4200 4575
 Wire Wire Line
-	3925 4375 3525 4375
+	3175 4375 3925 4375
 Wire Wire Line
 	3525 4175 3525 4600
 Connection ~ 3925 4375
 Connection ~ 3525 4375
-$Comp
-L C C?
-U 1 1 5A877784
-P 4700 3975
-F 0 "C?" H 4725 4075 50  0000 L CNN
-F 1 "0.1u" H 4725 3875 50  0000 L CNN
-F 2 "" H 4738 3825 50  0001 C CNN
-F 3 "" H 4700 3975 50  0001 C CNN
-	1    4700 3975
-	1    0    0    -1  
-$EndComp
 Connection ~ 4700 4175
-$Comp
-L R R?
-U 1 1 5A8779E5
-P 4350 3775
-F 0 "R?" V 4430 3775 50  0000 C CNN
-F 1 "R" V 4350 3775 50  0000 C CNN
-F 2 "" V 4280 3775 50  0001 C CNN
-F 3 "" H 4350 3775 50  0001 C CNN
-	1    4350 3775
-	0    1    1    0   
-$EndComp
 Wire Wire Line
 	4700 3825 4700 3775
 Wire Wire Line
 	4500 3775 5050 3775
 Wire Wire Line
-	4200 3775 3525 3775
+	3175 3775 4200 3775
 Wire Wire Line
 	3525 3450 3525 3875
 Wire Wire Line
@@ -195,17 +393,6 @@ Wire Wire Line
 	3525 5125 3525 4900
 Wire Wire Line
 	4700 5125 4700 5025
-$Comp
-L C C?
-U 1 1 5A8784C0
-P 5100 4875
-F 0 "C?" H 5125 4975 50  0000 L CNN
-F 1 "C" H 5125 4775 50  0000 L CNN
-F 2 "" H 5138 4725 50  0001 C CNN
-F 3 "" H 5100 4875 50  0001 C CNN
-	1    5100 4875
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	5150 4475 5100 4475
 Wire Wire Line
@@ -220,19 +407,8 @@ Wire Wire Line
 	6300 4325 6200 4325
 Connection ~ 6300 4475
 Wire Wire Line
-	3525 3450 7075 3450
+	3525 3450 7825 3450
 Connection ~ 3525 3775
-$Comp
-L R R?
-U 1 1 5A87952C
-P 6650 3700
-F 0 "R?" V 6730 3700 50  0000 C CNN
-F 1 "R" V 6650 3700 50  0000 C CNN
-F 2 "" V 6580 3700 50  0001 C CNN
-F 3 "" H 6650 3700 50  0001 C CNN
-	1    6650 3700
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	6200 4175 6650 4175
 Wire Wire Line
@@ -240,52 +416,20 @@ Wire Wire Line
 Wire Wire Line
 	6650 3550 6650 3450
 Connection ~ 6650 3450
-$Comp
-L C C?
-U 1 1 5A879687
-P 6650 4850
-F 0 "C?" H 6675 4950 50  0000 L CNN
-F 1 "0.1u" H 6675 4750 50  0000 L CNN
-F 2 "" H 6688 4700 50  0001 C CNN
-F 3 "" H 6650 4850 50  0001 C CNN
-	1    6650 4850
-	1    0    0    -1  
-$EndComp
 Connection ~ 6650 4175
 Wire Wire Line
 	6650 5125 6650 5000
 Wire Wire Line
-	3525 5125 7075 5125
+	3525 5125 7825 5125
 Connection ~ 4700 5125
 Connection ~ 5100 5125
 Connection ~ 6300 5125
 Connection ~ 6650 5125
-Text HLabel 7075 5125 2    60   BiDi ~ 0
-BATT-
-Text HLabel 7075 3450 2    60   BiDi ~ 0
-BATT+
-$Comp
-L GND #PWR?
-U 1 1 5A87BAD8
-P 5700 5250
-F 0 "#PWR?" H 5700 5000 50  0001 C CNN
-F 1 "GND" H 5700 5100 50  0000 C CNN
-F 2 "" H 5700 5250 50  0001 C CNN
-F 3 "" H 5700 5250 50  0001 C CNN
-	1    5700 5250
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	5700 5250 5700 5125
 Connection ~ 5700 5125
 Wire Notes Line
-	6350 4025 7000 4025
-Text Notes 7075 4050 0    60   ~ 0
-HIGH => overvoltage condition\nWhat is voltage level that is outputed?
-Wire Notes Line
 	4350 3650 4350 2925
-Text Notes 3725 2850 0    60   ~ 0
-Choose resistor and capacitor values for\noptimal balancing current\n
 Wire Notes Line
 	4950 2925 4950 4875
 Wire Notes Line
@@ -312,8 +456,51 @@ Wire Notes Line
 	2325 5175 3275 5175
 Wire Notes Line
 	2700 3400 3275 3400
-Text Notes 2350 3700 0    60   ~ 0
-Battery voltage\nand current \nmeasurements here
 Wire Notes Line
 	3275 3400 3275 5175
+Wire Notes Line
+	6400 4025 6400 5300
+Wire Notes Line
+	6400 5300 6450 5300
+Wire Wire Line
+	7700 3450 7700 3800
+Wire Wire Line
+	7700 3800 7950 3800
+Connection ~ 7700 3450
+Wire Wire Line
+	7950 3900 7700 3900
+Wire Wire Line
+	7700 3900 7700 4200
+Wire Wire Line
+	7700 4600 7700 5125
+Connection ~ 7700 5125
+Wire Wire Line
+	8000 4400 8000 4550
+Wire Wire Line
+	8000 4400 8375 4400
+Wire Wire Line
+	2875 3775 2875 3875
+Wire Wire Line
+	2875 4375 2875 4500
+Wire Wire Line
+	2875 3775 2700 3775
+Wire Wire Line
+	2875 4375 2700 4375
+Wire Wire Line
+	7350 4200 7350 4400
+Wire Wire Line
+	7350 3450 7350 3900
+Connection ~ 7350 4300
+Wire Wire Line
+	7350 4300 7050 4300
+Wire Wire Line
+	7050 4300 7050 4400
+Connection ~ 7350 3450
+Wire Wire Line
+	7350 4700 7350 5125
+Connection ~ 7350 5125
+Text Notes 7550 4275 3    60   ~ 0
+Temp sensor
+Text Notes 6975 4850 1    60   ~ 0
+10mV/K
 $EndSCHEMATC

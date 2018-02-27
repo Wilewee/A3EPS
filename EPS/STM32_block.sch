@@ -49,7 +49,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 2 14
 Title "STM32"
-Date "2018-02-16"
+Date "2018-02-22"
 Rev "R1"
 Comp ""
 Comment1 ""
@@ -208,12 +208,6 @@ F 3 "" H 8375 3900 50  0000 C CNN
 $EndComp
 Text Notes 8050 750  0    60   ~ 0
 Power supply schemes - Decoupling capacitors\n(Refer to AN4488 p.9)
-Text GLabel 9825 1300 2    60   Input ~ 0
-VDD
-Text GLabel 3675 2575 1    60   Input ~ 0
-VDD
-Text GLabel 8975 2575 2    60   Input ~ 0
-VDDA
 $Comp
 L GND #PWR05
 U 1 1 5A7802F1
@@ -238,14 +232,8 @@ F 3 "" H 8150 2600 50  0000 C CNN
 	1    8150 2600
 	1    0    0    -1  
 $EndComp
-Text GLabel 4275 2575 1    60   Input ~ 0
-VDDA
 Text Notes 3625 2200 0    60   ~ 0
 Ferrite bead for noise resistance
-Text GLabel 5175 2850 1    60   Input ~ 0
-VCAP
-Text GLabel 8725 3700 2    60   Input ~ 0
-VCAP
 $Comp
 L GND #PWR07
 U 1 1 5A7876E8
@@ -358,14 +346,6 @@ F 3 "" H 10875 5725 50  0000 C CNN
 	1    10875 5725
 	1    0    0    -1  
 $EndComp
-Text GLabel 3225 2850 1    60   BiDi ~ 0
-OSC_IN
-Text GLabel 3375 2850 1    60   BiDi ~ 0
-OSC_OUT
-Text GLabel 10125 5100 1    60   BiDi ~ 0
-OSC_IN
-Text GLabel 10875 5100 1    60   BiDi ~ 0
-OSC_OUT
 Text Notes 9900 6075 0    60   ~ 0
 C = 2(C_L - C_stray)
 Text Notes 8050 4600 0    60   ~ 0
@@ -376,12 +356,6 @@ Text Notes 3200 2300 0    60   ~ 0
 HSE
 Text Notes 8050 4975 0    60   ~ 0
 PA13 JTMS-SWDIO\nPA14 JTCK-SWCLK\nPB3 JTDO-SWO
-Text GLabel 2775 2700 1    60   Input ~ 0
-NRST
-Text GLabel 1975 5625 0    60   BiDi ~ 0
-SWDIO
-Text GLabel 1975 5775 0    60   Input ~ 0
-SWCLK
 $Comp
 L +3.3V #PWR013
 U 1 1 5A7A74D0
@@ -393,8 +367,6 @@ F 3 "" H 9000 5250 50  0000 C CNN
 	1    9000 5250
 	1    0    0    -1  
 $EndComp
-Text GLabel 9000 5375 0    60   Input ~ 0
-SWCLK
 $Comp
 L GND #PWR014
 U 1 1 5A7A85E0
@@ -406,18 +378,6 @@ F 3 "" H 8625 5475 50  0000 C CNN
 	1    8625 5475
 	0    1    1    0   
 $EndComp
-Text GLabel 9000 5575 0    60   BiDi ~ 0
-SWDIO
-Text GLabel 9000 5675 0    60   Input ~ 0
-NRST
-Text GLabel 1950 5025 0    60   Output ~ 0
-USART_TX
-Text GLabel 1950 5175 0    60   Input ~ 0
-USART_RX
-Text GLabel 9000 6150 0    60   Output ~ 0
-USART_TX
-Text GLabel 9000 6250 0    60   Input ~ 0
-USART_RX
 Text Notes 5975 750  0    60   ~ 0
 Boot pin connection\nAN4488 p.27\nDon't wire this to bus!
 Text Notes 6775 900  0    60   ~ 0
@@ -433,8 +393,6 @@ F 3 "" H 2925 2650 50  0000 C CNN
 	1    2925 2650
 	1    0    0    -1  
 $EndComp
-Text GLabel 2925 2325 1    60   Input ~ 0
-BOOT0
 $Comp
 L R R2
 U 1 1 5A7B9A07
@@ -446,12 +404,6 @@ F 3 "" H 3225 7000 50  0000 C CNN
 	1    3225 7000
 	1    0    0    -1  
 $EndComp
-Text GLabel 3225 7225 3    60   Input ~ 0
-BOOT1
-Text GLabel 6375 1250 0    60   Input ~ 0
-BOOT0
-Text GLabel 7250 1250 0    60   Input ~ 0
-BOOT1
 $Comp
 L +3.3V #PWR015
 U 1 1 5A7BF9E1
@@ -521,20 +473,16 @@ F 3 "" H 3925 1500 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L +3.3V #PWR022
+L +3.3V #PWR020
 U 1 1 5A7A8437
 P 5700 775
-F 0 "#PWR022" H 5700 625 50  0001 C CNN
+F 0 "#PWR020" H 5700 625 50  0001 C CNN
 F 1 "+3.3V" H 5700 915 50  0000 C CNN
 F 2 "" H 5700 775 50  0000 C CNN
 F 3 "" H 5700 775 50  0000 C CNN
 	1    5700 775 
 	1    0    0    -1  
 $EndComp
-Text GLabel 1975 5475 0    60   Output ~ 0
-CAN1_TX
-Text GLabel 1975 5325 0    60   Input ~ 0
-CAN1_RX
 $Sheet
 S 1050 700  1200 750 
 U 5A7D797A
@@ -542,37 +490,19 @@ F0 "CAN_transceivers" 60
 F1 "CAN_transceivers.sch" 60
 F2 "CAN1_TX" I L 1050 850 60 
 F3 "CAN1_RX" O L 1050 975 60 
-F4 "CAN1_H" B R 2250 850 60 
-F5 "CAN1_L" B R 2250 975 60 
-F6 "CAN2_TX" I L 1050 1175 60 
-F7 "CAN2_RX" O L 1050 1300 60 
-F8 "CAN2_H" B R 2250 1175 60 
-F9 "CAN2_L" B R 2250 1300 60 
+F4 "CAN2_TX" I L 1050 1175 60 
+F5 "CAN2_RX" O L 1050 1300 60 
+F6 "CAN_H" B R 2250 850 60 
+F7 "CAN_L" B R 2250 975 60 
 $EndSheet
 Text Notes 1175 5425 0    60   ~ 0
 CAN1
-Text GLabel 3675 6675 3    60   Input ~ 0
-CAN2_RX
-Text GLabel 3825 6700 3    60   Output ~ 0
-CAN2_TX
 Text Notes 3650 7300 0    60   ~ 0
 CAN2
-Text GLabel 975  850  0    60   Input ~ 0
-CAN1_TX
-Text GLabel 975  975  0    60   Output ~ 0
-CAN1_RX
-Text GLabel 975  1300 0    60   Output ~ 0
-CAN2_RX
-Text GLabel 975  1175 0    60   Input ~ 0
-CAN2_TX
 Text HLabel 2550 850  2    60   BiDi ~ 0
-CAN1_H
+CAN_H
 Text HLabel 2550 975  2    60   BiDi ~ 0
-CAN1_L
-Text HLabel 2550 1175 2    60   BiDi ~ 0
-CAN2_H
-Text HLabel 2550 1300 2    60   BiDi ~ 0
-CAN2_L
+CAN_L
 Text Notes 1025 5150 0    60   ~ 0
 USART1
 $Comp
@@ -864,11 +794,7 @@ Wire Wire Line
 Wire Wire Line
 	2550 975  2250 975 
 Wire Wire Line
-	2550 1175 2250 1175
-Wire Wire Line
-	2550 1300 2250 1300
-Wire Wire Line
-	3675 6675 3675 6525
+	3675 6700 3675 6525
 Wire Wire Line
 	1950 5925 2175 5925
 Wire Wire Line
@@ -985,12 +911,12 @@ Wire Wire Line
 	1950 2825 2775 2825
 Connection ~ 2775 2825
 $Comp
-L L L?
+L L L1
 U 1 1 5A80E7CA
 P 3975 2725
-F 0 "L?" V 3925 2725 50  0000 C CNN
+F 0 "L1" V 3925 2725 50  0000 C CNN
 F 1 "1000 Ohm" V 4050 2725 50  0000 C CNN
-F 2 "" H 3975 2725 50  0001 C CNN
+F 2 "Resistors_SMD:R_1206" H 3975 2725 50  0001 C CNN
 F 3 "" H 3975 2725 50  0001 C CNN
 	1    3975 2725
 	0    1    1    0   
@@ -1000,12 +926,12 @@ Maximum dropout 380 mV at 2A
 NoConn ~ 4575 6525
 NoConn ~ 4725 6525
 $Comp
-L TPS7A7002 TPS?
+L TPS7A7002 TPS1
 U 1 1 5A8D1059
 P 4625 1000
-F 0 "TPS?" H 4625 650 60  0000 C CNN
+F 0 "TPS1" H 4625 650 60  0000 C CNN
 F 1 "TPS7A7002" H 4600 1300 60  0000 C CNN
-F 2 "" H 4575 1100 60  0001 C CNN
+F 2 "Housings_SOIC:SOIC-8_3.9x4.9mm_Pitch1.27mm" H 4575 1100 60  0001 C CNN
 F 3 "" H 4575 1100 60  0001 C CNN
 	1    4625 1000
 	1    0    0    -1  
@@ -1020,34 +946,34 @@ Connection ~ 3925 1100
 Wire Wire Line
 	3925 1500 3925 1450
 $Comp
-L R R?
+L R R5
 U 1 1 5A8D2A77
 P 5450 750
-F 0 "R?" V 5530 750 50  0000 C CNN
+F 0 "R5" V 5530 750 50  0000 C CNN
 F 1 "168k6" V 5450 750 50  0000 C CNN
-F 2 "" V 5380 750 50  0001 C CNN
+F 2 "Resistors_SMD:R_0603" V 5380 750 50  0001 C CNN
 F 3 "" H 5450 750 50  0001 C CNN
 	1    5450 750 
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5700 1100 5025 1100
+	5025 1100 5700 1100
 $Comp
-L R R?
+L R R6
 U 1 1 5A8D2D55
 P 5450 1300
-F 0 "R?" V 5530 1300 50  0000 C CNN
+F 0 "R6" V 5530 1300 50  0000 C CNN
 F 1 "30k1" V 5450 1300 50  0000 C CNN
-F 2 "" V 5380 1300 50  0001 C CNN
+F 2 "Resistors_SMD:R_0603" V 5380 1300 50  0001 C CNN
 F 3 "" H 5450 1300 50  0001 C CNN
 	1    5450 1300
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR?
+L GND #PWR021
 U 1 1 5A8D3309
 P 5450 1500
-F 0 "#PWR?" H 5450 1250 50  0001 C CNN
+F 0 "#PWR021" H 5450 1250 50  0001 C CNN
 F 1 "GND" H 5450 1350 50  0000 C CNN
 F 2 "" H 5450 1500 50  0000 C CNN
 F 3 "" H 5450 1500 50  0000 C CNN
@@ -1057,7 +983,7 @@ $EndComp
 Wire Wire Line
 	5450 1500 5450 1450
 Wire Wire Line
-	5450 1150 5450 900 
+	5450 900  5450 1150
 Wire Wire Line
 	5025 950  5450 950 
 Connection ~ 5450 950 
@@ -1069,10 +995,10 @@ Wire Wire Line
 	5275 575  5275 1100
 Connection ~ 5275 1100
 $Comp
-L C C?
+L C C3
 U 1 1 5A8D4324
 P 5700 1300
-F 0 "C?" H 5725 1400 50  0000 L CNN
+F 0 "C3" H 5725 1400 50  0000 L CNN
 F 1 "4.7u" H 5725 1200 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0603" H 5738 1150 50  0001 C CNN
 F 3 "" H 5700 1300 50  0000 C CNN
@@ -1081,10 +1007,10 @@ F 3 "" H 5700 1300 50  0000 C CNN
 $EndComp
 Connection ~ 5700 1100
 $Comp
-L GND #PWR?
+L GND #PWR022
 U 1 1 5A8D44E3
 P 5700 1500
-F 0 "#PWR?" H 5700 1250 50  0001 C CNN
+F 0 "#PWR022" H 5700 1250 50  0001 C CNN
 F 1 "GND" H 5700 1350 50  0000 C CNN
 F 2 "" H 5700 1500 50  0000 C CNN
 F 3 "" H 5700 1500 50  0000 C CNN
@@ -1093,4 +1019,72 @@ F 3 "" H 5700 1500 50  0000 C CNN
 $EndComp
 Wire Wire Line
 	5700 1500 5700 1450
+Text Notes 550  7625 0    60   ~ 0
+TODO:\n-For R2 I2C enable\n
+Text Label 975  850  2    60   ~ 0
+CAN1_TX
+Text Label 975  975  2    60   ~ 0
+CAN1_RX
+Text Label 975  1300 2    60   ~ 0
+CAN2_RX
+Text Label 975  1175 2    60   ~ 0
+CAN2_TX
+Text Label 1975 5475 2    60   ~ 0
+CAN1_TX
+Text Label 1975 5325 2    60   ~ 0
+CAN1_RX
+Text Label 3825 6700 3    60   ~ 0
+CAN2_TX
+Text Label 3675 6700 3    60   ~ 0
+CAN2_RX
+Text Label 6375 1250 2    60   ~ 0
+BOOT0
+Text Label 2925 2325 1    60   ~ 0
+BOOT0
+Text Label 7250 1250 2    60   ~ 0
+BOOT1
+Text Label 3225 7225 3    60   ~ 0
+BOOT1
+Text Label 9825 1300 0    60   ~ 0
+VDD
+Text Label 3675 2575 1    60   ~ 0
+VDD
+Text Label 4275 2575 1    60   ~ 0
+VDDA
+Text Label 8975 2575 0    60   ~ 0
+VDDA
+Text Label 8725 3700 0    60   ~ 0
+VCAP
+Text Label 10125 5100 1    60   ~ 0
+OSC_IN
+Text Label 10875 5100 1    60   ~ 0
+OSC_OUT
+Text Label 3225 2850 1    60   ~ 0
+OSC_IN
+Text Label 3375 2850 1    60   ~ 0
+OSC_OUT
+Text Label 2775 2700 1    60   ~ 0
+NRST
+Text Label 9000 5675 2    60   ~ 0
+NRST
+Text Label 9000 5575 2    60   ~ 0
+SWDIO
+Text Label 9000 5375 2    60   ~ 0
+SWCLK
+Text Label 9000 6150 2    60   ~ 0
+USART_TX
+Text Label 9000 6250 2    60   ~ 0
+USART_RX
+Text Label 1950 5025 2    60   ~ 0
+USART_TX
+Text Label 1950 5175 2    60   ~ 0
+USART_RX
+Text Label 1975 5625 2    60   ~ 0
+SWDIO
+Text Label 1975 5775 2    60   ~ 0
+SWCLK
+Text Label 5175 2850 1    60   ~ 0
+VCAP
+Text Notes 600  7725 0    60   ~ 0
+Add couple leds for debugging
 $EndSCHEMATC
