@@ -342,11 +342,5 @@ Wire Wire Line
 	4050 4000 4050 3850
 Connection ~ 4050 3850
 Wire Wire Line
-<<<<<<< HEAD
 	3875 3800 3875 3850
-=======
-	5025 3425 5025 3450
-Text Notes 3650 4250 0    60   ~ 0
-GND = OFF\nFLOAT = ON
->>>>>>> b68d49fd452eda9161df41b1eb820290923da276
 $EndSCHEMATC

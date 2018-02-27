@@ -277,28 +277,7 @@ Wire Wire Line
 Wire Wire Line
 	5650 2300 5650 2625
 Wire Wire Line
-<<<<<<< HEAD
 	5650 2625 5800 2625
-=======
-	3075 2525 3275 2525
-Text GLabel 5175 5225 2    60   Output ~ 0
-SCL
-Text GLabel 5175 5125 2    60   BiDi ~ 0
-SDA
-Text GLabel 5175 5325 2    60   Output ~ 0
-LDAC
-$Sheet
-S 5800 2500 950  650 
-U 5A88CC7E
-F0 "Battery_pack" 60
-F1 "Battery_pack.sch" 60
-F2 "BATT-" B L 5800 3000 60 
-F3 "BATT+" B L 5800 2625 60 
-F4 "BATT_HEATER" I L 5800 2750 60 
-F5 "BATT_CELL1_VOLTAGE" O L 5800 2850 60 
-F6 "BATT_CELL2_VOLTAGE" O L 5800 2925 60 
-$EndSheet
->>>>>>> b68d49fd452eda9161df41b1eb820290923da276
 Wire Wire Line
 	5550 2200 7275 2200
 Wire Wire Line
