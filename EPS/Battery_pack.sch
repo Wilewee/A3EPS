@@ -190,17 +190,6 @@ Text HLabel 7825 5125 2    60   BiDi ~ 0
 BATT-
 Text HLabel 7825 3450 2    60   BiDi ~ 0
 BATT+
-$Comp
-L GND #PWR0153
-U 1 1 5A87BAD8
-P 5700 5250
-F 0 "#PWR0153" H 5700 5000 50  0001 C CNN
-F 1 "GND" H 5700 5100 50  0000 C CNN
-F 2 "" H 5700 5250 50  0001 C CNN
-F 3 "" H 5700 5250 50  0001 C CNN
-	1    5700 5250
-	1    0    0    -1  
-$EndComp
 Text Notes 6500 5375 0    60   ~ 0
 HIGH => overvoltage condition\nWhat is voltage level that is outputed?
 Text Notes 3725 2850 0    60   ~ 0
@@ -425,9 +414,6 @@ Connection ~ 4700 5125
 Connection ~ 5100 5125
 Connection ~ 6300 5125
 Connection ~ 6650 5125
-Wire Wire Line
-	5700 5250 5700 5125
-Connection ~ 5700 5125
 Wire Notes Line
 	4350 3650 4350 2925
 Wire Notes Line
