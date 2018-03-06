@@ -190,17 +190,6 @@ Text HLabel 7825 5125 2    60   BiDi ~ 0
 BATT-
 Text HLabel 7825 3450 2    60   BiDi ~ 0
 BATT+
-$Comp
-L GND #PWR0153
-U 1 1 5A87BAD8
-P 5700 5250
-F 0 "#PWR0153" H 5700 5000 50  0001 C CNN
-F 1 "GND" H 5700 5100 50  0000 C CNN
-F 2 "" H 5700 5250 50  0001 C CNN
-F 3 "" H 5700 5250 50  0001 C CNN
-	1    5700 5250
-	1    0    0    -1  
-$EndComp
 Text Notes 6500 5375 0    60   ~ 0
 HIGH => overvoltage condition\nWhat is voltage level that is outputed?
 Text Notes 3725 2850 0    60   ~ 0
@@ -241,10 +230,10 @@ F 3 "" H 8000 4700 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR0154
+L GND #PWR0151
 U 1 1 5A8DAE81
 P 8000 4850
-F 0 "#PWR0154" H 8000 4600 50  0001 C CNN
+F 0 "#PWR0151" H 8000 4600 50  0001 C CNN
 F 1 "GND" H 8000 4700 50  0000 C CNN
 F 2 "" H 8000 4850 50  0001 C CNN
 F 3 "" H 8000 4850 50  0001 C CNN
@@ -252,7 +241,7 @@ F 3 "" H 8000 4850 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Text HLabel 8375 4400 2    60   Input ~ 0
-BATT_HEATER
+HEATER_EN
 $Comp
 L R R50
 U 1 1 5A8EC8AE
@@ -298,10 +287,10 @@ F 3 "" H 2875 4650 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L GND #PWR0155
+L GND #PWR0152
 U 1 1 5A8ECDA3
 P 2875 4175
-F 0 "#PWR0155" H 2875 3925 50  0001 C CNN
+F 0 "#PWR0152" H 2875 3925 50  0001 C CNN
 F 1 "GND" H 3000 4125 50  0000 C CNN
 F 2 "" H 2875 4175 50  0001 C CNN
 F 3 "" H 2875 4175 50  0001 C CNN
@@ -309,10 +298,10 @@ F 3 "" H 2875 4175 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR0156
+L GND #PWR0153
 U 1 1 5A8ECDEB
 P 2875 4800
-F 0 "#PWR0156" H 2875 4550 50  0001 C CNN
+F 0 "#PWR0153" H 2875 4550 50  0001 C CNN
 F 1 "GND" H 2875 4650 50  0000 C CNN
 F 2 "" H 2875 4800 50  0001 C CNN
 F 3 "" H 2875 4800 50  0001 C CNN
@@ -365,10 +354,7 @@ Wire Wire Line
 	3925 4575 4200 4575
 Wire Wire Line
 	3175 4375 3925 4375
-Wire Wire Line
-	3525 4175 3525 4600
 Connection ~ 3925 4375
-Connection ~ 3525 4375
 Connection ~ 4700 4175
 Wire Wire Line
 	4700 3825 4700 3775
@@ -425,9 +411,6 @@ Connection ~ 4700 5125
 Connection ~ 5100 5125
 Connection ~ 6300 5125
 Connection ~ 6650 5125
-Wire Wire Line
-	5700 5250 5700 5125
-Connection ~ 5700 5125
 Wire Notes Line
 	4350 3650 4350 2925
 Wire Notes Line
@@ -494,7 +477,7 @@ Connection ~ 7350 4300
 Wire Wire Line
 	7350 4300 7050 4300
 Wire Wire Line
-	7050 4300 7050 4400
+	7050 4250 7050 4400
 Connection ~ 7350 3450
 Wire Wire Line
 	7350 4700 7350 5125
@@ -503,4 +486,34 @@ Text Notes 7550 4275 3    60   ~ 0
 Temp sensor
 Text Notes 6975 4850 1    60   ~ 0
 10mV/K
+NoConn ~ 6200 4025
+$Comp
+L TEST TP26
+U 1 1 5A9EFC6C
+P 8350 4325
+F 0 "TP26" H 8350 4625 50  0000 C BNN
+F 1 "TEST" H 8350 4575 50  0000 C CNN
+F 2 "Measurement_Points:Measurement_Point_Round-SMD-Pad_Small" H 8350 4325 50  0001 C CNN
+F 3 "" H 8350 4325 50  0001 C CNN
+	1    8350 4325
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8350 4325 8350 4400
+Connection ~ 8350 4400
+$Comp
+L TEST TP25
+U 1 1 5A9EFE34
+P 7050 4250
+F 0 "TP25" H 7050 4550 50  0000 C BNN
+F 1 "TEST" H 7050 4500 50  0000 C CNN
+F 2 "Measurement_Points:Measurement_Point_Round-SMD-Pad_Small" H 7050 4250 50  0001 C CNN
+F 3 "" H 7050 4250 50  0001 C CNN
+	1    7050 4250
+	1    0    0    -1  
+$EndComp
+Connection ~ 7050 4300
+Wire Wire Line
+	3525 4175 3525 4600
+Connection ~ 3525 4375
 $EndSCHEMATC

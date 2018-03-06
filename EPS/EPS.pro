@@ -1,4 +1,4 @@
-update=20/02/2018 14:24:37
+update=5.3.2018 20.02.55
 version=1
 last_client=kicad
 [general]
@@ -29,7 +29,7 @@ version=1
 NetIExt=net
 [eeschema]
 version=1
-LibDir=INA139;MAX668_669;STM32F466RE;TPS54302;BQ29209;MAX40200;TPS7A7002;MAX5395;INA210
+LibDir=INA139;MAX668_669;STM32F466RE;TPS54302;BQ29209;MAX40200;TPS7A7002;MAX5395;INA210;BU33SD5
 [eeschema/libraries]
 LibName1=EPS-rescue
 LibName2=power
@@ -74,3 +74,14 @@ LibName40=TPS7A7002/tps7a7002
 LibName41=MAX5395/max5395
 LibName42=INA210/ina210
 LibName43=NCS20071/ncs20071
+LibName44=BU33SD5/bu33sd5
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+PlotDirectoryName=./
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=
+SpiceForceRefPrefix=0
+SpiceUseNetNumbers=0
+LabSize=60
