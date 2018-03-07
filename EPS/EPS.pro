@@ -1,4 +1,4 @@
-update=5.3.2018 20.02.55
+update=6.3.2018 18.12.05
 version=1
 last_client=kicad
 [general]
@@ -78,7 +78,7 @@ LibName44=BU33SD5/bu33sd5
 [schematic_editor]
 version=1
 PageLayoutDescrFile=
-PlotDirectoryName=./
+PlotDirectoryName=pdf/
 SubpartIdSeparator=0
 SubpartFirstId=65
 NetFmtName=

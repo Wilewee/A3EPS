@@ -471,8 +471,6 @@ Wire Wire Line
 	2875 4375 2700 4375
 Wire Wire Line
 	7350 4200 7350 4400
-Wire Wire Line
-	7350 3450 7350 3900
 Connection ~ 7350 4300
 Wire Wire Line
 	7350 4300 7050 4300
@@ -516,4 +514,15 @@ Connection ~ 7050 4300
 Wire Wire Line
 	3525 4175 3525 4600
 Connection ~ 3525 4375
+$Comp
+L +3.3V #PWR?
+U 1 1 5AA008D8
+P 7350 3900
+F 0 "#PWR?" H 7350 3750 50  0001 C CNN
+F 1 "+3.3V" H 7350 4040 50  0000 C CNN
+F 2 "" H 7350 3900 50  0001 C CNN
+F 3 "" H 7350 3900 50  0001 C CNN
+	1    7350 3900
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
